@@ -1,0 +1,9 @@
+/* team members */
+ul.teamiconsUL { font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.teamiconsUL > li { display: inline-block; font-size: $font-size; margin: 2px 3px 2px 0; vertical-align: middle; }
+ul.teamiconsUL > li:last-child { margin-right: 0; }
+ul.teamiconsUL > li.moreUsersLI .profile { background-color: $light-grey !important; border-color: $light-grey; color: $dark-grey !important; }
+ul.teamiconsUL > li.addMoreUsersLI .profile {}
+/* user is clickable */
+.userClickable { display: inline-block; }
+.userClickable-info.metaBox { padding: 20px 0.9375rem; }

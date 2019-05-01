@@ -1,0 +1,47 @@
+/*** Edit degree Modal****/
+.edit-degree-main-body {margin: 20px 0 0;}
+#edit-degree-modal  {
+  .input {width: 100%; max-width: 100%; margin: 0 0 10px;}
+  .input-label {width: 100%; max-width: 100%;}
+}
+.suggestedCipCodeFilter input{max-width: 300px;}
+.uploadDegreeWrap button{ margin: 5px 0 0;}
+.uploadDegreeWrap .success > span {word-wrap: break-word;}
+.remove-cip-wrap > button{color: $dark-red; display: inline-block; font-size: 18px; margin: 15px 0 0;}
+.add-more-cip-wrap > button{font-size: 26px;}
+.suggest-wrap {padding: 10px 20px; margin: 0 0 10px; border: 1px solid #ebebeb; position: relative;}
+.close-suggest {position: absolute;top: -8px;right: -6px;font-size: 18px;}
+.add-more-cip-wrap > button > span{font-size: $font-size; margin: 0 0 0 5px; vertical-align: middle;}
+
+/*** Add degree Modal ***/
+#add-degree-modal {
+  .radio {margin: 0;}
+  .modal-body {min-height: 250px;}
+}
+
+.select2-drop-active {margin-top: 3px;}
+/*** Add non IPEDs degree Modal ***/
+.info-sign {font-size: 46px; color: $dark-gold; display: inline-block; margin: -8px 0 0;}
+#add-non-iped-degree-modal {
+  h3 {
+    span {
+      &.non-iped-action {font-weight: normal; font-size: $font-size; margin-left: 130px;}
+      button {margin: 0 0 0 10px;}
+    }
+  }
+  form {
+    [type="button"].close-button {padding: 10px;}
+  }
+}
+
+.row.info-wrap {padding-top: 10px; margin-bottom: 15px; border: 1px solid $light-beige}
+.or-institution {line-height: 80px; margin: 0 15px 0 -10px;}
+
+.buttons-wrap > .button,
+.buttons-wrap > [type="submit"] {margin-top: 0; margin-bottom: 0;}
+
+/*** Add qualification modal ***/
+#add-alternate-qualification-modal .modal-header > .close-button {top: 0; right: 0;}
+.qualification-description-wrap {position: relative; z-index: 5;}
+.qualification-documentation-wrap {position: relative; z-index: 2;}
+.qual-city-wrapper {position: relative; z-index: 6;}

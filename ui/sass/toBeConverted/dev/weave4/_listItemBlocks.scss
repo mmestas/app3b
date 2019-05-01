@@ -1,0 +1,11 @@
+/************************** LIST ITEM BLOCKS *******************************/
+// .list-item-blocks {list-style-type: none; margin:0;}
+// .list-item-blocks li {padding:15px; background: $light-beige; margin:5px 0; cursor:pointer;}
+// .list-item-blocks li:hover {background: #dac38b;}
+
+//couldn't find this class being used in the entire project.... DELETE??
+.list-item-blocks {list-style-type: none; margin:0;
+  li {padding:15px; background: $light-beige; margin:5px 0; cursor:pointer;
+    &:hover {background: $beige;}
+  }
+}

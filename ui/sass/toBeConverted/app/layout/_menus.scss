@@ -1,0 +1,21 @@
+//******************* navMenu *******************/
+ul.navMenuUL > li > a { display: block; font-family: 'Rubik'; font-size: 14px; font-weight: $regular; line-height: 1.9em; padding: 14px 18px; text-decoration: none; }
+ul.navMenuUL > li > a:hover,
+.menu .active > a,
+ul.navMenuUL > li.active > a { background-color: $light-beige; color: $dark-grey; }
+
+//******************* systemMenu *******************/
+/* system */
+ul.systemMenuUL > li.systemSearchLI,
+ul.systemMenuUL > li.systemHelpLI { font-size: 20px; line-height: 1em; }
+ul.systemMenuUL > li.systemAlertsLI { font-size: 20px; line-height: 1em; position: relative; }
+.menu > .systemSearchLI > a,
+.menu > .systemAlertsLI > a,
+.menu > .systemHelpLI > a { font-size: 26px; padding: 0 1rem; position: relative; text-decoration: none; }
+.systemAlertsLI .dropdown-pane { border: 0; box-shadow: $button-shadow; font-family: 'Rubik'; right: 1rem !important; padding: 0; width: 450px; }
+.menu > .systemSearchLI toggle a, .menu > .systemAlertsLI toggle a, .menu > .systemHelpLI toggle a, .menu > .systemImpersonateLI toggle a, .menu > .systemSettingsLI toggle a { font-size: 26px; padding: 0 1rem; position: relative; text-decoration: none; display: inline-block; line-height: 1.7em;}
+.menu.systemMenuUL dropdown-toggle toggle > a:hover, .menu.systemMenuUL dropdown-toggle  > .is-open > toggle > a {background-color: #62615d;}
+.menu > .systemUserLI .user-menu {line-height: 1.3;}
+/* system alerts - no number */
+ul.systemMenuUL .badge { display: block; font-size: 0; height: 12px; padding: 0; position: absolute; left: 10px; top: 5px; width: 12px; z-index: 2; }
+ul.systemMenuUL .badge.alert { background-color: $red; border-radius: 50%; color: $dark-gold; }

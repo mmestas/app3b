@@ -1,0 +1,275 @@
+#id-standardProgramsAdvancePage{
+    h1{margin: 15px 0 25px;}
+}
+
+ul.users-group-navigation {list-style: none; margin: 0; padding: 0;}
+ul.users-group-navigation > li {display: inline-block; margin-right: 25px;}
+ul.users-group-navigation > li > a{text-decoration: none; font-size: 24px; font-family: 'Rubik', sans-serif}
+ul.users-group-navigation > li > a.active{text-decoration: underline; font-weight: 500;}
+
+#id-userManagementPage{
+    th.group-name-th {
+        label{margin-right: -6px;}
+        > div, > span {display: inline-block;}
+    }
+    .group-management-table {
+        th.user-group-th, th.group-projects-th {width: 40%;}
+        th.group-options-th {width: 50px;}
+        th.group-name-th {width: 20%;}
+    }
+    .userProgramRoles {margin-left: 5px;}
+    .assessment-actions-toggle .dropdown-pane {width: 210px;}
+}
+#id-createUserGroupStep1{
+    .main-body{
+        text-align: center;
+        padding: 140px 0 0;
+
+        .input{
+            max-width: 600px;
+            margin-top: 30px;
+        }
+
+        .grant-project-access {
+            margin-top: 20px;
+
+            h1{
+                margin-bottom: 15px;
+            }
+
+            span.radio{
+                max-width: 520px;
+                display: inline-block;
+            }
+
+            button{
+                margin-top: 35px;
+            }
+        }
+    }
+
+    .form-error {display: block;}
+}
+
+#id-createUserGroupStep2 {
+    .main-body {
+        text-align: center;
+        padding: 70px 0 0;
+
+        h1{
+            margin-bottom: 0;
+        }
+
+        h5{
+            margin-bottom: 70px;
+        }
+
+        .allUsersBox {text-align: left;}
+        th.user-name-th {width: 30%;}
+        th.user-group-title {width: 15%;}
+        th.user-group-th {width: 55%;}
+    }
+    .dash-project-checkbox{
+        width:40px;
+    }
+
+    th.std-checkbox-th {width: 22px;}
+
+    table [type=checkbox]+label, table [type=radio]+label, table .checkbox {margin: 0;}
+    table .checkbox {width: 22px; overflow: hidden;}
+    .button-wrap {margin-top: 10px;}
+    .user-filters {text-align: left;}
+    tr.oneUser td:last-child {text-align: left;}
+}
+
+#id-createUserGroupStep3 {
+    .main-body {
+        padding: 70px 0 0;
+
+        h1, h5{
+            margin-bottom: 0;
+        }
+
+        .project-select-titles{
+            text-align: center;
+            margin: 0 0 70px;
+        }
+    }
+
+    .dash-project-checkbox{
+        width:40px;
+    }
+
+    table [type=checkbox]+label, table [type=radio]+label, table .checkbox {margin: 0;}
+    table .checkbox {width: 22px; overflow: hidden;}
+    .projects-filters .input {max-width: 95%;}
+    .button-wrap {margin-top: 10px;}
+}
+
+#id-createUserGroupStep4 {
+    .main-body {
+        padding: 70px 0 0;
+        max-width: 750px;
+        margin: 0 auto;
+
+        h1{margin-bottom: .75rem}
+
+        .note{
+            padding: 20px 25px 30px;
+            border-bottom: 1px solid #ADADAD;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .select-permissions{margin-bottom: 30px;}
+
+        .radio-wrap{
+            padding: 0 25px;
+            max-width: 570px;
+            margin: 0 auto 10px;
+
+            > div{ margin-bottom: 10px;}
+        }
+    }
+}
+
+#id-createUserGroupStep5 {
+    .main-body {
+        padding: 70px 0 0;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .remove-icon {color: #b21716; font-size: 18px;}
+
+
+    ul.review-group-create {
+        margin: 0 0 0 140px;
+        padding: 0;
+        list-style: none;
+
+        > li{position: relative; margin: 20px 0;}
+        h4{font-weight: 500; display: inline-block; margin-right: 10px}
+        a.edit-group {color: $dark-beige; font-size: 14px;}
+        .checked-group {position: absolute; left: -20px; color: #A9BF35; font-size: 16px;}
+    }
+
+    .button-wrap {margin-top: 15px;}
+}
+
+#id-userManagementPage {
+    .schoolsAddBox .button{
+        margin-left: 10px;
+    }
+}
+
+#id-standardToGroupPage{
+    h3{margin: 20px 0 0;}
+    h1{margin: 55px 0 0;}
+    md-autocomplete {margin-bottom: 1rem;}
+    md-autocomplete .md-show-clear-button button {top: 10px; right: 5px;}
+    .input {max-width: 430px;}
+    .radio {margin: 0;}
+    .userGroupInfo{
+        border-radius: 3px;
+        border: 1px solid #ECE5D6;
+        float: right;
+        margin-top: 10px;
+
+        .userGroupheader{
+            background: #ECE5D6;
+            padding: 2px 5px;
+            font-size: 14px;
+        }
+
+        .link-to-standard{
+            transform: rotate(-45deg);
+            font-size: 18px;
+        }
+
+        .userGroupBody{
+            text-align: left;
+            padding: 5px;
+
+            h4{margin: 0;}
+        }
+    }
+    .button-wrap {button {margin: 0 5px; min-width: 150px}}
+
+    .group-to-standard-wrap{
+        width: 1280px; margin: auto;
+        .filter-wrap {padding: 50px 0 5px; border-bottom: 1px solid #ECE5D6; margin: 0 0 70px;}
+        .filter-wrap .col{padding-right: 15px;}
+        .filter-wrap md-select{margin: 0;}
+        .group-permissions-th {width: 20%;}
+        .user-group-th {width: 60%;}
+    }
+}
+
+.addTeamMemberBox{ padding: 10px; margin-top: 10px; border-top: 1px solid #e0e1d9;}
+div.addTeamMemberBox{
+    .button {width: 100%;}
+}
+dropdown-toggle.addTeamDropDown{
+    toggle {
+        a.button{text-align: left; width: 100%;margin-top: 1rem;}
+    }
+
+    .is-open{
+        a.button {border: 2px solid #fed766;}
+    }
+
+    .dropdown-pane{
+        width: calc(100% - 20px); border: none; box-shadow: 0 4px 5px rgba(0,0,0,.15); padding: 0;
+        ul li a {padding: 1rem; text-decoration: none;}
+        ul li a:hover {background-color: #fed766;}
+    }
+}
+
+ul ul.select2-result-single > li:hover .addOneMemberResult { color: #764c03; }
+ul ul.select2-result-single > li:hover .addOneMemberResult .member-add-col { visibility: visible; }
+.userPermissionsModal {
+    .permissions{margin: 10px 0;}
+    .radio-wrap > div {margin-bottom: 10px;}
+    .input {width: 100%; max-width: 100%;}
+    md-autocomplete .md-show-clear-button button {top: 10px; right: 0;}
+}
+ul.usersUL > li {padding: 5px 15px; float: left;}
+
+.addTeamMemberBox  .button.dropdown:after {
+    border-color: #764c03 transparent transparent;
+}
+
+.reveal.userGroupModal.large {width: 50%;}
+.userGroupModal {
+    .user-group-meta{
+        .button {margin: 0;}
+        .cell-meta{margin: 0 30px 0 0; color :#a5a5a5;}
+    }
+}
+
+#id-groupOverviewPage{
+    .group-metadata {font-size: 12px;}
+    .usergroup-wrap {
+        > .status-badge {margin-right: 10px;}
+        > h3 {margin-right: 20px;}
+        > a {margin-top: 2px;}
+    }
+    a.group-edit {text-decoration: none;}
+    a.group-edit > span {margin-left: 5px;}
+    .filter-wrap {
+        max-width: 1280px;
+        margin: 20px auto 10px;
+        .col {padding: 0 10px;}
+        .select.input {background-color: #fff;}
+    }
+    .group-management-table {
+        th.group-name-th {width: 25%;}
+        th.user-reporting-period-th, th.group-type-th, th.group-status-th {width: 15%;}
+        th.group-userGroups-th {width: 30%;}
+
+        th.user-name-th{width: 35%;}
+        th.user-title-th{width: 15%;}
+        th.user-userGroups-th{width: 50%;}
+    }
+}

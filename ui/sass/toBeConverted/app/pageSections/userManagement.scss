@@ -1,0 +1,23 @@
+/* sprint 09 - user management */
+.userManagementPage .filterBox.input { margin: 1em 0 0; }
+.userManagementPage { padding-bottom: 7em; }
+.userManagementPage .standardActionPane { z-index: 9; }
+.userManagementPage .oneStandardUnit { margin-bottom: 2em; }
+.userManagementPage .standardHeaderTable { background: $light-beige; padding: 12px 0.9375rem 0; }
+.allUsersBox .standardHeaderTable { background-color: $dark-beige; padding: 12px 0.9375rem 0;  }
+.allUsersBox .standardNameBox .subheader,
+.allUsersBox .multipleActions .status { color: $plain-white; }
+tr.oneUser .checkbox { margin: auto; width: 21px; }
+tr.oneUser td:last-child { position: relative; text-align: center; }
+th.user-programassign-th { width: 20%; }
+th.user-frequest-th { width: 20%; }
+.basic-user-table { width: auto; }
+.basic-user-table .user-info-img,
+.basic-user-table .user-info-name { cursor: pointer; }
+.basic-user-table:hover .user-info-name { text-decoration: none; }
+.basic-user-table .user-info-img { width: 40px; }
+.basic-user-table .user-info-name { text-decoration: underline; > a{line-height: 2.5rem;}}
+.progAssignDropdown { max-height: 250px; overflow-y: auto; padding: 0; width: 280px; }
+ul.progAssignListUL { font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.progAssignListUL > li { font-size: 14px; padding: 10px; }
+ul.progAssignListUL > li > a { color: inherit; }

@@ -1,0 +1,77 @@
+/* sprint 04 - evaluative feedback (accreditor and school) */
+.feedbackHeaderBox .responseHeaderTitle-name > h3 { max-width: 100%; }
+.feedbackHeaderBox h4 { margin-bottom: 0; }
+.feedbackHeaderBox .responseHeader-table > .col { padding: 10px 0 12px; }
+.feedbackHeaderBox .responseStatus-col { width: 135px; vertical-align: middle; }
+.accreditor-feedback-state { width: 450px; }
+.accreditor-feedback-state h6 { margin-bottom: 0; }
+.accreditor-feedback-state .final-tag{font-size: 18px; margin: 0 2px; position: relative; top: 3px;}
+.feedbackHeaderBox .status-stage { background-color: $grey; color: $plain-white; display: inline-block; font-size: 12px; padding: 7px 10px; }
+.feedbackHeaderBox .pagePrintDownload { margin-bottom: 5px; }
+.schoolFeedbackHeaderBox.feedbackHeaderBox .pagePrintDownload { margin-bottom: 0; }
+/* award accreditation */
+.awardAccreditationBox { width: 255px; }
+.awardAccreditationBox select { font-size: 12px; height: auto; margin-bottom: 0; padding: 6px 10px; }
+.awardAccreditationBox md-select { font-size: 12px; height: auto; margin-bottom: 0; padding-top: 6px; padding-bottom: 6px; line-height: 16px;}
+/* feedback/report header */
+.accreditorFeedbackHeader { margin: 1.5em 0; }
+.accreditorFeedbackHeader-inner > .col { vertical-align: top; }
+.accreditorFeedbackHeader-inner > .standard-col { font-size: 14px; padding-right: 26px; }
+.accreditorFeedbackHeader-inner > .info-col { width: 25%; }
+.accreditorFeedbackHeader-inner .info-col h4 { background-color: $light-beige; padding: 10px; text-align: center; }
+.accreditorFeedbackHeader-inner .info-col h4:first-child { background-color: $dark-beige; color: $plain-white; }
+.accreditorFeedbackHeader-inner .info-col h4:last-child { margin-bottom: 0; }
+.accreditorFeedbackHeader .standard-col h5 { background-color: $dark-beige; color: $plain-white; margin-bottom: 0; padding: 10px; }
+.accreditorFeedbackHeader .standard-col .standard-description { background-color: $light-beige; padding: 10px; }
+.contain .redactor-editor,
+.contain .previewBody .redactor-editor.previewBodyInner,
+.contain .previewBody .redactor-editor.previewBodyInner span,
+.contain .feedbackCommendationPanel p,
+.contain .feedbackCommendationPanel div,
+.contain .ratingReasonBox p{font-size: 27px !important; color: $dark-grey !important;}
+
+/* narrative + evidence */
+.accreditorFeedbackBox > .col,
+.recommendFeedbackBox > .col { vertical-align: top; }
+.accreditorFeedbackBox > .narrative-col,
+.recommendFeedbackBox > .commendations-col { padding-right: 13px; }
+.accreditorFeedbackBox > .evidence-col,
+.recommendFeedbackBox > .recommendations-col { padding-left: 13px; }
+.accreditorFeedbackBox .evidenceFunctionBox { max-height: 480px; min-height: 480px; }
+.accreditorFeedbackBox .narrativeFunctionBox,
+.commendFunctionBox, .recommendFunctionBox { min-height: 480px; }
+.accreditorFeedbackBox .narrativeFunctionBox { max-height: 480px; overflow-y: auto; padding: 10px 15px; }
+/* evidence modal */
+.accreditorFeedbackBox ul.evidenceListUL .oneFile { cursor: pointer; }
+/* rubric */
+.accreditorFeedbackRubricBox { margin: 1.5em 0; }
+.accreditorFeedbackRubricBox ul.rubricsUL { display: table; width: 100%; }
+.accreditorFeedbackRubricBox ul.rubricsUL > li { border-top: 0; border-bottom: 0; display: table-cell; font-size: 14px; padding: 15px 23px; vertical-align: top; }
+.accreditorFeedbackRubricBox ul.rubricsUL .ratingReasonBox textarea { min-height: 250px; resize: vertical; }
+.accreditorFeedbackRubricBox .three-stages > li { width: 33%; }
+.accreditorFeedbackRubricBox .four-stages > li { width: 25%; }
+.accreditorFeedbackRubricBox ul.rubricsUL > li.rating-done { background-color: $plain-white; color: $dark-grey; }
+.accreditorFeedbackRubricBox ul.rubricsUL > li.rating-current { background-color: $faint-gold; }
+.accreditorFeedbackRubricBox ul.rubricsUL > li.rating-next { color: $grey; }
+.accreditorFeedbackRubricBox ul.rubricsUL > li.rating-done .radio-button label { cursor: not-allowed; }
+.accreditorFeedbackRubricBox ul.rubricsUL > li.rating-next .radio-button label { border-color: $light-grey; color: $grey; cursor: not-allowed; }
+.accreditorFeedbackRubricBox .rubricHeader-accreditor .icon-col { width: 20px; }
+.accreditorFeedbackRubricBox .rating-is-met .rubricHeader-accreditor h5,
+.accreditorFeedbackRubricBox .rating-is-met .rubricHeader-accreditor .icon-col,
+.accreditorFeedbackRubricBox .rating-is-exceeds .rubricHeader-accreditor h5,
+.accreditorFeedbackRubricBox .rating-is-exceeds .rubricHeader-accreditor .icon-col { color: $accreditor-dark-green; }
+.accreditorFeedbackRubricBox .rating-is-not-met .rubricHeader-accreditor h5,
+.accreditorFeedbackRubricBox .rating-is-not-met .rubricHeader-accreditor .icon-col { color: $dark-red; }
+.rubricHeader-accreditor > .icon-col { font-size: 20px; float: right; }
+.ratingDate { min-height: 3.1em; margin: 1em 0; }
+.ratingDate h6 { line-height: 1.5em; margin-bottom: 0; text-align: center; }
+/* school feedback */
+.schoolFeedbackPage .accreditorFeedbackHeader-inner > .info-col { background-color: $dark-beige; vertical-align: middle; }
+.schoolFeedbackPage .commendFunctionBox,
+.schoolFeedbackPage .recommendFunctionBox { padding: 15px; min-height: auto; }
+.schoolFeedbackMessages { padding: 1em 0; }
+.schoolFeedbackPage .rubricRatingsBox { border-top: 1px solid $highlight-grey; padding: 1em 0 2em; }
+.schoolFeedbackPage .rubricRatingsBox [readonly],
+.schoolFeedbackPage .accreditorFeedbackRubricBox label,
+.selfRatingsPage .rubricRatingsBox [readonly],
+.selfRatingsPage .accreditorFeedbackRubricBox label{ cursor: default !important; }

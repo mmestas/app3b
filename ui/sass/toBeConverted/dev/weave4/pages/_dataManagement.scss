@@ -1,0 +1,81 @@
+/************************** DATA MANAGEMENT *******************************/
+.dataManagement {
+  .pageHead {text-align: center;margin-bottom: 50px;margin-top: 50px;}
+  table.mapCSVToWeaveField {
+    thead {
+      th {padding: .625rem;
+        &:nth-child(1) {width:50px;}
+        &:nth-child(2) {width:200px;}
+        &:nth-child(3) {width:234px;}
+        &:nth-child(4) {}
+        &:nth-child(5) {}
+        &:nth-child(6) {width:155px;}
+      }
+    }
+    tbody {
+      td {padding: .625rem; position: relative;
+        &.disabled {color: #ccc;}
+        &.editModal.disabled {cursor: default;}
+
+      }
+    }
+  }
+
+  .missingCSVRows {
+    li {display:inline;
+      &:after {content: ',';}
+      &:last-child:after {content: '';}
+    }
+    span {display:inline;
+      &:after {content: ',';}
+      &:last-child:after {content: '';}
+    }
+  }
+
+
+}
+
+.uploadedCSVFileName {color: $dark-gold;font-weight: bold;margin-left: 7px;}
+.editModal {cursor: pointer;}
+
+#id-importUserAccounts .mb15 button.button.action {margin:0;}
+#id-mapUserAccounts, #id-mapCourses {max-width: 1050px; margin: auto;}
+.form-error.showFormError {display:block;}
+.fieldHasError, .fieldHasError td.fieldName {color: $red !important;}
+
+.reviewImportOuterWrapper {width:900px; margin:auto;}
+.reviewImportWrapper {display:flex; justify-content: center;}
+.reviewImportWrapper .reviewImportLeftColumn {width: 250px; min-width:200px;}
+.reviewImportWrapper .reviewImportRightColumn {width: 650px; margin-right:0;}
+.reviewImportWrapper .innerPanelPadding {padding: 5px 10px;}
+.reviewImportWrapper .form-error {margin: 0 0 5px;}
+
+.fullWidthSelect, .fullWidthSelect md-select, .fullWidthSelect select {width:100%; }
+#id-importUserAccounts .fullWidthSelect, #id-importCourses .fullWidthSelect {margin: 0 0 10px;}
+#id-importCourses .matchCoursesContainers {display:flex; width:100%;}
+#id-importCourses  .width50 {width:50%;}
+#id-importCourses  .pl-15 {padding-left:15px;}
+#id-importCourses  .matchByFields {height:55px;margin-bottom: 10px;display: flex;flex-direction: column;justify-content: center;padding-right: 15px;}
+
+
+.select2-container.select2-allowclear .select2-choice abbr {display:none;}
+.showClearFilter.select2-container.select2-allowclear .select2-choice abbr {display:inline-block;top: 18px;}
+.select2-container .ion-close {position: absolute;right: 25px;color: #8a8a89;}
+
+.mapCSVToWeaveField td.editModal {text-align: center;}
+
+td.editModal .button.action {margin: 0;}
+.mapCSVToWeaveField td.editModal.disabled .button.action{background-color: #e0e0e0; color: #b1b1b1; opacity: 1; }
+.mapCSVToWeaveField td.editModal.disabled:hover .button.action{background-color: #e0e0e0; color: #b1b1b1; box-shadow: none;}
+
+li.disabled {opacity:0.0; cursor: default;}
+li.disabled:hover {background-color: $light-beige;}
+
+
+.dependencyTooltipWrapper {
+  .ion-alert, .ion-android-alert {font-size: 17px;}
+  .dependencyTooltip {display:none;font-size: 12px;background-color: $warningLt;top: 3px;bottom: 3px;left: 0;right: 0;padding: 3px 5px;position: absolute;line-height: 15px;vertical-align: middle;}
+  &:hover {
+    .dependencyTooltip {display:block;}
+  }
+}

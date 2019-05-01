@@ -1,0 +1,30 @@
+/************** Report Generator Added 4.12.18  COMPILE REPORT *********************/
+#id-compileReportListPage-step2 .standardsHeaderBox, #id-compileReportListPage-coverPage .standardsHeaderBox {max-width:1280px; margin:auto;}
+
+#coverPageEditContainer {max-width: 1280px; margin: auto; margin-top:10px;}
+#coverPageEditContainer .coverPageHeader {display: flex; justify-content: space-between; padding-bottom: 10px;}
+#coverPageEditContainer .coverPageHeader h3 {margin: 0; line-height: unset;}
+#coverPageEditContainer .coverPageHeader .button {margin: 0;}
+#coverPageEditContainer span.firepad-fs-9px  {font-size: 9px; line-height: 9px;}
+#coverPageEditContainer span.firepad-fs-10px {font-size: 10px; line-height:10px;}
+#coverPageEditContainer span.firepad-fs-12px {font-size: 12px; line-height:12px;}
+#coverPageEditContainer span.firepad-fs-14px {font-size: 14px; line-height:14px;}
+#coverPageEditContainer span.firepad-fs-18px {font-size: 18px; line-height:18px;}
+#coverPageEditContainer span.firepad-fs-24px {font-size: 24px; line-height:24px;}
+#coverPageEditContainer span.firepad-fs-32px {font-size: 32px; line-height:32px;}
+#coverPageEditContainer span.firepad-fs-42px {font-size: 42px;line-height: 42px;}
+
+#reportDescriptionTextarea {margin:0; resize: none;}
+
+.firepad-cover-page .firepad-toolbar-wrapper .firepad-btn-group:nth-child(4) .firepad-btn:nth-child(4) {display:none;}
+.firepad-cover-page .firepad-toolbar-wrapper .firepad-btn-group:nth-child(5) {display:none;}
+.dndPlaceholder {list-style-type:none;
+	background-color: $dark-grey;
+    border-radius: 3px;
+    color: $plain-white;
+    font-size: 13px;
+    font-weight: $strong;
+    padding: 9px 15px;
+    height:33px;
+    margin-bottom:15px;
+    }

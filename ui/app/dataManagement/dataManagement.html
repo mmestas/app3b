@@ -1,0 +1,23 @@
+<!-- DATA MANAGEMENT -->
+<div id="id-dataManagement" class="generic-container dataManagement" data-ng-init="init()" block-ui="programUI">
+  <!-- page heading -->
+  <div class="pageHead help-table">
+      <div class="col">
+          <h1>Manage Your Data</h1>
+      </div>
+  </div>
+  <!-- end page heading -->
+  <div class="standard-width">
+    <div><label>What do you want to do?</label></div>
+    <div>
+      <ul class="list-item-blocks">
+        <li data-ng-click="importCSVModal('app.data-import-userAccounts')">Import User Records</li>
+        <li data-ng-click="importCSVModal('app.data-import-courses')">Import Courses</li>
+        <li data-ng-click="importInternalReviewProjectsCSVModal('app.map-internalReviewProjects-data')">Import Assessment Projects</li>
+        <li data-ng-click="importCSVModal('app.map-userDegrees-data')">Import Degrees to User Profiles</li>
+        <!-- <li class="disabled">Export User Records</li>
+        <li class="disabled">Export Courses</li> -->
+      </ul>
+    </div>
+  </div>
+</div>

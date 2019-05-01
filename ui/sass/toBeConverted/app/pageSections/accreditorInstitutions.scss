@@ -1,0 +1,55 @@
+/* sprint 08 - accreditor institutions */
+.accredStandardsPage .oneSchoolUnit { margin-bottom: 0; }
+.schoolPartnerInfo { background-color: $dark-beige; margin-bottom: 1em; }
+.schoolPartnerInfo .subheader { color: $plain-white; }
+.schoolPartnerInfo .col { padding: 5px 0.9375rem; }
+.schoolsPage-accreditor .oneSchoolGroup:first-child { margin-top: 1em; }
+ul.filterSelectsUL { font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.filterSelectsUL > li { display: inline-block; font-size: 14px; margin-left: 5px; vertical-align: top; }
+ul.filterSelectsUL > li:first-child { margin-left: 0; }
+ul.filterSelectsUL select { font-size: 14px; line-height: 1em; margin-bottom: 0; width: inherit; }
+ul.filterSelectsUL md-select { font-size: 14px; line-height: 1em; margin-bottom: 0; width: inherit; }
+.schoolPartnerInfo .partnerdate-col { text-align: right; }
+.schoolPartnerInfo h6 { margin-bottom: 0; }
+.accredManager .subheader { margin-bottom: 0; }
+.prog-standardset-th { width: 17%; }
+.prog-years-th {}
+.prog-stage-th { width: 15%; }
+.prog-frequests-th {}
+.prog-completion-th {}
+.schoolNameBox > .schoolNameHeader.mainLocation { font-size: $font-size; height: auto; line-height: inherit; overflow: auto; }
+.schoolOptionsBox.accreditor { position: relative; }
+.schoolOptionsBox.accreditor .standardActionPane { width: 250px; }
+/* pagination table */
+.pagination-table { margin: 3em 0; text-align: center; }
+.pagination-table .page-label,
+.pagination-table .page-filter,
+.pagination-table .page-numbers { display: inline-block; vertical-align: middle; }
+.pagination-table .page-label { font-family: 'Rubik'; font-size: 12px; font-weight: $bold; margin-right: 1em; }
+.pagination-table .page-numbers .pagination,
+.pagination-table .page-filter select { margin-bottom: 0; }
+.pagination-table .page-filter { margin: 0 1em; }
+.pagination-table .page-filter select { background-color: $plain-white; cursor: pointer; font-family: 'Rubik'; font-size: 12px; margin-left: 5px; padding: 5px 2.5em 5px 5px; }
+.pagination-table .page-numbers .pagination { margin-bottom: 0; }
+/* team member modal */
+.filterTeamBox .filt-team-col { padding-right: 5px; }
+.filterTeamBox .filt-individ-col { padding-left: 5px; }
+.teamManage-table > .col { vertical-align: top; }
+.teamManage-table > .col:first-child { padding-right: 10px; }
+.teamManage-table > .col:last-child { padding-left: 10px; }
+.teamResultBox { margin: 1em 0; }
+.teamResultBox, .teamMembersToAdd { height: 320px; }
+.teamResultBox ul.typeaheadUL, .teamMembersToAdd ul.currentUsersUL { height: 280px; }
+.teamResultBox ul.typeaheadUL > li.active { cursor: default; }
+.teamResultBox ul.typeaheadUL > li > .oneResult { padding: 7px 10px; }
+.teamResultBox .member-img-col { width: 38px; }
+.teamResultBox .member-info-col h5, .teamResultBox .member-info-col p { font-size: 12px; }
+.teamMembersToAdd { margin: 1em 0; }
+.teamMembersToAdd ul.currentUsersUL > li { margin: 0 3px 3px 0; }
+.teamMembersToAdd ul.currentUsersUL > li > a { display: block; padding: 2px; }
+.teamMembersToAdd ul.currentUsersUL > li > a:hover { background-color: $light-gold; }
+.teamMembersToAdd .dropdown-pane { border: 0; font-size: 12px; padding: 0; width: auto; }
+.teamMembersToAdd .dropdown-pane > a { background-color: $dark-grey; color: $plain-white; display: block; padding: 5px; text-decoration: none; }
+.modal-body .teamMemberList { min-height: 250px; }
+.modal-body .teamMemberList { margin: 5em 0 2em; }
+.modal-body .teamMemberList th:last-child { width: 150px; }

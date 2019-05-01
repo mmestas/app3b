@@ -1,0 +1,16 @@
+/* pagination */
+.pagePagination { margin: 1em 0; }
+ul.pagination { font-size: 14px; }
+ul.pagination > li { font-size: 14px; line-height: 1rem; vertical-align: middle; }
+ul.pagination > li:not(.show-all) > a { text-decoration: none; }
+ul.pagination .pagination-previous span, ul.pagination .pagination-previous a, ul.pagination .pagination-next span, ul.pagination .pagination-next a, ul.pagination .disabled { border: 1px solid $light-grey; border-radius: 3px; font-size: 14px; padding: 1px 10px 0; }
+.pagination-previous a::before, .pagination-previous.disabled::before,
+.pagination-next a::after, .pagination-next.disabled::after { font-family: 'Ionicons'; margin: 3px 0.25rem; }
+.pagination-previous a::before, .pagination-previous.disabled::before { content: "\f488"; -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.pagination-next a::after, .pagination-next.disabled::after { content: "\f488"; }
+.pagination .ellipsis::after { content: "..."; }
+.pagination .current { background: $gold; color: $dark-grey; }
+.pagination a:hover, .pagination button:hover { background: $highlight-grey; }
+.pagination .show-all a:hover { background: transparent; }
+.pagination .active { background: $gold none repeat scroll 0 0; color: $dark-grey; }
+dir-pagination-controls { display: inline-block; margin-right: 10px; }

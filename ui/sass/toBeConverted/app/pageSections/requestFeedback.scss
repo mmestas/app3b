@@ -1,0 +1,34 @@
+/* sprint 05 - request feedback (internal, accreditor) */
+.feedbackModalHeader { background-color: $dark-beige; padding: 10px 0.9735rem; margin-bottom: 2em; }
+.feedbackModalHeader h4, .feedbackModalHeader h5 { color: $plain-white; margin-bottom: 0; }
+.modal-feedback-tabs { border: 0; font-size: 0; text-align: center; }
+.modal-feedback-tabs .tabs-title { display: inline-block; float: none; font-size: $font-size; }
+.modal-feedback-tabs .tabs-title > a { border: 1px solid $beige; color: #372a04; font-family: 'Catamaran'; font-size: 1em; font-weight: $strong; padding: 12px 20px; text-decoration: none; }
+.modal-feedback-tabs .school.tabs-title > a:focus, .modal-feedback-tabs .school.tabs-title > a[aria-selected='true'] { background-color: $school-dark-blue; border-color: $school-dark-blue; color: $plain-white; }
+.modal-feedback-tabs .accreditor.tabs-title > a:focus, .modal-feedback-tabs .accreditor.tabs-title > a[aria-selected='true'] { background-color: $accreditor-dark-green; border-color: $accreditor-dark-green; color: $plain-white; }
+.modal-feedback-content { border: 0; }
+.modal-feedback-content .tabs-panel { padding: 2em 0 0 0; }
+.modal-feedback-content .feedbackMessageBox .input { margin-bottom: 1.2em; z-index: inherit; }
+.modal-feedback-content .accreditor.feedbackMessageBox { margin-top: 2em; }
+.feedback-request.accreditor .vis-off { color: $dark-red; }
+.feedback-request.accreditor .vis-on { color: $accreditor-dark-green; }
+table.feedbackReportsTable button { margin-bottom: 0; }
+table.feedbackReportsTable td:last-child { text-align: center; }
+.feedbackPdfReportLayout h3,
+.feedbackPdfReportLayout h4,
+.feedbackPdfReportLayout h5{font-size: 29px !important;}
+.feedbackPdfReportLayout .radio-button label {background-color:$light-beige !important; border: none !important; color: #372a04 !important; border-right: 1px solid #e2d0a9 !important;}
+.feedbackPdfReportLayout .radio-button input:checked + label {background-color:$beige !important; border: none !important; color: #372a04 !important;}
+.feedbackPdfReportLayout .rubricHeader-accreditor h5 {color: #0a0a0a !important;}
+.feedbackPdfReportLayout p,
+.feedbackPdfReportLayout .ratingReasonBox .textarea *,
+.feedbackPdfReportLayout h5.subheader,
+.feedbackPdfReportLayout .feedbackCommendationPanel p{font-size: 27px !important;}
+.feedbackPdfReportLayout .accreditorFeedbackRubricBox ul.rubricsUL > li{padding:0}
+.feedbackPdfReportLayout ul.ratingsButtonsUL > li {float: left;}
+th.feedtype-th { width: 180px; }
+th.feeddate-th,
+th.feedstatus-th { width: 120px; }
+th.feedaccred-th { width: 220px; }
+th.feedviewbtn-th { width: 130px; }
+tr.hasIssue td:nth-last-child(2) { color: $red; font-weight: $strong; }

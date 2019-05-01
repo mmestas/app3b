@@ -1,0 +1,19 @@
+/* callouts */
+.callout {border: 0; border-radius: 3px; color: rgba(0,0,0,0.59); font-weight: $strong; padding: 10px 20px;
+  &.alert {background-color: $alertLt;}
+  &.success {background-color: $successLt;}
+  &.warning {background-color: $warningLt;}
+  &.primary {background-color: $primaryLt;}
+  strong {font-weight: $bold;}
+  .help-table {
+    > .col {line-height: 1.5em; vertical-align: middle;
+      &:first-child {text-align: center; width: 32px;
+        > span {font-size: 28px;}
+      }
+      &:last-child {padding-left: 5px;}
+    }
+  }
+}
+
+
+span.warning {color: #ff4a49;} //Needs to be moved to a better location

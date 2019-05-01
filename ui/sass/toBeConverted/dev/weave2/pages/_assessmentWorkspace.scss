@@ -1,0 +1,242 @@
+/*** Assessment Workspace ***/
+
+#id-assessmentWorkspace {
+  ul {
+    &.goal-list {margin: 0; padding: 0; list-style: none; border: none; border-top: none;
+      > li {border: 1px solid $light-beige; border-top: none;margin-bottom: 30px;
+        &:last-child {margin-bottom: 0;}
+      }
+    }
+    &.objective-list {margin: 0; padding: 0; list-style: none; border: none; border-top: none;
+      > li {border: 1px solid $light-beige; border-top: none;margin-bottom: 30px;
+        &:last-child {margin-bottom: 0;}
+      }
+    }
+    &.measure-list {margin: 0; padding: 0; list-style: none; border: none; margin-top: 15px; border-top: none;
+      > li {margin-bottom: 30px;
+        &:last-child {margin-bottom: 0;}
+      }
+    }
+    &.target-list {margin: 0; padding: 0; list-style: none; border: none; margin-top: 15px; border-top: none;
+      > li {
+          &:last-child {margin-bottom: 0;}
+      }
+    }
+  }
+
+  .objective-body {background-color: $faint-gold; padding: 0 15px 10px 15px; margin-bottom: 15px;
+    .assessment-desc {padding: 15px 0;
+      p {padding-top: 5px;}
+    }
+  }
+  .measure-body {background-color: $faint-gold; padding: 0 15px 10px 15px; margin-bottom: 15px;
+    .assessment-desc {padding: 15px 0;
+      p {padding-top: 5px;}
+    }
+  }
+
+  .supported-initiatives-list {margin: 0 0 25px 0;
+    > .help-table {margin: 10px 0;}
+    > ul {margin-left: 1.75rem;
+      > li {padding:0; list-style: none;
+        &:before {content:"\2022"; font-size:40px; vertical-align:middle; line-height:0; padding-right: 0.625rem;}
+      }
+    }
+  }
+  .supported-initiatives-modal-body {min-height: 300px;}
+
+}
+
+
+
+// TO BE CONVERTED
+/*** Assessment Workspace ***/
+toggle a.project-options {font-size: 18px; padding-right: 10px; color: $dark-gold;}
+#id-assessmentWorkspace ul.pageOptionsUL > li:last-child{margin-right: 5px;}
+li.project-options-set toggle > a{font-size: 18px; padding: 0 15px 0 10px;}
+ul.pageOptionsUL > li.project-options-set {margin-left: 14px;}
+.assessmentWorkspace .tableLayout-left {width: 370px;} //See ui_components/tables.scss Perhaps delete this in future
+.pageOptionsUL .progress {margin: 0; width: 86px; display: table-cell;}
+.projectHeaderBox {margin: 10px 0 30px;}
+.progress-completed {color: #696969; font-size: 12px; display: table-cell; padding-left: 10px;}
+.locked-col {white-space: nowrap;}
+.locked-col .callout {margin: 0;}
+.projectName-col {width: 100%; vertical-align: middle;}
+.projectName-col .editable-wrap {width: 30%;}
+.projectName-col > h3{display: inline;}
+h3.reporting-period-change {margin-left: 20px;color: $grey;}
+h3.reporting-period-change toggle a{color: $grey; margin: 0; text-decoration: none;}
+h3.reporting-period-change toggle a .arrow-down{padding: 0 15px 0 10px; font-size: 22px;}
+.project-status-col {white-space: nowrap; padding-right: 15px; vertical-align: middle;}
+.project-status-col select {min-width: 200px;}
+.table-of-contents {padding: 20px 20px 30px 5px;}
+.table-of-contents ul {list-style-type: none;}
+.table-of-contents ul.root {margin-left: 28px;}
+.table-of-contents ul.root > li.goals-list-item {margin-left: -21px;}
+.table-of-contents .nothing-entered {font-style: italic;}
+.table-of-contents i.ion-arrow-down-b,.table-of-contents i.ion-arrow-right-b {margin: 0 4px 0 -5px; padding: 0 5px; cursor: pointer; font-size: 12px; } /** I am doing padding & margin for cursor placement **/
+.table-of-contents i.ion-arrow-right-b {margin-right: 7px;}
+.table-of-contents i.disabled {cursor: default; opacity: .5;}
+.table-of-contents ul ul {margin-left: 21px;}
+.table-of-contents ul ul.measureList {margin-left: 45px;}
+.table-of-contents span.index {margin-right: 9px;}
+.missionBox.panelBox .accordion-title,
+.panelBox.preview .missionBox.panelBox .accordion-title{
+  font-size: 32px;
+  font-size: $font-size-accordionTitle;
+  color: $dark-grey;
+  background-color: #fff;
+  padding: 0 0 5px;
+  border-bottom: 1px solid $light-beige;
+  font-weight: $regular;
+}
+.missionBox.panelBox .accordion-title::before,
+.panelBox.preview .missionBox.panelBox .accordion-title::before{font-size: 22px;}
+.missionBox.panelBox .panelBox-body {padding: 15px;}
+.missionBox.panelBox .editable-wrap {width: 100%;}
+h2.program-goals-header {color: $dark-grey; font-weight: 400}
+.editable-error {color: $red;}
+.panelBox.accordion.missionBox ul.accordion {margin-right: 0;}
+.expand-col a:first-child{margin-right: 5px;}
+.expand-col a:last-child{margin-left: 5px;}
+.goal-list-wrapper {padding: 0 0 27px 0;}
+.objective-list-wrapper {padding: 15px;}
+.objective-list-wrapper > .help-table {margin-bottom: 15px;}
+.objective-list-wrapper h3, .objective-list-wrapper h4, .objective-list-wrapper h5, .objective-list-wrapper h6, .objective-list-wrapper button, .goal-list-wrapper button, .goal-list-wrapper h2 {margin: 0;}
+// MM commented 4.4.19 used by settingsView/template-workspace.html & templates/serverReports/assessmentReports/PageView||reportPageView-Design.html
+// ul.goal-list, ul.objective-list, ul.measure-list, ul.target-list {margin: 0; padding: 0; list-style: none; border: 1px solid $light-beige; border-top: none;}
+// ul.goal-list {margin: 10px 0 15px;}
+// ul.goal-list, ul.objective-list {border: none;}
+// ul.measure-list, ul.target-list {border: none; margin-top: 15px;}
+// ul.goal-list > li, ul.objective-list > li {border: 1px solid $light-beige; border-top: none;}
+// ul.goal-list > li, ul.objective-list > li, ul.measure-list > li {margin-bottom: 30px;}
+// ul.goal-list > li:last-child, ul.objective-list > li:last-child, ul.measure-list > li:last-child {margin-bottom: 0;}
+ul.assesment-actions {margin: 0; padding: 0; list-style: none;}
+ul.assesment-actions > li {display: inline-block;}
+ul.assesment-actions > li > a,
+ul.assesment-actions > li > dropdown-toggle toggle a {display: inline-block; width: 36px; text-align: center;}
+dropdown-toggle.actions-toggle toggle a {display: inline-block; width: 36px; text-align: center;}
+.assessment-header {font-size: 18px; background-color: $light-beige; font-family: 'Rubik', sans-serif; line-height: 39px;}
+.assessment-header form {width: 100%;}
+ul.target-list .assessment-header {background: none;}
+.index-col {background-color: $beige; text-align: center; width: 3%; padding: 0 14px; }
+.index-col.action-plan-col {width: 1px; white-space: nowrap; }
+.title-col {padding: 0 14px;}
+p.assessment-desc {background-color: $faint-gold; padding: 15px; margin: 0;}
+label.assessment-label {text-transform: none; padding: 15px 0 0 0;}
+// MM commented 4.4.19 used by settingsView/template-workspace.html & templates/serverReports/assessmentReports/PageView||reportPageView-Design.html
+// .objective-body, .measure-body {background-color: $faint-gold; padding: 0 15px 10px 15px; margin-bottom: 15px;}
+// .objective-body .assessment-desc, .measure-body .assessment-desc {padding: 15px 0;}
+// .objective-body p.assessment-desc, .measure-body p.assessment-desc {padding-top: 5px;}
+
+// .supported-initiatives-list > .help-table {margin: 10px 0;}
+// .supported-initiatives-list {margin: 0 0 25px 0;}
+// .supported-initiatives-list > ul {margin-left: 1.75rem;}
+// .supported-initiatives-list > ul > li {padding:0; list-style: none;}
+// .supported-initiatives-list > ul > li:before {content:"\2022"; font-size:40px; vertical-align:middle; line-height:0; padding-right: 0.625rem;}
+// .supported-initiatives-modal-body {min-height: 300px;}
+.measure-list-wrapper, .action-plan-wrapper {padding: 15px;}
+a.target-description {font-size: 12px; font-weight: 700;}
+.target-title-row {line-height: 17px;}
+title-col > .target-title-row:first-child > a{vertical-align: top}
+title-col > .target-title-row:last-child > a{vertical-align: bottom}
+.target-list-wrapper {margin: 15px 0 0;}
+.editable-wysiwyg {cursor: pointer;}
+.editable-wysiwyg.nothing-entered {font-style: italic;}
+.action-plan-row {padding: 10px 0;}
+.action-plan-body > .row {padding: 15px 0;}
+.action-plan-label {font-size: 12px; color: #707070; font-weight: $strong;}
+th.action-item-number {width: 60px;}
+th.action-item-actions {width: 40px;}
+th.date-column {width: 15%;}
+button.delete-action-item {color: $dark-red;}
+.target-body {padding: 30px 0;}
+.target-body .target-label {font-size: 12px; font-weight: $strong; color: #707070;}
+.target-body > .row {padding-bottom: 15px;}
+.target-body > .row > .columns:first-child {padding-left: 0;}
+input.editable-date-input {padding: 0; margin: 0; border: none; cursor: pointer; background: transparent;}
+input.editable-date-input::-webkit-input-placeholder{opacity: 1; color: $dark-grey; font-style: italic;}/* Chrome/Opera/Safari */
+input.editable-date-input:-moz-placeholder{opacity: 1; color: $dark-grey; font-style: italic;} /* Firefox 18- */
+input.editable-date-input::-moz-placeholder{opacity: 1; color: $dark-grey; font-style: italic;} /* Firefox 19+ */
+input.editable-date-input:-ms-input-placeholder{opacity: 1; color: $dark-grey; font-style: italic;} /* IE 10+ */
+td input.editable-date-input {font-size: 14px; color: $dark-grey;}
+th.ordinal-column, th.actions-column {width: 5%;}
+table.supported-initiatives button{margin: 0;}
+.selectCollections select {width : 30%;}
+.supportedInitiativesHeaderTable {padding: 12px 0.9375rem; background-color: $dark-beige;}
+.supportedInitiativesHeaderTable .subheader {margin: 0; color: #fff;}
+.supportedInitiativesHeaderTable .standardOptionsBox select,
+.supportedInitiativesHeaderTable .standardOptionsBox md-select {font-size: 14px; margin: 0; width: auto;}
+.supported-initiatives-list a.delete-supported-initiative {color: $dark-red; margin: 0 0 0 2px; padding: 0 3px;}
+.columns.nopadding {padding-left: 0; padding-right: 0;}
+.action-plan-wrapper select,
+.source-of-evidence-wrapper select,
+.target-title-row select{width: auto;}
+.no-visibility ._720kb-datepicker-calendar {display: none !important;}
+.project-attachments.panelBox.accordion ul.accordion {background-color: transparent;}
+.project-attachments.missionBox.panelBox .panelBox-body {padding: 15px 0;}
+.project-attachments.panelBox.accordion .accordion-content {border-bottom: none;}
+.upload-area .ion-upload {color: #FFD75A; font-size: 48px; margin-bottom: -15px;}
+.upload-area {border: 2px dashed #FFD75A;}
+.upload-area.dragover {background: #FFF9E6;}
+.upload-progress {position: fixed; bottom: 0; left: 0; right: 0; width: 100%; background: #fff; box-shadow: 0 0 8px rgba(0, 0, 0, 0.24); z-index: 2; border-top: 2px solid #FFD762;}
+.upload-progress > .callout {background: none; margin: 0; border-radius: 0; background: url(../img/loaders/upload.gif) no-repeat 25px center #fff;padding: 13px 0 13px 75px;}
+.upload-progress .upload-progress-bar.progress {margin: 0; border-radius: 0; height: .6rem; box-shadow: inset -1px 2px 3px 0 rgba(255, 215, 98, 0.5); background: #FFEEBE;}
+.upload-progress .upload-progress-bar.progress .progress-meter{border-radius: 0; background: #FFD762;}
+.upload-progress .callout .help-table > .col:first-child {width: auto; text-align: left;}
+.upload-progress .callout .help-table > .col:first-child > span {font-size: 20px; margin-right: 15px;}
+.upload-progress .callout .help-table > .col.seconds-left {padding-right: 50px; color: #d7d7d7;}
+.upload-progress a.goldButton {color: $dark-beige;}
+.upload-progress.success {border-top-color: #ABBC21; border-bottom: .6rem solid #A7BC00}
+.upload-progress.success > .callout {background-image: none;}
+.success-check {font-size: 28px; margin-left: -45px; color: #A7BC00;}
+.project-attachments-header {padding-right: 5px;}
+.uploading-row {opacity: .5;}
+.attachments-uploadOverlay { background-color: rgba(255,255,255,0.6); color: $grey; display: none; text-align: center; width: 100%; height:100%; position: absolute; top: 0;}
+.dragover .attachments-uploadOverlay{display: block;}
+.attachments-uploadOverlay-inner { padding: 80px 0; vertical-align: middle; }
+.attachments-uploadOverlay .ionicon { font-size: 72px; line-height: 1.3em; color: #FFD762;}
+a.project-attachments-options {width: 100%; display: inline-block; padding: 100px 0; margin: -100px 0; font-size: 18px;}
+.is-open a.project-attachments-options{background: #E1D0AA;}
+table.projectsTable .project-attachments-options-th {width: 40px;}
+.project-attachments-options-td {overflow: hidden; padding: 0; width: 40px;}
+.document-options {font-size: 18px; padding: 0 15px;}
+.document-preview-col {width: 50px;}
+.document-preview-col .assessment-actions-toggle >span {padding-top: 5px;}
+.document-preview-col .assessment-actions-toggle >span.is-open{background: #E1D0AA;}
+
+input.editable-date-input:focus {border: none; color: transparent; text-shadow: 0 0 0 $dark-grey; background: transparent;}
+.md-virtual-repeat-container.md-autocomplete-suggestions-container {height: 315.5px;max-height: 315.5px !important;}
+.md-virtual-repeat-container .md-virtual-repeat-scroller {background-color: #fff;}
+.animate-show {
+    line-height:20px;
+    opacity:1;
+    padding:10px;
+    border:1px solid black;
+    background:white;
+}
+
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+    line-height:0;
+    opacity:0;
+    padding:0 10px;
+}
+
+.no-animate{
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+.editorUsersBox ul.currentUsersUL .animate-show,
+.editorUsersBox ul.currentUsersUL .animate-hide{
+    line-height:inherit;
+    opacity:1;
+    padding:0;
+    border:none;
+}

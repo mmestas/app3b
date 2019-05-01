@@ -1,0 +1,69 @@
+/***************************** PRINT *****************************/
+
+@media screen {
+    ul.fileOptionsUL-for-print{display: none;}
+    #commendations-print, #recommendations-print{display: none;}
+    .print-only, .print-only-inline{display: none; visibility: hidden;}
+}
+
+/* Print styles */
+@media print
+{
+    .print-only{display: block; visibility: visible;}
+    .print-only-inline{display: inline; visibility: visible;}
+    #printSection{display:none}
+    .NoPrint, .no-print {visibility:hidden; display:none}
+    #id-layoutHeader, #id-layoutFooter {visibility:hidden; display:none}
+    /*****Response Page**/
+    #id-schoolsResponsePage .pageOptionsUL,
+    #id-schoolsResponsePage .responseHeader-right-col,
+    #id-schoolsResponsePage .teamSummaryPanel,
+    #id-schoolsResponsePage .startRatingButton,
+    #id-schoolsResponsePage .feedbackPanel,
+    #id-schoolsResponsePage .narrativeEditorOptions ,
+    #id-schoolsResponsePage .firepad-toolbar,
+    #id-schoolsResponsePage .narrativeCustomTools,
+    #id-schoolsResponsePage #id-filterEvidenceSelect,
+    #id-schoolsResponsePage .fileOptionsUL,
+    #id-schoolsResponsePage .evidenceUploadBox,
+    #id-schoolsResponsePage .firepad-accordion,
+    #id-schoolsResponsePage .selfratingSummaryPanel {visibility:hidden; display:none}
+    #id-schoolsResponsePage .narrativeContent,
+    #id-schoolsResponsePage .tableLayoutBox{display: block;}
+    #id-schoolsResponsePage .tableLayoutBox > .col, #id-schoolsResponsePage .ratings-col {display: block;}
+    .schoolsResponsePage .tableLayout-left{width:100%;}
+    ul.fileOptionsUL-for-print{display: inline-block;list-style: outside none none;margin: 0;padding: 0;}
+   /* .progress-meter {background-image: linear-gradient($school-blue, $school-blue) !important;}*/
+    .progress-meter {
+        position: relative;
+        overflow: hidden; /* this might not work well in all situations */
+    }
+    .progress-meter:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        /* and here it is, the background color */
+        border: 99999px $school-blue solid;
+        z-index: 0; /* was required in my situation */
+    }
+    .progress-meter * {
+        /* was required in my situation */
+        position: relative;
+        z-index: 1;
+    }
+
+    #id-schoolsResponsePage .evidenceFunctionBox {max-height: 100%;}
+
+    /***Feedback Workspace ***/
+    #commendations-print, #recommendations-print{display: block;}
+    .firepad-feedback-workspace {display: none; visibility: hidden;}
+    #feedback-workspace-wrapper .responseHeaderBox .sticky.is-stuck.is-at-top {position: absolute; }
+    .textarea:not(.input--filled) .input-label{display: none;}
+    a[href]:after {
+        content: none !important;
+    }
+
+}

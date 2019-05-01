@@ -1,0 +1,9 @@
+/** md switches **/
+md-switch {height: auto; line-height: normal;}
+md-switch.md-default-theme .md-bar, md-switch .md-bar {background-color: rgb(158,158,158);}
+md-switch.md-default-theme .md-thumb, md-switch .md-thumb {background-color: rgb(250,250,250);}
+md-switch.md-default-theme .md-ink-ripple, md-switch .md-ink-ripple {color: rgb(158,158,158);}
+md-switch.md-default-theme.md-checked .md-thumb, md-switch.md-checked .md-thumb {background-color: #dac38b}
+md-switch.md-default-theme.md-checked.md-warn .md-ink-ripple, md-switch.md-checked.md-warn .md-ink-ripple {color: #dac38b;}
+md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {background-color: rgba(218,195,139, 0.5)}
+.lock-reponse-area > md-switch {margin-bottom: -2px; margin-top: -1px;}

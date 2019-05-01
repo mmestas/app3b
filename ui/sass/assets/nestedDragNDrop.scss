@@ -1,0 +1,349 @@
+/***************************** DRAG N DROP *****************************/
+
+.dragNdrop ul {
+    list-style-type: none;
+}
+.box {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 0;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.box > h3 {
+    color: #4b4c47;
+    border-color: #ddd;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    background-repeat: repeat-x;
+    display: block;
+    font-size: $font-size;
+    padding: 10px 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.box-padding {
+    padding: 15px;
+}
+
+.box-padding > h3 {
+    margin: -15px;
+    margin-bottom: 15px;
+}
+
+.box-grey {
+    border-color: $light-beige;
+}
+
+.box-grey > h3 {
+    background-color: $light-beige;
+    /* background-image: -webkit-linear-gradient(top,#f5f5f5 0,#e8e8e8 100%); */
+    /* background-image: linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%); */
+}
+
+.box-blue {
+    border-color: #bce8f1;
+    border-color: $faint-gold;
+}
+
+.box-blue > h3 {
+    color: #333;
+/*     background-color: #d9edf7; */
+    border-color: $faint-gold;
+/*     background-image: -webkit-linear-gradient(top,#d9edf7 0,#c4e3f3 100%);
+    background-image: linear-gradient(to bottom,#d9edf7 0,#c4e3f3 100%); */
+    background-color: $faint-gold;
+}
+
+.box-yellow {
+    border-color: #faebcc;
+}
+
+.box-yellow > h3 {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #a39061;
+/*     background-image: -webkit-linear-gradient(top,#a39061 0,#a39061 100%);
+    background-image: linear-gradient(to bottom,#a39061 0,#a39061 100%); */
+    background-color: #a39061;
+    color: #ffffff;
+}
+
+.box-yellow > h3.reportSections {margin-top: 0px;background: $light-beige;border-color: $light-beige;color: #4b4c47;}
+.box-yellow > h3.instructions {
+    background-color: $beige;
+    border-color: $beige;
+    color: #4b4c47;
+}
+
+/***************************** Dropzone Styling *****************************/
+.dragNdrop.nestedDemo {max-width:1280px; width:100%; margin:auto;margin-top:10px;}
+/**
+ * The dnd-list should always have a min-height,
+ * otherwise you can't drop to it once it's empty
+ */
+ /* .nestedDemo .dropzone ul {
+     margin: 0px;
+     min-height: 42px;
+     padding-left: 0px;
+ } */
+.nestedDemo .dropzone #individualStandard > ul[dnd-list] {
+    margin: 0px;
+    min-height: 200px;
+    min-height: 9.5in;
+    padding-left: 0px;
+    background: whitesmoke;
+    border: 1px dashed #ccc;
+    background-image: url("/img/placeholders/dragHere.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.nestedDemo .dropzone ul[dnd-list] {
+    margin: 0px;
+    min-height: 50px;
+    padding-left: 0px;
+}
+
+.nestedDemo .dropzone li {
+    background-color: #fff;
+    border: 1px dashed $light-beige;
+    /* border-bottom-color: $light-beige; */
+    padding: 0px;
+    /* min-height: 75px; */
+    /*NOTE: height cannot be 100% because if more than 1 is added they will overlap */
+}
+
+/**
+ * Reduce opacity of elements during the drag operation. This allows the user
+ * to see where he is dropping his element, even if the element is huge. The
+ * .dndDragging class is automatically set during the drag operation.
+ */
+.nestedDemo .dropzone .dndDragging {
+    opacity: 0.7;
+}
+
+/**
+ * The dndDraggingSource class will be applied to the source element of a drag
+ * operation. It makes sense to hide it to give the user the feeling that he's
+ * actually moving it. Note that the source element has also .dndDragging class.
+ */
+.nestedDemo .dropzone .dndDraggingSource {
+    display: none;
+}
+
+/**
+ * An element with .dndPlaceholder class will be added as child of the dnd-list
+ * while the user is dragging over it.
+ */
+.nestedDemo .dropzone .dndPlaceholder {
+    background-color: #ddd;
+    display: block;
+    /* min-height: 42px; */
+    height: 100px;
+    margin:0;
+}
+
+/***************************** Element type specific styles *****************************/
+
+.nestedDemo .dropzone .item {
+    padding: 10px 15px;
+}
+
+.nestedDemo .dropzone .container-element {
+    margin: 10px;
+    /* margin: 0; */
+    overflow: hidden;
+    display: flex;
+}
+
+.nestedDemo .dropzone .container-element ul {
+    flex-grow: 1;
+    height: 100%;
+    background: #f5f5f5;
+}
+
+.nestedDemo .dropzone .container-element .column {
+    /* float: left; */
+    width: 50%;
+    /* min-height: 75px; */
+    min-height: 100px;
+    border: 1px dashed #ccc;
+}
+
+/***************************** Toolbox *****************************/
+
+.nestedDemo .toolbox ul {
+    cursor: move;
+    list-style: none;
+    padding-left: 0px;
+    margin: 0;
+}
+
+.nestedDemo .toolbox button {
+    margin: 5px;
+    margin: 5px 0;
+    opacity: 1.0;
+    width: 123px;
+    width: 100%;
+}
+.nestedDemo .toolbox .draggableBtn {cursor: move; width:100%;}
+.nestedDemo .toolbox .dndDragging {
+    opacity: 0.5;
+}
+
+.nestedDemo .toolbox .dndDraggingSource {
+    opacity: 1.0;
+}
+.reportContainerBtn {background-image: url("/img/icons/svg/containerBtn.png");background-repeat: no-repeat;background-size: 246px 31px;background-size: 100% 38px;}
+
+/***************************** Trashcan *****************************/
+
+.nestedDemo .trashcan ul {
+    list-style: none;
+    padding-left: 0px;
+    margin:0;
+}
+.nestedDemo .trashcan ul li {
+    text-align: center;
+}
+.nestedDemo .trashcan ul li span.ion-ios-trash {font-size: 50px;}
+.nestedDemo .trashcan img {
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.nestedDemo .trashcan .dndDragover img {
+    width: 100%;
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none;
+}
+
+.nestedDemo .trashcan .dndPlaceholder {
+    display: none;
+}
+
+.nestedDemo .columns.dragNDropSidebar {width: 23%;}
+.nestedDemo .columns.dragNDropMain {padding-left:10px;width: 77%;}
+
+/* .nestedDemo .item a {text-decoration:none;}
+.nestedDemo .item.addLinks a {text-decoration:underline; color: $accreditor-green;} */
+
+.generatedReportHTML.deactivateLinks .deactivateLinks {pointer-events: none;}
+.generatedReportHTML.deactivateLinks a {text-decoration:none; color:inherit;}
+.generatedReportHTML a {text-decoration: none;}
+.generatedReportHTML.addLinks .addLinks a {text-decoration: underline;color: #a39061;}
+
+#id-main-evidenceList {padding: 10px 15px;}
+#evidenceFilesList {}
+#evidenceFilesList li {border: 0; min-height:unset;}
+
+
+/*********** Report Generator Added 4.12.18 *********/
+.dragNDropSidebar .input-field {
+    padding: 5px 10px;
+    margin:0;
+}
+.dragNDropSidebar textarea {margin:0;}
+.dragNDropSidebar li label:focus {outline: 0;}
+
+
+.TOC-contents ul {padding:15px;margin:0}
+#generatedTOC {float:none; display:none;}
+#generatedTOC li.TOC-li {display:flex; justify-content: space-between;padding:10px;border:0;}
+#generatedTOC li.TOC-li .tocTitle {padding-right:2px;}
+#generatedTOC li.TOC-li .tocSpace {flex-grow: 1; overflow-x: hidden;overflow-y: hidden;}
+#generatedTOC li.TOC-li .tocSpace:after {
+  white-space: nowrap;
+  float: left;
+  width: 0;
+  content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "}
+#generatedTOC li.TOC-li .tocPage {padding-left:4px;}
+#reportTitle {
+  font-size: 21px;
+  /* font-weight: 300; */
+  font-size: $font-size;
+  padding: 10px 15px;
+  /* text-align: center; */
+  background: $light-beige;
+  margin: 0;
+}
+#standardHeader {padding:10px 15px;}
+.firepad-cover-page {border: 1px solid $light-beige;}
+.firepad-cover-page .firepad-toolbar {border-bottom: 1px solid $light-beige;}
+
+
+/********** NOTE: This is new and causing breaks.... 4.26.18 ********/
+body .firepad-cover-page .firepad {height: 11in;}
+.firepad-cover-page .firepad-richtext .CodeMirror {
+    height: 9.5in;
+    width: 7in;
+    margin: auto;
+    position: static;
+    background: #fff;
+    border: 1px dashed #888;
+    overflow: hidden;
+    padding: 0;}
+.firepad-cover-page .firepad-richtext .CodeMirror:after {
+  /* content: 'Anything added after the dashes will not be included on the cover page';
+  color: #ff4a49;z-index: 10000;margin-top: 30px;top: 30px;padding: 30px;position: absolute;top: 830px;width: 7in;
+  text-align: center; */
+}
+.firepad-cover-page .CodeMirror-scroll {
+
+  /* overflow: hidden !important;margin: 0; */
+  background: #000;
+  margin-right: -20px;
+  /* opacity: 0.3; */
+  /* padding: 0; */
+}
+.firepad-cover-page .CodeMirror-scroll:after {
+  content: 'Anything added after the red dashed line will not be included on the cover page';
+  color: #9be658;
+  color: #ff4a49;
+  z-index: 10000;
+  margin-top: 12px;
+  top: 30px;
+  padding: 30px;
+  padding: 0px;
+  position: absolute;
+  top: 830px;
+  top: 906px;
+  width: 7in;
+  text-align: center;
+  }
+.firepad-cover-page  .CodeMirror-sizer {
+  border-right-width: 0px !important;
+  max-height: 912px !important;
+  min-height: 912px !important;
+  border-bottom: 2px dashed #ff4a49;
+  background: #fff;
+  opacity: 2.0;
+  }
+
+.firepad-cover-page .CodeMirror-vscrollbar {
+    right: 0;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.containerSpan {display: flex; justify-content: space-around;}
+.inactiveLink {pointer-events: none; cursor: default;}
+/************* NOTE: End this is new and causing breaks ***********/
+
+@media screen and (min-width: 40em) {
+  .nestedDemo .column, .nestedDemo .columns {
+      padding-left: 0;
+      padding-right: 0;
+  }
+}

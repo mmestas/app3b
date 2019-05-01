@@ -1,0 +1,15 @@
+/***Users Management***/
+th.user-name-th {width: 25%;}
+th.user-group-th,
+th.user-first-name-th,
+th.user-recent-login-th,
+th.user-last-name-th {width: 20%;}
+th.user-no-login-th {width: 10%;}
+
+/***Account Preferences ***/
+table.account-manage-table .name-fields .input,
+table.account-manage-table .two-col .input {width: calc(50% - 5px);}
+table.account-manage-table .name-fields .input:first-child,
+table.account-manage-table .two-col .input:first-child {margin-right: 5px;}
+table.account-manage-table .input.prefix {max-width: calc(25% - 9px);}
+.roles-manage .checkbox {display: inline-block; margin-right: 10px;}

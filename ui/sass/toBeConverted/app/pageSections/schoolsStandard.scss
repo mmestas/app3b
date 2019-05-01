@@ -1,0 +1,92 @@
+/* sprint 02 - school standards page */
+/* standard heading sticky */
+.standardsHeaderBox .sticky.is-stuck.is-at-top { background-color: $plain-white; box-shadow: $box-shadow; left: 0 !important; right: 0; margin: auto !important; max-width: 100% !important; padding: 0 1.875rem; z-index: 11; }
+.standardsHeader.sticky.is-at-top.is-stuck .filter-input-col { padding-top: 5px; padding-bottom: 5px; }
+.standardsHeader.sticky.is-at-top.is-stuck .input-field { padding: 5px 10px; }
+.standardsHeader { width: 100%; }
+.standardsPageHead { background-color: $plain-white; margin: 0 !important; }
+.standardsPageHead .input { margin: 0.5em 0; }
+.standardsPageHead .typeaheadBox { top: 100%; }
+.standardHeading { margin-top: 15px; }
+.standardsPageHead > .col { position: relative; vertical-align: middle; }
+.standardsPageHead > .filter-list-col { padding: 0 50px; }
+.standardsPageHead .filterBox .input-field { margin-bottom: 0; }
+.adding-standard-col > button { margin-bottom: 0; }
+.standardsAction-col { position: relative; width: 160px; }
+.standardActionButton { margin-bottom: 0; padding-right: 30px; }
+.standardActionButton > span { display: block; position: relative; }
+.standardActionButton > span::before { border: inset 5px; border-color: $dark-grey transparent transparent; border-top-style: solid; border-bottom-width: 0; content: ""; display: inline-block; height: 0; position: absolute; top: 0.25em; right: -15px; width: 0; }
+.standardActionPane { background-color: $dark-grey; border: 0; box-shadow: $box-shadow; padding: 0; left: inherit !important; right: 0 !important; }
+.oneStandard-header .standardActionPane { width: 235px; }
+.currentResponse .standardActionPane { width: 235px; }
+ul.standardActionUL { color: $plain-white; font-family: 'Catamaran'; font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.standardActionUL > li { display: inline-block; font-size: 14px; font-weight: $strong; text-align: left; width: 100%; }
+ul.standardActionUL > li > a,
+ul.standardActionUL > li > span { display: block; padding: 0.7rem 1rem; text-decoration: none; }
+ul.standardActionUL > li:hover { background-color: $light-gold; color: $dark-grey; }
+ul.standardActionUL > li.disabled,
+ul.standardActionUL > li.disabled:hover { background-color: $light-grey; color: $grey; cursor: not-allowed; }
+/* one standard */
+.oneStandard-header { background-color: $dark-beige; color: $plain-white; padding: 10px 0.9735rem; }
+.oneStandard-header h4, .oneStandard-header h5 { color: $plain-white; margin-bottom: 0; }
+th.stdstarted-th,
+th.stdcompleted-th,
+th.stdaccreditation-th { width: 200px; }
+.oneStandardUnit { margin-top: 1em; }
+/* standard description */
+.oneStandard-description { background-color: $light-beige; font-size: 14px; padding: 20px 15px; }
+.std-read-more-col { width: 100px; }
+/* current standard response */
+.oneStandard-current { border-left: 1px solid $light-beige; border-right: 1px solid $light-beige; display: table; width: 100%; }
+.currentResponse { display: table-cell; font-family: 'Rubik'; padding: 10px; vertical-align: top; }
+.currentResponse .subheader { color: $dark-grey; margin-bottom: 0; }
+.currentStandardResponseLink { font-size: 22px; font-weight: $light; line-height: 1.5em; margin-bottom: 0; }
+.currentResponseTable > .col { vertical-align: top; }
+.currentResponseAction-col { position: relative; width: 100px; }
+.currentResponseActionButton { padding: 1px 7px; }
+.currentResponseActionButton > span { font-size: 26px; line-height: 1em; }
+.has-no-responses { border-bottom: 1px solid $light-beige; color: $grey; padding: 20px; text-align: center; vertical-align: middle; }
+.has-no-responses > span { font-size: 14px; }
+.create-new-response { border-bottom: 1px solid $light-beige; color: $grey; font-family: 'Catamaran'; padding: 20px; vertical-align: middle; }
+.create-response-table .year-col { width: 40%; }
+.year-col select { height: 3.1em; margin-bottom: 0; }
+.create-response-table .team-col { padding-top: 6.5px; width: 25%; }
+.create-response-table .team-col .input { margin-bottom: 0 !important; }
+.create-response-table .teamBox { padding: 0 10px 0; }
+.addResponseYearLinkBox { font-size: 14px; margin: 3px; }
+.create-response-buttons { border-top: 1px solid $light-beige; margin-top: 1em; padding-top: 1.5em; }
+.create-response-buttons button { margin-bottom: 0; }
+/* standard details snapshot */
+.standardDescription { white-space: pre-line; }
+.oneStandard-details { border-left: 1px solid $light-beige; border-right: 1px solid $light-beige; border-bottom: 1px solid $light-beige; }
+.oneStandard-details .subheader { color: $dark-grey; }
+.oneStandard-details .standardsSnapshotTable { position: relative; }
+.oneStandard-details .standardsSnapshotTable::before { background-color: $light-grey; content: ""; display: block; height: 2px; position: absolute; left: 15px; right: 15px; }
+.standardsSnapshotTable { padding: 5px 15px 0; }
+.standardsSnapshotTable > .col { padding: 20px 46px 20px 0; vertical-align: top; }
+.standardsSnapshotTable > .col:last-child { padding-right: 0; }
+.standards-status-col { width: 20%; }
+.narrative-status-col { width: 15%; }
+.team-status-col { padding-right: 41px; width: 20%; }
+.evidence-status-col { width: 45%; }
+.standards-status-col .status-badge { margin-bottom: 0.5em; }
+.standard-status-row { font-size: 14px; line-height: 1.8em; }
+.evidence-status-col .subheader > a { font-size: $font-size; font-weight: $light; }
+/* popular evidence */
+ul.popularEvidenceUL { font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.popularEvidenceUL > li { display: inline-block; font-size: 14px; width: 50%; }
+ul.popularEvidenceUL .oneFile-info { background-position: center left 0; padding: 10px 20px 10px 50px; }
+.evidenceVoteSummaryTable { font-family: 'Rubik'; font-size: 11px; font-weight: $bold; width: inherit; }
+.evidenceVoteSummaryTable > .col { padding-right: 10px; width: 80px; }
+.evidenceVoteSummaryTable .upvotes-col { color: #7ed321; }
+.evidenceVoteSummaryTable .downvotes-col { color: $dark-red; }
+.no-votes { color: $grey; }
+/* previous standard responses */
+.oneStandard-previous .accordion { background: none; border: 0; }
+.oneStandard-previous .accordion-title { background-color: $faint-gold; border-left: 1px solid $light-beige; border-right: 1px solid $light-beige; border-top: 0; border-bottom: 1px solid $light-beige; padding: 7px 15px; color: $dark-grey; font-family: 'Rubik'; font-size: 18px; line-height: 1.5em; text-decoration: none; }
+.oneStandard-previous .accordion-title::before { content: "\f2c7"; font-family: 'Ionicons'; font-size: $font-size; right: 15px; top: 40%; }
+.oneStandard-previous .is-active > .accordion-title::before { content: "\f209"; }
+.oneStandard-previous .accordion-content { background-color: transparent; border: 0; padding: 0; }
+table.standardResponseTable { border-top: 0; }
+.standard-group-name {background: #ECE5D6; padding: 10px; margin: 0 0 15px;}
+.standard-group-name > h4 {line-height: 1em; margin: 0;}

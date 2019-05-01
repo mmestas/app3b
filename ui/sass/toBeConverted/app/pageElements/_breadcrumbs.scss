@@ -1,0 +1,15 @@
+ul.breadcrumbs {font-family: $header-font-family; font-size: 14px; font-weight: $regular; margin-bottom: 0;
+  > li {color: $dark-grey; font-size: 12px; text-transform: capitalize;
+    &.no-text-transform {text-transform: none;}
+    > a {color: $dark-beige;}
+    &:not(:last-child)::after { color: $dark-grey; margin: 0 0.25rem; }
+  }
+}
+
+
+// .pageBreadcrumbs {}
+// ul.breadcrumbs { font-family: $header-font-family; font-size: 14px; font-weight: $regular; margin-bottom: 0; }
+// ul.breadcrumbs > li { color: $dark-grey; font-size: 12px; text-transform: capitalize; }
+// ul.breadcrumbs > li.no-text-transform {text-transform: none;}
+// ul.breadcrumbs > li > a { color: $dark-beige; }
+// ul.breadcrumbs > li:not(:last-child)::after { color: $dark-grey; margin: 0 0.25rem; }

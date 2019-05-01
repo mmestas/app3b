@@ -1,0 +1,59 @@
+/******* User Management *********/
+.select-user-type {}
+.select-user-type span.subCaption {font-size:20px; color: $plain-white;}
+.select-user-type span {margin-right:10px;}
+.select-user-type input {margin-right:10px;}
+
+#suggestBox {
+    display:inline-block; overflow:hidden; border:solid black 1px;
+}
+
+#suggestBox > select {
+    padding:10px; margin:-5px -20px -5px -5px;
+}
+
+#suggestBox > select > option:hover {
+    box-shadow: 0 0 10px 100px #4A8CF7 inset; color: white;
+}
+
+.inviteButton{
+    margin: 0 15px;
+}
+
+.firepad-dialog-div .firepad-btn-group .firepad-btn.remove-link{
+    background-image: url('../img/icons/remove-link.png');
+    background-position: 6px 6px;
+    background-repeat: no-repeat;
+    padding-left: 33px;
+}
+
+.disable-password-wrap{margin-top: 10px;}
+
+.standard-description > p{
+    white-space: pre-line;
+}
+
+.editResponseBtn {margin-left: 10px;}
+.delete-btn > span {color: $dark-red;}
+.editResponseBtn > span{font-size: 17px; color: $grey;}
+.open-feedback-request-wrap {margin-right: 5px;}
+.open-feedback-request-wrap > span > span{float:left;}
+h3.editResponseName tooltip tip-tip._small{font-size: 14px; line-height: 46px; font-weight: $light; font-family: 'Catamaran', sans-serif;}
+#responseNameId {display: inline-block; width: 30%; padding: 1px 8px; margin-bottom: 0}
+form[name="editResponseNameForm"] button{padding: 0.60em .7em}
+.programNewResponseName form.ng-invalid.ng-submitted .form-error,
+form.ng-invalid.ng-submitted[name="editResponseNameForm"] .form-error {display: inline-block;}
+.programNewResponseName input[type="text"] {display: inline-block; width: 50%;margin-bottom: 0;}
+.programNewResponseName > form > button {margin-bottom: 0;}
+.programNewResponseName {float: left; width: 50%;}
+.final-tag {font-size: 30px; color: $grey; margin: 0 5px 0 0; line-height: 0;}
+.final-tag.accreditor {font-size: 14px; color: #fff;}
+.final-tag.accreditor-dashboard {font-size: 14px; color: #372a04;}
+.feedback-report-info .final-tag,
+.standard-details .final-tag {font-size: $font-size;}
+.prepareReportUL li select{width: auto; font-size: 14px; margin-bottom: 10px;}
+.prepareReportUL li {display: inline-block;}
+.prepareReportUL li button {margin: 0}
+.open-feedback-request-wrap button {margin-bottom: 0;}
+.pre {white-space: pre-line;}
+.accreditorFeedbackHeader {page-break-inside: avoid; }

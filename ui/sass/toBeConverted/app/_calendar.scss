@@ -1,0 +1,11 @@
+/* calendar / datepicker */
+.calendar { position: relative; z-index: 9; }
+.calendar label { padding-left: 50px; }
+.calendar .calendar-icon { color: #333333; display: inline-block; font-size: 32px; position: absolute; top: 4px; left: 12px; transition: color 0.25s; }
+.input--filled .calendar-icon { color: $dark-gold; transition: color 0.25s; }
+.calendar-arr { background-repeat: no-repeat; display: block; height: 25px; width: 20px; }
+.calendar-prev { background-image: url('../img/forms/calendar-icon-arrow-left-tiny.png'); }
+.calendar-next { background-image: url('../img/forms/calendar-icon-arrow-right-tiny.png'); }
+.calendar .input-field { padding-left: 50px; }
+._720kb-datepicker-open:before { content: ""; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 5px solid $dark-gold; position: absolute; top: -5px; width: 0; height: 0; margin: auto; left: 0; right: 0; }
+._720kb-datepicker-calendar-day._720kb-datepicker-active { font-weight: $strong; }

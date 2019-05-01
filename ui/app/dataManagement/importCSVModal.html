@@ -1,0 +1,28 @@
+    <div class="modal-header">
+        <h3>File Upload</h3>
+        <button type="button" class="close-button" aria-label="Close modal" data-ng-click="cancel()">
+            <span class="ion-android-close" area-hidden="true"></span>
+        </button>
+    </div>
+    <div class="modal-body">
+      <h4 class="text-center">Import your CSV file:</h4>
+      <div class="profilePicUploadOverlay" ng-model="csv.csvFile" ngf-drop ngf-drag-over-class="'dragover'"  accept=".csv">
+        <div class="profilePicUploadOverlay-inner">
+          <p>Drop your CSV file to instantly upload it</p>
+          <div class="ion-plus-circled ionicon"></div>
+          <p class="choose">Or click <a ngf-select ng-model="csv.csvFile" accept=".csv">here</a> to choose file from your computer</p>
+          <progressbar ng-show="csv.isGettingUploaded" class="progress-upload progress-small" value="csv.progress"></progressbar>
+          <span class="float:left;" ng-show="csv.isGettingUploaded">{{csv.progress}} %</span>
+          <alert type="error" ng-show="csv.errorMsg" close="csv.errorMsg=String()">{{csv.errorMsg}}</alert>
+        </div>
+      </div>
+      <div class="text-center" ng-show="csv.csvFile">
+        {{csv.csvFile.name}}
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="form-error" ng-show="showErrorMessage" ng-class="{'showFormError' : showErrorMessage}">{{errorMessage}}</div>
+        <button type="button" class="button action" data-ng-click="uploadCSV(csv.csvFile, importPath)">
+            Next
+        </button>
+    </div>

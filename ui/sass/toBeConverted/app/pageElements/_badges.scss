@@ -1,0 +1,21 @@
+/* badges */
+.badge {background-color: $grey; border-radius: 0; color: $plain-white; font-size: 12px; line-height: 1.6em; padding: 0 10px;
+  &.default {background-color: $grey;}
+  &.secondary {background-color: $light-beige; color: $dark-grey;} //Not being used
+  &.alert {background-color: $red;}
+  &.success {background-color: #43ac6a;}
+  &.warning {background-color: $gold; color: $dark-gold;}
+  &.info {background-color: $dark-gold; color: $light-beige;}
+  &.school {background-color: $school-dark-blue;}
+  &.accreditor {background-color: $accreditor-dark-green;}
+
+  &.exceeded, &.complete {background-color: $accreditor-green;}
+  &.met, &.partiallyComplete {background-color: $accreditor-light-green;}
+  &.partiallyMet, &.planned {background-color: $school-light-blue;}
+  &.notMet, &.internalReview {background-color: $school-blue;}
+  &.notReported, &.notStarted {background-color: $light-grey;}
+  &.nothingEntered, &.inProgress {background-color: $dark-grey;}
+
+  &.round {border-radius: 40px;}
+  &.rounded {border-radius: 3px;}
+}

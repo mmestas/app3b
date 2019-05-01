@@ -1,0 +1,92 @@
+// NOT SURE WHERE THIS SHOULD GO 11.2.18
+.advancedSearch .select2-container .select2-choice {
+    background: $light-grey;
+    border: none;
+    border-radius: 0;
+    height: 24px;
+    line-height: 26px;
+    padding: 0 0 0 15px;
+    color: #0a0a0a;
+}
+.advancedSearch .select2-container.ui-select-container .select2-choice.select2-default {
+    color: $dark-grey !important;
+}
+.advancedSearch .select2-container .select2-choice > .select2-chosen {margin-right: unset;}
+ul.advanced-search .select2-results li {width:105px;text-align: left;}
+form[name="courseForm"] .ui-select-container,
+form[name="courseForm"] md-autocomplete {margin-bottom: 16px;}
+form[name="courseForm"] md-autocomplete-wrap > [type="button"], form[name="courseForm"] md-autocomplete-wrap > [type="button"]:hover, form[name="courseForm"] md-autocomplete-wrap > [type="button"]:focus, form[name="courseForm"]  md-autocomplete-wrap > [type="button"] {margin: 10px 0 0 4px;}
+md-autocomplete .md-show-clear-button button {position: absolute; right: 10px;}
+
+
+.md-virtual-repeat-container.md-autocomplete-suggestions-container {z-index: 9999;}
+.md-autocomplete-suggestions-container .coursesUL .highlight {font-weight: bold;}
+.input.full-width {max-width: 100%;}
+.not-relative.input {position: inherit;}
+.input.course-level-designation-wrapper {margin-top: -6px;}
+form[name="courseForm"] .ui-select-placeholder {min-height: 64px;}
+body.is-reveal-open {height: 1000%;} /***Hack for autocomplete **/
+md-autocomplete-wrap > [type="button"],
+form md-autocomplete-wrap > [type="button"]:hover,
+form md-autocomplete-wrap > [type="button"]:focus,
+form md-autocomplete-wrap > [type="button"] {margin: 10px 0 0; background: none; color: #0a0a0a; box-shadow: none;}
+.rp-type-th, .rp-editable-th {width: 10%;}
+.rp-description-th, .rp-period-th {width: 40%;}
+.rp-options-th {padding: 0 20px;}
+.button-actions-wrapper > .button {margin-left: 5px; margin-right: 5px;}
+.beige-wrapper {background: $light-beige; padding: 10px;}
+.editable-wrapper {margin-bottom: 20px;}
+.settingsFilters select {width: auto; min-width: 250px;}
+.settingsFilters .select {display: inline-block;}
+.settingsFilters > .col >  div {margin-right: 10px;}
+.repFilters .filterBox {margin: 1.5em 0;}
+.se-type-th {width: 15%;}
+.genEd-number-th,
+.instPr-number-th{width: 5%;}
+.center-inputs .input {margin-left: 15px; margin-right: 15px;}
+.stCol-source-th {width: 15%;}
+.st-number-th {width: 1%;}
+.st-title-th {width: 20%;}
+.standards-header > div {display: inline-block;}
+/*#main-settings-view .filterBox {margin-top: 0;}*/
+.stColDup .filterBox.input {margin-top: 0;}
+.stColModal-select {width: 1%;}
+.radio input + label.selectColLabel {margin: 0 0 0 6px;}
+.existinngStdCol .input {max-width: 100%;}
+.existinngStdCol .radio {margin: 0}
+.standard-edit .input {max-width: 96%;}
+.standard-edit textarea {height: 200px;}
+.help-table > .top-v-align.col {vertical-align: top;}
+.org-settings-table {max-width: 800px;}
+.org-settings-name-th,
+.org-settings-code-th{width: 44.5%;}
+.org-settings-tools-th {width: 1%;}
+table.org-settings-table a.deleteBtn:before{color:$dark-red; margin-right: 3px;}
+table.org-settings-table a.deleteBtn {text-decoration: none;}
+table.org-settings-table a.editable {display: block; width: 100%;}
+table.org-settings-table .input-field,
+table.org-settings-table .button {margin: 0;}
+.auth-settings-wrapper > .radio {display: inline-block;}
+#auth-settings-wrapper h5.subheader.settings-subheader {margin: -20px -20px 20px -20px; padding: 10px; background: $faint-gold}
+.select-auth-method {margin-right: 15px;}
+.radio-wrap > .radio {display: inline-block;}
+#auth-settings-wrapper .col.input {padding-right: 15px;}
+.ldap-table{padding: 20px 0 10px;}
+label.required::after{content: '*'; clear: both;}
+.reveal-overlay.no-scroll {overflow: hidden;}
+.reveal-overlay + .md-virtual-repeat-container.md-autocomplete-suggestions-container {margin-left: 8px;}
+.coursesUL {background: $plain-white;}
+.coursesUL li:hover {background: $light-beige;}
+.coursesUL li span.type-more-msg {display: block; padding: 0 14px; margin: 0 -14px; cursor: default; font-weight: bold;}
+.coursesUL li:hover span.type-more-msg {background: #fff;}
+.imp-achieved-type-wrapper > .input { margin-right: 15px;}
+.imp-achieved-desc-wrapper > .input > input[type="text"] {margin: 0;}
+th.templatesModal-select {width: 1%;}
+.accordion-title.editable-title {position: absolute; top: -5px; left: 0;}
+.accordion-title.editable-title + .editable-wrap {position: absolute; top: -10px; left: 0; max-width: 350px;}
+.accordion-title.editable-title::before {display: none;}
+.editable-mission > ul.accordion > li.is-active a.accordion-title > span:not(.template-workspace-edit) {visibility: hidden;}
+.action-plan input.editable-input{min-width: 350px;}
+.templateSuccess {width: 500px; margin: -50px auto 30px;}
+.template-workspace-edit {font-size: 18px; margin: 0 5px;}
+.help-table-50.new-tempalte-table > .col {vertical-align: top;}

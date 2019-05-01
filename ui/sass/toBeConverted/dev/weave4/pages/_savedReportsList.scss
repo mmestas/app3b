@@ -1,0 +1,14 @@
+/***** Saved Reports List *****/
+.savedreportsdate-th {width: 150px;}
+.savedreportsdwnload-th {width: 200px;}
+a.button.dwnldReport {width:180px;}
+table tbody.savedStandardsList td, table tbody.savedStandardsList th {
+    padding: .5rem .5rem .0rem;
+}
+ul.prepareReportUL li input {padding: 3px; max-width: 250px; float: right;}
+.CodeMirror .cm-spell-error {
+    background-image: url("https://raw.githubusercontent.com/jwulf/typojs-project/master/public/images/red-wavy-underline.gif");
+    background-position: bottom;
+    background-repeat: repeat-x;
+}
+tr.disabled-row.standardsList > td{color: #b1b1b1;}

@@ -1,0 +1,123 @@
+@import "ui_components/colors";
+@import "ui_components/variables";
+@import "ui_components/mixins";
+@import "ui_components/margins-padding";
+@import "ui_components/elements";
+@import "ui_components/directives";
+@import "ui_components/flexbox";
+@import "ui_components/fonts";
+@import "ui_components/tables";
+@import "ui_components/icons";
+@import "ui_components/badges";
+
+@import "assets/libraryOverrides";
+@import "assets/print";
+@import "assets/nestedDragNDrop";
+@import "assets/firepad";
+
+// dev.scss semi converted - just organized in sections for now
+@import "toBeConverted/dev/weave2/pages/projects";
+// @import "toBeConverted/dev/weave2/pages/createNewProjects";
+@import "toBeConverted/dev/weave2/pages/assessmentWorkspace";
+@import "toBeConverted/dev/weave2/attachments";
+@import "toBeConverted/dev/weave2/reports/savedReports";
+@import "reports/assessmentReports";
+@import "templates/assessmentReport";
+// @import "toBeConverted/dev/weave2/reports/accreditationReports";
+
+// @import "toBeConverted/dev/weave2/pages/settings";
+@import "toBeConverted/dev/weave2/notSureWhereThisShouldGo1";
+@import "toBeConverted/dev/weave2/pages/credentials";
+@import "toBeConverted/dev/weave2/users";
+@import "toBeConverted/dev/weave2/modals/modals";
+@import "toBeConverted/dev/weave2/reports/credentials";
+
+
+@import "toBeConverted/dev/weave4/notSureHowToOrganizeThese";
+@import "toBeConverted/dev/weave4/multiSelect";
+@import "toBeConverted/dev/weave4/notSureHowToOrganizeThese2";
+@import "toBeConverted/dev/weave4/mdAutocomplete";
+@import "toBeConverted/dev/weave4/pages/compileReportList";
+@import "toBeConverted/dev/weave4/pages/savedReportsList";
+@import "toBeConverted/dev/weave4/pages/userManagement";
+@import "toBeConverted/dev/weave4/pages/evaluators";
+@import "toBeConverted/dev/weave4/pages/newFeedbackWorkspace";
+@import "toBeConverted/dev/weave4/pages/selfRating";
+@import "toBeConverted/dev/weave4/pages/compileReport";
+@import "toBeConverted/dev/weave4/pages/projectStatus";
+@import "toBeConverted/dev/weave4/listItemBlocks";
+@import "toBeConverted/dev/weave4/pages/dataManagement";
+@import "toBeConverted/dev/weave4/pages/schoolResponse";
+
+
+// app.scss semi converted - just organized in sections for now
+@import "toBeConverted/app/body";
+@import "toBeConverted/app/links";
+@import "toBeConverted/app/textElements";
+@import "toBeConverted/app/forms";
+@import "toBeConverted/app/md-switch";
+@import "toBeConverted/app/callouts";
+@import "toBeConverted/app/columnsRows";
+@import "toBeConverted/app/calendar";
+@import "toBeConverted/app/help";
+@import "toBeConverted/app/buttons";
+
+@import "toBeConverted/app/pageElements/loader";
+@import "toBeConverted/app/pageElements/progressBars";
+@import "toBeConverted/app/pageElements/filters";
+@import "toBeConverted/app/pageElements/tags";
+@import "toBeConverted/app/pageElements/pagination";
+@import "toBeConverted/app/pageElements/breadcrumbs";
+@import "toBeConverted/app/pageElements/pageOptions";
+@import "toBeConverted/app/pageElements/teamMembers";
+@import "toBeConverted/app/pageElements/metaBoxes";
+@import "toBeConverted/app/pageElements/typeHead";
+@import "toBeConverted/app/pageElements/toolTips";
+@import "toBeConverted/app/pageElements/commentsDropdown";
+
+@import "toBeConverted/app/imageElements/images";
+@import "toBeConverted/app/modals/modals";
+
+@import "toBeConverted/app/layout/header";
+@import "toBeConverted/app/layout/menus";
+@import "toBeConverted/app/layout/notifications";
+@import "toBeConverted/app/layout/assessmentActions";
+@import "toBeConverted/app/layout/systemHelp";
+@import "toBeConverted/app/layout/account";
+@import "toBeConverted/app/layout/contentBody";
+@import "toBeConverted/app/layout/footer";
+
+@import "toBeConverted/app/pageSections/loginPage";
+@import "toBeConverted/app/pageSections/schoolsProgramList";
+@import "toBeConverted/app/pageSections/schoolsResponse";
+@import "toBeConverted/app/pageSections/schoolsStandard";
+@import "toBeConverted/app/pageSections/evidencePreview";
+@import "toBeConverted/app/pageSections/evaluativeFeedback";
+@import "toBeConverted/app/pageSections/requestFeedback";
+@import "toBeConverted/app/pageSections/selfRatingsTeamMembers";
+@import "toBeConverted/app/pageSections/accreditorStandardsView";
+@import "toBeConverted/app/pageSections/narrativeEditor";
+@import "toBeConverted/app/pageSections/accreditorInstitutions";
+@import "toBeConverted/app/pageSections/userManagement";
+@import "toBeConverted/app/pageSections/accountManagement";
+@import "toBeConverted/app/pageSections/dashboards";
+@import "toBeConverted/app/pageSections/standards";
+@import "toBeConverted/app/pageSections/userGroups";
+@import "toBeConverted/app/pageSections/admintasks";
+
+@import "toBeConverted/app/layoutPlugins/angularDatepicker";
+@import "toBeConverted/app/layoutPlugins/carousel";
+@import "toBeConverted/app/layoutPlugins/firepadCodemirror";
+
+@import "toBeConverted/app/errors/errors";
+@import "toBeConverted/app/layout/sideNavPan";
+@import "toBeConverted/app/layout/group";
+
+@import "toBeConverted/app/editable/editable";
+@import "toBeConverted/app/editable/popover";
+
+
+@import "pages/standard";
+@import "pages/createNewProjects";
+@import "pages/settings";
+@import "pages/dashboard";

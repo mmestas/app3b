@@ -1,0 +1,23 @@
+
+/******** Project status Actions ***/
+.project-status-actions-toggle .dropdown-pane > pane > ul:after {
+    bottom: 100%;
+    left: 13px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: $plain-white;
+    border-width: 8px;
+    margin-left: -5px;
+}
+
+.project-status-actions-toggle .dropdown-pane {
+    width: 364px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 0 8px 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    background-color: $plain-white;
+}

@@ -1,0 +1,19 @@
+/***** Compile Report List ****/
+th.progviewselect-th {width:50px;}
+th.progviewstandard-th {width:250px;}
+/*th.progviewdescription-th {width:;}*/
+th.progviewstage-th {width:200px;}
+
+.reportBox span {float:left;}
+.checkbox.include-evidence input + label {margin-left:10px; top:15px;}
+.checkbox.include-evidence input {margin-left:15px; top:15px;}
+.checkbox.include-evidence {height:51px;}
+a.selectCheckBoxes-th {text-decoration: none;}
+a:not(.button).selectCheckBoxes-th {text-decoration: none;}
+.selectCheckBoxesPane div.dropdown-pane{width:70px; padding:5px;}
+
+ul.selectCheckBoxesUL { list-style: none; margin: 0; padding: 0; }
+ul.selectCheckBoxesUL > li > a { display: block; padding:0; text-decoration: none; }
+ul.selectCheckBoxesUL > li:hover { background-color: $light-beige; color: $dark-grey; }
+ul.selectCheckBoxesUL span { display: inline-block; margin-right: 0.5em; }
+ul.prepareReportUL {margin:0; list-style:none;}

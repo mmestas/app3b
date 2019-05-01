@@ -1,0 +1,136 @@
+/*****New feedback Workspace ****/
+#id-feedbackHeaderBox .pageBreadcrumbs {margin-bottom: 5px; margin-top: 2px;}
+.new-feedback-workspace .responseHeaderTitle-name > .feedback-report-info > h3 {height: auto; vertical-align: middle;}
+.new-feedback-workspace .responseHeaderTitle-name h3 .badge {line-height: 2.2em; }
+.accreditorFeedbackPage {padding: 1em 0.9375rem 0;}
+.accreditorFeedbackPage .tableLayout-left {width: 370px;} //See ui_components/tables.scss Perhaps delete this in future
+/*label[for="id-filterProjects"],
+label[for="id-filterItems"] {position: absolute;top: 26px;color: #75776A;font-size: 20px;font-weight: $light;}*/
+input#id-filterProjects, input#id-filterItems {padding-left: 35px;margin: 0;}
+.attachments-search-wrapper.input {max-width: none;margin: 0;padding: 15px;}
+.panelBox.accordion.preview > ul.accordion { background: $plain-white;border: 1px solid #EDE5D6;}
+.feedbackWorkspaceBox {margin-top: 15px;}
+.feedback-workspace-col .panelBox.accordion ul.accordion {margin-right: 0;}
+.preview-table-of-contents > ul { margin: 0;  padding: 0;  list-style: none;  ax-height: 400px;  overflow-y: auto; }
+.preview-table-of-contents > ul > li {display: block;}
+.preview-table-of-contents > ul > li a {  text-decoration: none;  font-size: 14px;  display: block;  padding: 5px 10px;  }
+.preview-table-of-contents > ul > li:first-child a {  padding-top: 10px; }
+.preview-project-name { margin-right: 6px; }
+.preview-table-of-contents > ul > li a.selected, .preview-table-of-contents ul > li a:hover {background-color: $faint-gold;}
+span.preview-project-name {display: block; padding-bottom: 3px;}
+.attachments-table {border: none; border-spacing: 0; margin-bottom: 0;}
+table.attachments-table thead, table.attachments-table th {  background: $faint-gold; }
+table.attachments-table td, table.attachments-table th {  border-left: 1px solid #fff;  border-right: 1px solid #fff;  }
+table.attachments-table th {font-size: 14px; font-weight: $strong; font-family: 'Rubik', sans-serif;}
+.feedback-workspace-col .panelBox.standard-details .accordion-content,
+.feedback-workspace-col .panelBox.standard-details .accordion-content,
+.feedback-workspace-col .panelBox.narrative .accordion-content{padding: 15px;}
+.commendations .input,
+.recommendations .input {margin: 0;}
+.rubric-data .firepad-toolbar,
+.commendations .firepad-toolbar,
+.recommendations .firepad-toolbar{ background-color: $faint-gold; border: none;}
+table.attachments-table a.icon {color: $dark-beige; font-size: 20px; margin-left: 3px;}
+.rubric-data-inner {background-color: $faint-gold; padding: 15px;}
+.rubric-data-inner h5 {margin-bottom: 0;}
+.rubric-header > h5 {display: inline-block;}
+.rubric-header > a {font-size: 14px; margin-left: 5px;}
+ul.rubric-tiles {list-style: none; margin: 0; padding: 0;}
+ul.rubric-tiles > li {padding-top: 10px;}
+ul.rubric-tiles > li:first-child {padding-top: 0;}
+.tile-status {font-size: 11px; font-family: 'Rubik', sans-serif; font-style: italic;}
+p.rubric-criteria {margin: 10px 0; white-space: pre-line;}
+.feedback-workspace-col .firepad-toolbar-wrapper > .firepad-btn-group:nth-child(1),
+.feedback-workspace-col .firepad-toolbar-wrapper > .firepad-btn-group:nth-child(2),
+.feedback-workspace-col .firepad-toolbar-wrapper > .firepad-btn-group:nth-child(3) {display: none;}
+.firepad-rating {position: relative;}
+.accreditor-rating {position: relative; right: 15px; top: 4px; z-index: 9; float: right;}
+.accreditor-rating .radio-button input + label {background-color: $light-beige; font-size: 12px; font-weight: $strong; border: none; color: #372a04; border-right: 1px solid #e2d0a9; padding: 8px 15px;}
+.accreditor-rating li:last-child .radio-button input + label {border: none;}
+.accreditor-rating .radio-button input.self-rating-res:checked + label,
+.accreditor-rating .radio-button input.rating-no:checked + label,
+.accreditor-rating .radio-button input.rating-notmet:checked + label,
+.accreditor-rating .radio-button input.rating-met:checked + label,
+.accreditor-rating .radio-button input.rating-exceeds:checked + label{background-color: $beige; border: none; color: #372a04;}
+.accreditor-rating .radio-button input[class*='rating-']:disabled + label {cursor: default;}
+.accreditor-rating ul.ratingsButtonsUL {margin-left: 10px;}
+.report-type {padding: 15px;}
+.ratings-wrapper {position: relative; background-color: $faint-gold; padding-top: 45px; }
+.hasBeenSubmitted.ratings-wrapper .accreditor-rating{left: auto; right: 10px; top: -50px;}
+.ratings-wrapper > div {background-color: #fff;}
+.ratings-wrapper > .accreditor-rating {left: 15px; right: auto; background-color: transparent;}
+.rubric-tiles-continuous-wrap > a {font-size: 14px;}
+ul.rubric-tiles-continuous {display: table; margin: 5px 0; padding: 0;}
+ul.rubric-tiles-continuous > li {display: table-cell; width: 25%; padding: 5px 15px;}
+ul.rubric-tiles-continuous > li.current {background-color: $light-beige;}
+.standard-groups-wrap {padding: 15px;}
+.standard-groups {position: relative;}
+.standard-groups a.current-group{background-color: $light-beige; padding: 5px 10px; text-decoration: none; width: 100%; display: inline-block;}
+.feedback-report-info.standard-groups toggle i {margin-left: 10px;}
+.feedback-report-info.standard-groups .dropdown-menu.standard-navigation .dropdown-pane {width: auto;}
+.dropdown-menu.standard-navigation .dropdown-pane > pane > ul::after {display: none;}
+.dropdown-menu.standard-navigation .dropdown-pane {width: 100%;}
+.dropdown-menu.standard-navigation .dropdown-pane ul > li > a {color: $dark-grey; width: 100%; display: inline-block; padding: 5px 20px; position: relative;}
+.dropdown-menu.standard-navigation .dropdown-pane ul > li > a:hover {background-color: $light-gold;}
+.dropdown-menu.standard-navigation .dropdown-pane > pane > ul {padding: 15px 0;}
+.dropdown-menu.standard-navigation .dropdown-pane ul > li {padding: 0;}
+.dropdown-menu.standard-navigation .dropdown-pane ul > li > a.current::before {font-family: Ionicons; content: '\f122';position: absolute; left: 5px; font-size: 14px; top: 4px;}
+.feedback-report-info > h3,
+.feedback-report-info > h6 {display: inline-block;}
+.full-view-btn {float: right; font-size: 20px; right: 33px; position: absolute; top: 5px;}
+/**Full screen mode**/
+.firepad-feedback-workspace .firepad-toolbar-wrapper > .firepad-btn-group:last-child {display: none;} /**Remove Image from accreditor feedback workspace **/
+.back-wrapper h4 {display: inline-block;}
+a.back-to-normal-screen {font-size: 14px; color: #774d00; padding-right: 5px; margin-right: 5px;}
+.domain-info {font-size: 14px;}
+.fullscreen accordion:not(.narrative),
+.fullscreen .full-view-btn,
+.fullscreen .expand {display: none;}
+.fullscreen accordion.narrative {position: absolute;left: 25px;top: 95px;bottom: 10px;overflow: hidden;right: 50%; margin-right: 10px;}
+.fullscreen .narrativeEditorOptions {position: fixed; top: 7px; border: none; z-index: 101;}
+.fullscreen.evaluation accordion.evaluation,
+.fullscreen.evaluation .ratings-wrapper.hasBeenSubmitted,
+.fullscreen.commendations accordion.commendations,
+.fullscreen.recommendations accordion.recommendations {position: absolute;right: 25px;top: 95px;bottom: 10px;overflow: hidden;left: 50%; display: block; margin-left: 10px;}
+.fullscreen.evaluation .ratings-wrapper.hasBeenSubmitted {left: 0; top: 0; padding-top: 0; background: none;}
+.fullscreen.evaluation .hasBeenSubmitted.ratings-wrapper .accreditor-rating {right: 2px;}
+.fullscreen.evaluation .hasBeenSubmitted.ratings-wrapper > .report-type {margin-top: 40px;}
+.fullscreen accordion.narrative > ul.accordion,
+.fullscreen accordion.narrative > ul.accordion > li,
+.fullscreen accordion.narrative > ul.accordion  > li > div.accordion-content{height: 100%; }
+.fullscreen accordion.narrative > ul.accordion  > li > div.accordion-content{overflow: auto;}
+.fullscreen.evaluation accordion.evaluation > ul,
+.fullscreen.evaluation accordion.evaluation > ul > li,
+.fullscreen.evaluation accordion.evaluation > ul > li > div.accordion-content,
+.fullscreen.evaluation accordion.evaluation > ul > li > div.accordion-content > div.panelBox-body,
+.fullscreen.evaluation accordion.evaluation > ul > li > div.accordion-content > div.panelBox-body > div.accreditor-rating-wrap,
+.fullscreen.evaluation accordion.evaluation > ul > li > div.accordion-content > div.panelBox-body > div.accreditor-rating-wrap > div.firepad-feedback-workspace,
+.fullscreen.evaluation accordion.evaluation > ul > li > div.accordion-content > div.panelBox-body > div.accreditor-rating-wrap > div.firepad-feedback-workspace > div.firepad {height: 100%;}
+.fullscreen.evaluation accordion.evaluation a.accordion-title,
+.fullscreen.evaluation accordion.evaluation .rubric-data-inner {display: none;}
+.fullscreen.evaluation accordion.evaluation .firepad,
+.fullscreen.commendations accordion.commendations .firepad,
+.fullscreen.recommendations accordion.recommendations .firepad {background-color: #fff;}
+.fullscreen.evaluation accordion.evaluation .firepad-toolbar,
+.fullscreen.commendations accordion.commendations .firepad-toolbar,
+.fullscreen.recommendations accordion.recommendations .firepad-toolbar {padding-top: 5px; height: 53px;}
+.fullscreen.evaluation accordion.evaluation .accreditor-rating {top: 9px;}
+.fullscreen.evaluation accordion.evaluation .firepad-with-toolbar .CodeMirror,
+.fullscreen.commendations accordion.commendations .firepad-with-toolbar .CodeMirror,
+.fullscreen.recommendations accordion.recommendations .firepad-with-toolbar .CodeMirror {top: 60px;}
+.fullscreen.commendations accordion.commendations > ul,
+.fullscreen.commendations accordion.commendations > ul > li,
+.fullscreen.commendations accordion.commendations > ul > li > div.accordion-content,
+.fullscreen.commendations accordion.commendations > ul > li > div.accordion-content > div.panelBox-body,
+.fullscreen.commendations accordion.commendations > ul > li > div.accordion-content > div.panelBox-body > div.textarea,
+.fullscreen.commendations accordion.commendations > ul > li > div.accordion-content > div.panelBox-body > div.textarea >div.firepad{height: 100%;}
+.fullscreen.commendations accordion.commendations > ul > li > div.accordion-content > div.panelBox-body > a,
+.fullscreen.commendations accordion.commendations a.accordion-title {display: none;}
+.fullscreen.recommendations accordion.recommendations > ul,
+.fullscreen.recommendations accordion.recommendations > ul > li,
+.fullscreen.recommendations accordion.recommendations > ul > li > div.accordion-content,
+.fullscreen.recommendations accordion.recommendations > ul > li > div.accordion-content > div.panelBox-body,
+.fullscreen.recommendations accordion.recommendations > ul > li > div.accordion-content > div.panelBox-body > div.textarea,
+.fullscreen.recommendations accordion.recommendations > ul > li > div.accordion-content > div.panelBox-body > div.textarea >div.firepad{height: 100%;}
+.fullscreen.recommendations accordion.recommendations > ul > li > div.accordion-content > div.panelBox-body > a,
+.fullscreen.recommendations accordion.recommendations a.accordion-title {display: none;}

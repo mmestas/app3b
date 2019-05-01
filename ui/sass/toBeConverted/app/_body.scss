@@ -1,0 +1,43 @@
+/*======= TC-02 # Color Palette =======*/
+/* color palette */
+/* do not use css native variables */
+/* http://caniuse.com/#feat=css-variables */
+:root {
+    // From Centrieva AMS Styleguide
+    --school-blue: #05668d;
+    --school-light-blue: #9fc1cf;  //Light Blue
+    --school-dark-blue: #004a67;
+    --accreditor-green: #a5be00;  //Bright Green
+    // --accreditor-light-green: #e2ebab;  //old color
+    --accreditor-light-green: #e3ebab;  //Light Green
+    --accreditor-dark-green: #679436;
+    --grey: #707265;  //Dark Warm Gray
+    --light-grey: #ddded6;  //Gray
+    --gold: #fed766;  //Yellow
+    --light-gold: #fff4d6;
+    --dark-gold: #764c03;
+    --beige: #dac38b;
+    --light-beige: #ede6d6;  //Sand
+    --dark-beige: #a39061;
+    --red: #ff4a49;
+    --light-red: #f7c5c5;
+    --dark-red: #b21716;  //Rusty Red
+    --dark-grey: #4b4c47;
+    --highlight-blue: #d6e5eb;
+    --highlight-grey: #e7e7e7;
+
+    //From Weave Assessment Styleguide - that aren't in the above
+    --white: #e0e0e0;
+    --white-two: #f6f6f6;
+    --beige-two: $faint-gold;
+    --beige-three: #e3ebab;
+    --faded-blue: #717fc9;
+
+}
+
+body {font-family: $font-family; color: $dark-grey; min-width: 1130px; }
+body.app\.dashboard {position: static !important;}
+.dropdown-pane { top: 0; left: 0; }
+/* formatting */
+strong { font-weight: $strong }
+.bold { font-weight: $bold }

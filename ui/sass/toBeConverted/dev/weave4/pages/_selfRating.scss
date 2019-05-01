@@ -1,0 +1,51 @@
+/***Self Rating****/
+.accreditor-rating.self-rating{position: absolute; top: 6px;}
+.accreditor-rating.self-rating.response-closed{top: -36px; right: 70px;}
+.accreditor-rating.self-rating .radio-button input + label {background-color: $faint-gold;}
+#id-accreditorFeedbackPage .accreditor-rating.self-rating {top: 5px; right: 35px;}
+#id-accreditorFeedbackPage .accreditor-rating.self-rating .radio-button input + label {padding: 5px 15px;}
+.self-rating-label {position: relative; top: 2px;}
+.firepad-narrative .firepad-toolbar-wrapper .firepad-btn-group:first-child,
+.firepad-narrative .firepad-toolbar-wrapper .firepad-btn-group:nth-child(2) {display: none;}
+
+/***Media Queries **/
+@media screen and (max-width: 1457px) {
+    #id-schoolsStandardPage ul.filterUL > li{
+        margin-bottom: 10px;
+    }
+    .accreditor-rating.self-rating:not(.response-closed) {top: 39px; left: 12px;}
+
+    #id-accreditorFeedbackPage .accreditor-rating.self-rating {
+        top: 5px;
+        right: 35px;
+        left: auto;
+    }
+
+}
+
+@media screen and (max-width: 1720px) {
+    .accreditor-rating.self-rating.response-open.comments-open {top: 39px; left: 12px;}
+    .accreditor-rating.self-rating.response-closed.comments-open {right: -220px;}
+}
+
+span[class*="firepad-fs-"] {
+    font-size: 14px;
+}
+
+.preview.narrative .panelBox-body,
+.preview.narrative .panelBox-body span,
+.previewBody .redactor-editor.previewBodyInner,
+.previewBody .redactor-editor.previewBodyInner span{
+    font-size: 16px !important;
+    font-family: 'Catamaran', sans-serif !important;
+}
+.CodeMirror-widget {position: relative;}
+.CodeMirror-widget.active {display: inline-block; outline: 1px dashed rgba(0, 0, 0, 0.6);}
+.CodeMirror-widget.active img {opacity: .5;}
+.CodeMirror-widget .resizer {position: absolute; z-index: 2; line-height: 1; cursor: nw-resize; bottom: -4px; right: -5px; border: 1px solid #fff; background-color: #000; width: 8px;height: 8px;display: none;}
+.CodeMirror-widget.active .resizer {display: block;}
+.modal-upload-wrapper .upload-icon {font-size: 32px;}
+.modal-upload-wrapper {border: 4px dashed #e6e6e6; padding: 10px;}
+.narrativeCustomDialog .block-ui-message  {color: #0a0a0a; font-weight: normal; text-align: center; width: 120px;}
+.modal-upload-overlay.dragover {opacity: .5;}
+.narrativeCustomDialog .form-error.file{margin: 0;}

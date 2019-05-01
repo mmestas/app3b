@@ -1,0 +1,20 @@
+//Don't think these are being used anywhere in the project  DELETE??
+
+.md-autocomplete-suggestions.typeaheadUL{overflow-y: hidden; max-height: none;}
+.md-autocomplete-suggestions li{height: auto; font-size: inherit; line-height: normal; overflow: initial;}
+md-autocomplete-wrap input[type="search"] {background-color: $light-grey; color: $dark-gold;transition: background-color 0.25s ease 0s, border-color 0.25s ease 0s; width: 100%; height: auto; margin: 0; line-height: normal; font-size: $font-size; padding: 10px 15px; border: 2px solid $light-grey;}
+md-autocomplete-wrap input[type="search"].ng-not-empty {border:2px solid $gold; background: #fff;}
+md-autocomplete-wrap input[type="search"]::-moz-placeholder,
+input.select2-input[type="search"]::-moz-placeholder{color: #0a0a0a;}
+md-autocomplete-wrap input[type="search"]::-webkit-input-placeholder,
+input.select2-input[type="search"]::-webkit-input-placeholder{color: #0a0a0a;}
+md-autocomplete-wrap input[type="search"]:-ms-input-placeholder,
+input.select2-input[type="search"]:-ms-input-placeholder{color: #0a0a0a;}
+md-autocomplete-wrap input[type="search"]:-moz-placeholder,
+input.select2-input[type="search"]:-moz-placeholder{color: #0a0a0a;}
+md-autocomplete md-autocomplete-wrap.md-whiteframe-z1{box-shadow: none; height: auto;}
+md-autocomplete {height: auto;}
+md-autocomplete.md-default-theme, md-autocomplete{background: none; margin-bottom: 0;}
+form md-autocomplete [type="button"] {margin: 10px 0 0 4px}
+ul.typeaheadUL > li {background: #fefefe; padding: 0;}
+md-autocomplete {min-width: 180px;}

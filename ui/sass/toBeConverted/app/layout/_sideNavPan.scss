@@ -1,0 +1,33 @@
+.sideNavPan{
+    /*height: 97%;*/
+    width: 530px;
+    padding: 10px;
+    position: absolute;
+    left: calc(100% + 36px);
+    top: 3%;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+    background: #fff;
+    min-height: 500px;
+}
+.sideNavPan.closed{
+    display: none;
+}
+
+.sideNavPan.closed-remove,
+.sideNavPan.closed-add{
+    display: block;
+}
+
+.sideNavPan.visible{
+    transform: translate(-100%, 0);
+}
+
+.sideNav-header h4{
+    font-weight: 700;
+}
+.sideNav-header {
+    margin: 0 0 10px;
+}
+
+.sideNavPan .input{max-width: 100%;}

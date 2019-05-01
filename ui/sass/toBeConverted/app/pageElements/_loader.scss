@@ -1,0 +1,6 @@
+/* loader / spinner */
+.loader { display: inline-block; }
+.loader > img { display: block; }
+
+.block-ui-message { background: url(../img/loaders/ring.svg) no-repeat center center; color: #4B4C48; display: inline-block; font-size: 20px; font-weight: $bold; height: 90px; padding: 20px; text-align: left; width: 280px; opacity: .6;}
+.block-ui-active > .block-ui-container { min-height: 150px; }

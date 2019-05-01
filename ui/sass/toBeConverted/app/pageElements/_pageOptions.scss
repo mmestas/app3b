@@ -1,0 +1,12 @@
+/* print/download */
+ul.pageOptionsUL { font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.pageOptionsUL > li { font-family: 'Rubik'; font-size: $font-size; display: inline-block; margin-left: 1.5em; vertical-align: middle; }
+ul.pageOptionsUL > li:first-child { margin-left: 0; }
+.pageButton { color: $dark-beige; }
+.pageButton > span { display: inline-block; margin-left: 5px; vertical-align: middle; }
+.pageButton > span:last-child { font-size: 12px; text-decoration: underline; }
+.pageButton:hover > span:last-child { text-decoration: none; }
+.pageButton:active { opacity: 0.8; }
+.closePageButton.pageButton > span:first-child { font-size: 22px; }
+.printPageButton.pageButton > span:first-child { font-size: 18px; }
+.downloadPageButton.pageButton > span:first-child { font-size: 22px; }

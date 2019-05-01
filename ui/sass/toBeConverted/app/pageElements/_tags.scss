@@ -1,0 +1,6 @@
+/* tags */
+ul.tagsUL { font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.tagsUL > li { display: inline-block; font-size: 14px; margin-right: 10px; vertical-align: middle; }
+ul.tagsUL > li:last-child { margin-right: 0; }
+ul.tagsUL > li.labelLI { font-size: 14px; line-height: 1.1em; }
+ul.tagsUL .badge { }

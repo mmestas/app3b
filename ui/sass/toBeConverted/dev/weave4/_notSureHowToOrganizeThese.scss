@@ -1,0 +1,319 @@
+/* #id-layoutContent.evidencePreviewLayout { padding-top: 91px; } */
+#id-layoutContent.feedbackWorkspaceLayout { padding-top: 91px; }
+#id-layoutContent.feedbackReportLayout { padding-top: 91px; }
+#id-layoutContent.teamSelfRatingsLayout { padding-top: 91px; }
+#id-layoutContent.accreditorStandardLayout { padding-top: 91px; }
+
+.feedbackTileCriteria {
+  min-height:130px;
+  /*font-size: $font-size;*/
+  /*line-height: 16px;*/
+  /*overflow: hidden;*/
+}
+
+.uploadError{
+	color: $red;
+}
+
+.narrativeEditorPanel .narrativeFunctionBox{
+	padding:0;
+}
+
+a.powered-by-firepad {
+  display: none;
+}
+
+body .firepad {
+  height: 450px;
+  background-color: $light-beige;
+}
+
+pane.standardActionPane{
+	padding: 0;
+	display:block;
+}
+
+.standardsAction-col .dropdown-pane{
+	padding: 0;
+	width:235px;
+	left: -80px;
+}
+li.btnStageOverride {float:right;}
+ul.pageOptionsUL > li.downloadIcon {font-size:22px; margin-top: -8px;}
+li.downloadIcon {float:right; font-size:32px;}
+ li.downloadIcon.active > a, li.downloadIcon:hover > a {
+    background-color: transparent;
+    color: $dark-beige;
+}
+li.downloadIcon > a {
+    background-color: transparent;
+    color: $dark-beige;
+    border-radius: 3px;
+    display: block;
+    padding: 4px 15px;
+    text-decoration: none;
+}
+tooltip._left tip tip-arrow{
+    border-left-color: rgba(75, 76, 71, 0.9);
+}
+
+tooltip tip{
+	font-size: 1.25em;
+}
+
+.feedbackRequestBox tooltip tip{
+	white-space: normal;
+	text-align: left;
+}
+
+
+
+.modal-feedback-tabs-header > ul { border: 0; font-size: 0; text-align: center; }
+.modal-feedback-tabs-header .tabs-title { display: inline-block; float: none; font-size: $font-size; }
+.modal-feedback-tabs-header .tabs-title > a { border: 1px solid $beige; color: #372a04; font-family: 'Catamaran'; font-size: 1em; font-weight: $strong; padding: 12px 20px; text-decoration: none; }
+.modal-feedback-tabs-header .school.tabs-title > a:focus, .modal-feedback-tabs-header .school.tabs-title > a[aria-selected='true'] { background-color: $school-dark-blue; border-color: $school-dark-blue; color: $plain-white; }
+.modal-feedback-tabs-header .accreditor.tabs-title > a:focus, .modal-feedback-tabs-header .accreditor.tabs-title > a[aria-selected='true'] { background-color: $accreditor-dark-green; border-color: $accreditor-dark-green; color: $plain-white; }
+
+
+.tabs-content {
+	border: none;
+}
+
+.new-response-link.ng-hide-add {
+  -webkit-animation:0.5s hide;
+  animation:0.5s hide;
+}
+
+@keyframes hide {
+  0% {
+    opacity:1;
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.02);
+  }
+  100% {
+    opacity:0;
+    transform: scale(0.5);
+  }
+}
+
+@-webkit-keyframes hide {
+  0% {
+    opacity:1;
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.02);
+  }
+  100% {
+    opacity:0;
+    transform: scale(0.5);
+  }
+}
+
+
+.create-new-response.ng-hide-remove {
+  -webkit-animation:0.3s show;
+  animation:0.3s show;
+}
+
+@keyframes show {
+  0% {
+    opacity:0;
+    transform: scale(0.5);
+  }
+  70% {
+    transform: scale(1.02);
+  }
+  100% {
+    opacity:1;
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity:0;
+    transform: scale(0.5);
+  }
+  70% {
+    transform: scale(1.02);
+  }
+  100% {
+    opacity:1;
+    transform: scale(1);
+  }
+}
+
+.create-response-table .title-col {
+    width: 30%;
+	padding-top: 6px;
+}
+
+.ng-scope .create-response-table .year-col {
+    width: 20%;
+}
+
+.file-col .oneFile-info{
+	cursor: pointer;
+}
+
+.feedbackRequestBox tooltip tip{
+	min-width: 130px;
+}
+
+.feedbackMessageBox .textarea.input {
+	z-index: 0;
+}
+
+.hyperlinkModal.reveal, .imageURLModal.reveal{
+	background: none;
+	padding: 0;
+	border: none;
+	box-shadow: none;
+}
+
+.firepad-narrative.disabled .firepad-toolbar,
+.disabled#firepad-container{
+	display : none;
+}
+
+.firepad-narrative.disabled .firepad-with-toolbar .CodeMirror{
+	top:0;
+}
+
+.changeManagerPanel .dropdown-pane{
+	padding:0;
+	width: 250px;
+}
+
+.schoolPartnerInfo h3.subheader{
+	display:inline-block;
+	margin-right: 5px;
+}
+
+.schoolPartnerInfo .col.schoolname-col{
+	padding-top:12px;
+}
+
+.schoolPartnerInfo .col.schoolname-col button{
+	margin-bottom: 0.6rem;
+	float: right;
+	padding: 7px 11px;
+}
+
+#id-accreditorPage .show-all{
+	display: none;
+}
+
+.pagination-table{
+	width: 100%;
+}
+
+.accountManagementPage-admin {border: 2px dotted $red;}
+.accountManagement-content-admin { padding: 1em 0; }
+.accountManagement-content-admin > h3 { margin-bottom: 1em; color: $red;}
+.admin {border-color: $red !important; border-style: dotted !important;}
+/* admin button */
+/* action buttons */
+.button.admin { background-color: $red; color: #372a04; }
+.button.admin:hover, .admin-button:focus { background-color: $dark-red; color: #372a04;}
+/* secondary admin buttons */
+.button.admin-secondary { background-color: $light-red; color: #372a04; }
+.button.admin-secondary:hover, .secondary-action:focus { background-color: #f5f2eb; color: #372a04; }
+.adminImg {border: 2px dotted red;}
+.editMode .tabs-title:not(.is-active){display:none;}
+
+.cropArea {
+    overflow: hidden;
+    width:100%;
+    height:160px;
+}
+
+img-crop{width:100%;height:100%;display:block;position:relative;overflow:hidden}img-crop canvas{display:block;position:absolute;top:50%;left:50%;outline:0;-webkit-tap-highlight-color:transparent}
+
+li.systemUserLI toggle a.user-menu {
+    padding: 0.75rem 1.5rem;
+    position: relative;
+	display: block;
+    line-height: 1;
+    text-decoration: none;
+}
+
+li.systemUserLI .user-menu::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset 5px;
+  border-color: #ffffff transparent transparent;
+  border-top-style: solid;
+  border-bottom-width: 0;
+  right: 5px;
+  margin-top: -2px;
+  position: absolute;
+  top: 50%;
+}
+
+.profilePicUploadOverlay { background-color: rgba(255,255,255,0.6); color: $grey; display: table; text-align: center; width: 100%; }
+.profilePicUploadOverlay-inner { display: table-cell; padding: 20px; vertical-align: middle; }
+.profilePicUploadOverlay .ionicon { font-size: 42px; line-height: 1.3em; }
+.ng-scope .dragover.profilePicUploadOverlay{ opacity: 0.7; }
+.profilePicUploadOverlay .progress-upload {float: none; margin: 6px auto;}
+.accredStandardsPage .oneStandard td:last-child{
+	text-align: left;
+}
+
+.btn-link {
+    color: $dark-beige;
+    font-weight: $regular;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.responseTeam{
+    position: relative;
+    z-index: 2;
+}
+
+.tabs-panel .oneRubric p{
+    white-space: pre-line;
+}
+
+.systemImpersonateLI .dropdown-pane .input-field, .systemImpersonateLI .dropdown-pane button{
+    display: inline-block;
+    margin: 0;
+}
+
+.systemImpersonateLI .dropdown-pane .input-field{
+    max-width: 100%;
+    width: 250px;
+}
+
+.systemImpersonateLI .dropdown-pane button{
+    position: absolute;
+    right: 7px;
+    top: 7px;
+}
+
+.responseHeaderUL .state-col .subheader{
+    margin-top: 8px;
+}
+
+#id-schoolsResponsePage .ratings-col, .narrativeContent{
+    display: none;
+}
+
+.sticky-wrapper{margin-bottom: 100px;}
+
+.addProgManDropdowns,
+.addEvaluatorDropdowns {
+    display: inline;
+    float: left;
+    width: 50%;
+    padding-right: 15px;
+  }
+.addEvaluatorDropdowns {
+    width: 33%;
+}

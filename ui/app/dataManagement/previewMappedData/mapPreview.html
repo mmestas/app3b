@@ -1,0 +1,177 @@
+<!-- MAP CSV FILE TO DATABSE -->
+<div id="id-prevewMappedData" class="generic-container dataManagement" data-ng-init="initpreviewMappedData()" block-ui="programUI">
+  <!-- page heading -->
+  <div class="pageHead help-table">
+      <div class="col">
+          <h1>Review & Begin Import: <strong>{{importName}}</strong></h1>
+      </div>
+  </div>
+  <div class="reviewImportOuterWrapper">
+    <div class="alignRight">
+      <button class="button action" ng-click="importCSVModal(importPath)">Save Map & Upload New File</button>
+      <button class="button action" ng-click="importDbMap()"
+      ng-disabled="lengthError || duplicatedRecordSet > 0 || emptyRequiredFields.length > 0 || duplicateCSVRows.length > 0 ||  missingGoal.length > 0  ||  missingObjective.length > 0  ||  missingMeasure.length > 0 ||  missingTarget.length > 0  ||  missingFinding.length > 0"
+      >Start Import</button>
+    </div>
+    <div class="reviewImportWrapper">
+      <div class="panelBox reviewImportLeftColumn">
+        <div class="panelBox-inner">
+          <div class="panelBox-body">
+            <div class="panelBox-subheader">
+              <h4>Import to Include:</h4>
+            </div>
+            <div class="innerPanelPadding">
+              <div ng-repeat="includedField in importToInclude">
+                <strong>{{includedField.csvField}}</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviewImportRightColumn panelBox">
+        <div class="panelBox-inner">
+          <div class="panelBox-body">
+
+            <!-- Alerts -->
+            <div class="panelBox-subheader" ng-if="lengthError">
+              <h4><strong>Alerts</strong> <i class="ion-alert"></i> (File to large)</h4>
+            </div>
+            <div class="innerPanelPadding" ng-if="lengthError">
+              <div class="form-error showFormError">{{lengthErrorMsg}}</div>
+            </div>
+            <div class="panelBox-subheader" ng-if="emptyRequiredFields.length > 0">
+              <h4><strong>Alerts</strong> <i class="ion-alert"></i> (missing required fields)</h4>
+            </div>
+            <div class="innerPanelPadding" ng-if="emptyRequiredFields.length > 0">
+              <div ng-if="emptyRequiredFields.length === 0">None</div>
+              <div class="form-error" ng-show="emptyRequiredFields.length > 0" ng-class="{'showFormError' : emptyRequiredFields.length > 0}">You must fix these required fields and upload the CSV file again in order to import</div>
+              <div ng-repeat="erf in emptyRequiredFields">
+                <div> There <span ng-if="erf.emptyFields.length !== 1">are</span><span ng-if="erf.emptyFields.length === 1">is</span> <strong>{{erf.emptyFields.length}}</strong> row record<span ng-if="erf.emptyFields.length !== 1">s</span> without data for <strong>{{erf.csvField}}</strong></div>
+                <ul class="missingCSVRows">
+                  <li ng-repeat="line in erf.emptyFields">{{line}}</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="panelBox-subheader" ng-if="duplicateCSVRows.length > 0">
+              <h4><strong>Alerts</strong> <i class="ion-alert"></i> (duplicated fields)</h4>
+            </div>
+            <div class="innerPanelPadding" ng-if="duplicateCSVRows.length > 0">
+              <div ng-if="duplicateCSVRows.length === 0">None</div>
+              <div class="form-error" ng-show="duplicateCSVRows.length > 0" ng-class="{'showFormError' : duplicateCSVRows.length > 0}">There cannot be duplicated rows with matching Course Code, Number, Term, and Year in your CSV file.  Please eliminate any duplicates</div>
+              <div ng-show="duplicateCSVRows.length > 0">You have duplicate rows in your file on lines:
+                  <div ng-repeat="dups in duplicateCSVRows track by $index" class="missingCSVRows">
+                    {{dups.csvIndex + 2}} - [ <span ng-repeat="row in dups.group | filter: '!' + dups.csvIndex"> {{row + 2}} </span> ]
+                  </div>
+              </div>
+            </div>
+            <div class="panelBox-subheader" ng-if="duplicatedRecordSet > 0">
+              <h4><strong>Alerts</strong> <i class="ion-alert"></i> (Indentical Projects)</h4>
+            </div>
+            <div class="innerPanelPadding" ng-if="duplicatedRecordSet > 0">
+              <div ng-if="duplicatedRecordSet === 0">None</div>
+              <div class="form-error" ng-show="duplicatedRecordSet > 0" ng-class="{'showFormError' : duplicatedRecordSet > 0}">The following projects with identical names and reporting periods already exist in the system.  Please rename these files in order to import them.</div>
+              <div ng-show="duplicatedRecordSet > 0">
+                <div ng-repeat="duplicate in duplicatedImportReviewProjects track by $index" class="missingCSVRows">
+                  {{duplicate.projectName}} - {{duplicate.reportingPeriod}}
+                </div>
+              </div>
+            </div>
+            <div class="panelBox-subheader"  ng-if="(missingGoal.length > 0) || (missingObjective.length > 0) || (missingMeasure.length > 0) || (missingTarget.length > 0) || (missingFinding.length > 0)">
+              <h4><strong>Alerts</strong> <i class="ion-alert"></i> (dependent fields)</h4>
+            </div>
+            <div class="innerPanelPadding"  ng-if="(missingGoal.length > 0) || (missingObjective.length > 0) || (missingMeasure.length > 0) || (missingTarget.length > 0) || (missingFinding.length > 0)">
+              <div ng-if="!missingGoal && !missingObjective && !missingMeasure && !missingTarget && !missingFinding">
+                None
+              </div>
+              <div class="form-error showFormError" ng-show="(missingGoal.length > 0) || (missingObjective.length > 0) || (missingMeasure.length > 0) || (missingTarget.length > 0) || (missingFinding.length > 0)">
+                These fields are dependent upon other fields and must contain data
+              </div>
+            </div>
+            <div class="innerPanelPadding" ng-show="(missingGoal.length > 0)">
+              <div>
+                <div>A <strong>Goal</strong> is required in rows:</div>
+                <div ng-repeat="mg in missingGoal track by $index" class="missingCSVRows" style="display:inline-block;">
+                  {{mg + 1}}<span ng-if="(missingGoal.length > 1) && ($index !== (missingGoal.length - 1))">, &nbsp;</span>
+                </div>
+              </div>
+            </div>
+            <div class="innerPanelPadding" ng-show="(missingObjective.length > 0)">
+              <div>
+                <div>An <strong>Objective</strong> is required in rows:</div>
+                <div ng-repeat="mo in missingObjective track by $index" class="missingCSVRows" style="display:inline-block;">
+                  {{mo + 1}}<span ng-if="(missingObjective.length > 1) && ($index !== (missingObjective.length - 1))">, &nbsp;</span>
+                </div>
+              </div>
+            </div>
+            <div class="innerPanelPadding" ng-show="(missingMeasure.length > 0)">
+              <div>
+                <div>A <strong>Measure</strong> is required in rows:</div>
+                <div ng-repeat="mm in missingMeasure track by $index" class="missingCSVRows" style="display:inline-block;">
+                  {{mm + 1}}<span ng-if="(missingMeasure.length > 1) && ($index !== (missingMeasure.length - 1))">, &nbsp;</span>
+                </div>
+              </div>
+            </div>
+            <div class="innerPanelPadding" ng-show="(missingTarget.length > 0)">
+              <div>
+                <div>A <strong>Target</strong> is required for the corresponding Targets in rows:</div>
+                <div ng-repeat="mt in missingTarget track by $index" class="missingCSVRows" style="display:inline-block;">
+                  {{mt + 1}}<span ng-if="(missingTarget.length > 1) && ($index !== (missingTarget.length - 1))">, &nbsp;</span>
+                </div>
+              </div>
+            </div>
+            <div class="innerPanelPadding" ng-show="(missingFinding.length > 0)">
+              <div>
+                <div>A <strong>Finding</strong> is required for the corresponding Targets in rows:</div>
+                <div ng-repeat="mf in missingFinding track by $index" class="missingCSVRows" style="display:inline-block;">
+                  {{mf + 1}}<span ng-if="(missingFinding.length > 1) && ($index !== (missingFinding.length - 1))">, &nbsp;</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- WARNINGS Semi-Required -->
+            <div class="panelBox-subheader" ng-if="emptyFieldsSemiRequired.length > 0">
+              <h4><strong>Warnings</strong> <i class="ion-android-warning"></i></h4>
+            </div>
+            <div class="innerPanelPadding" ng-if="emptyFieldsSemiRequired.length > 0">
+              <div ng-if="(emptyFieldsSemiRequired.length === 0)">None</div>
+              <div ng-repeat="efsr in emptyFieldsSemiRequired">
+                <div>There <span data-ng-if="efsr.emptyFields.length !== 1">are</span><span data-ng-if="efsr.emptyFields.length === 1">is</span>
+                  <strong>{{efsr.emptyFields.length}}</strong> row record<span data-ng-if="efsr.emptyFields.length !== 1">s</span>
+                  without data for <strong>{{efsr.csvField}}</strong>.             
+                <strong class="alert-text">  Records missing this crucial data will be ignored and not be imported at all.</strong></div>
+              </div>
+            </div>
+
+            <!-- WARNINGS --> <!--Not Required -->
+            <div class="panelBox-subheader" ng-if="emptyFieldsNotRequired.length > 0">
+              <h4><strong>Warnings</strong> <i class="ion-android-warning"></i> (missing fields - not required)</h4>
+            </div>
+            <div class="innerPanelPadding" ng-if="emptyFieldsNotRequired.length > 0">
+              <div ng-if="(emptyFieldsNotRequired.length === 0)">None</div>
+              <div ng-repeat="efnr in emptyFieldsNotRequired">
+                <div>There <span data-ng-if="efnr.emptyFields.length !== 1">are</span><span data-ng-if="efnr.emptyFields.length === 1">is</span>
+                  <strong>{{efnr.emptyFields.length}}</strong> row record<span data-ng-if="efnr.emptyFields.length !== 1">s</span>
+                  without data for <strong>{{efnr.csvField}}</strong></div>
+              </div>
+            </div>
+            <div class="panelBox-subheader">
+              <h4><strong>Import Summary</strong></h4>
+            </div>
+            <div class="innerPanelPadding">
+              <!-- {{contensiveFields}} -->
+              <table class="">
+                <tbody>
+                  <tr ng-repeat="row in contensiveFields" ng-if="row.showField">
+                    <td>{{row.caption}}</td>
+                    <td><span>{{row.csvData.length}} records</span><span ng-if="row.csvField === 'unmapped'">unmapped</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

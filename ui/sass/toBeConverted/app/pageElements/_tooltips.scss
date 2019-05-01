@@ -1,0 +1,72 @@
+// app.css
+/* tooltips */
+.tooltip {
+    background-color: $dark-grey;
+    color: #fefefe;
+    font-size: 12px;
+    line-height: 1.3em;
+    padding: 7px 10px;
+    position: absolute;
+    z-index: 11;
+    top: calc(100% + 0.6495rem);
+    max-width: 10rem !important;
+    border-radius: 3px; }
+.tooltip::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 0.5rem;
+    border-color: transparent transparent $dark-grey;
+    border-bottom-style: solid;
+    border-top-width: 0;
+    bottom: 100%;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+.tooltip.top::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 0.5rem;
+    border-color: $dark-grey transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto; }
+.tooltip.left::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 0.5rem;
+    border-color: transparent transparent transparent $dark-grey;
+    border-left-style: solid;
+    border-right-width: 0;
+    bottom: auto;
+    left: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+.tooltip.right::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 0.5rem;
+    border-color: transparent $dark-grey transparent transparent;
+    border-right-style: solid;
+    border-left-width: 0;
+    bottom: auto;
+    left: auto;
+    right: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+tooltip tip { background: rgba(75,76,71, 0.9); min-width: 80px; padding: 2px 10px; white-space: nowrap; }
+tooltip._bottom  tip tip-arrow { border-bottom-color: rgba(75,76,71, 0.9); }

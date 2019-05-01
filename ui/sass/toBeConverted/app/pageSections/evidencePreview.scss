@@ -1,0 +1,61 @@
+/* sprint 03 - evidence preview */
+#id-layoutContent.evidencePreviewLayout { padding-top: 91px; }
+.evidenceHeaderBox .pagePrintDownload { padding-bottom: 5px; }
+.evidenceHeaderBox .evidenceVoteSummaryTable { margin: 5px 0 0; }
+.evidenceHeaderBox h5 { margin-bottom: 0; }
+.evidenceHeaderBox .subheader { margin-bottom: 0; }
+.evidencePreviewTable { margin-bottom: 2em; }
+.evidencePreviewTable .tableLayout-left { background-color: $light-beige; padding-bottom: 50px; }
+.evidencePreviewTable .tableLayout-right { padding-left: 20px; width: 460px; }
+.evidencePreviewTable { margin-top: 1em; }
+/* evidence display */
+.evidencePreviewPane { display: table; min-height: 400px; text-align: center; width: 100%; }
+.evidencePreviewPaneInner { display: table-cell; vertical-align: middle; width: 100%; }
+.evidenceHolder { display: inline-block; padding: 20px 10px; width: 100%; }
+/* evidence header */
+.hist-label { font-weight: $bold; }
+.vote-indicator { font-family: 'Rubik'; font-size: 11px; font-weight: $bold; padding: 9px; }
+.indicator-upvotes { color: #7ed321; }
+.indicator-downvotes { color: $dark-red; }
+/* evidence toolbar */
+.evidenceToolbar { text-align: right; padding: 10px; }
+.evidenceToolbar .button { margin-bottom: 0; padding: 7px 12px; }
+.evidenceToolbar .button span { font-size: 18px; }
+ul.evidenceToolbarUL { font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.evidenceToolbarUL > li { display: inline-block; font-size: 18px; margin-left: 5px; vertical-align: middle; }
+ul.evidenceToolbarUL > li:first-child { margin-left: 0; }
+/* evidence description box */
+.evidenceDescriptionBox { font-size: 14px; text-align: left; }
+.evidenceDescriptionBox .textarea textarea { min-height: 100px; max-height: 100px; max-width: 440px; resize: none; }
+.evidenceDescriptionBox .read-only { margin-bottom: 1em; }
+/* evidence comments */
+ul.commentEvidenceUL { font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.commentEvidenceUL > li { border-bottom: 1px solid $light-grey; font-size: 14px; padding: 10px 0; }
+ul.commentEvidenceUL > li:first-child { border-top: 1px solid $light-grey; }
+ul.commentEvidenceUL .school h6 { color: $school-blue; }
+ul.commentEvidenceUL .accreditor h6 { color: $accreditor-dark-green; }
+.user-header-small h6 { margin-bottom: 0; line-height: 1.5em; }
+.user-header-small .img-col { width: 50px; }
+.comment-header .comment-vote-col { text-align: right; width: 80px; }
+.comment-header .comment-vote-col .badge { border-radius: 0; }
+.oneComment .user-comment { padding: 10px 0 0; }
+li.commentsLI > dropdown-toggle { display: inline-block; }
+/* add evidence comment */
+.addNewComment-box { padding: 1em 0; }
+.addNewComment .comment-user-col { width: 50px; }
+.voteCommentBox textarea { min-height: 120px; max-height: 120px; max-width: 370px; resize: none; }
+.vote-help-text { color: $red; margin: 0 0 5px; }
+ul.commentButtonsUL { font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.commentButtonsUL > li { display: inline-block; margin-left: 5px; font-size: $font-size; }
+ul.commentButtonsUL > li:first-child { margin-left: 0; }
+ul.commentButtonsUL > li:last-child { float: right; }
+/* evidence comment voting */
+.commentsEvidencePanel > .dropdown-pane  { border: 0; box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.3), 0 0 24px 0 rgba(0, 0, 0, 0.22); padding: 0; text-align: left; width: 270px; z-index: 10; }
+.panelExpandBox > .accordion { background-color: $faint-gold; border: 0 none; }
+.commentButtonOptions .radio-button input + label { background-color: $highlight-grey; background-repeat: no-repeat; background-position: center left 10px; border: 1px solid $light-grey; border-radius: 3px; color: $grey; font-family: 'Catamaran'; font-size: 13px; font-weight: $strong; margin: 0; padding: 5px 15px 5px 35px; text-transform: capitalize; }
+.commentButtonOptions .radio-button input.downvote-radio + label { background-image: url('../img/icons/vote-down-none-tiny.png'); }
+.commentButtonOptions .radio-button input.downvote-radio:checked + label { background-color: $red; background-image: url('../img/icons/vote-down-votes-tiny.png'); border: 1px solid $red; color: $plain-white; }
+.commentButtonOptions .radio-button input.upvote-radio + label { background-image: url('../img/icons/vote-up-none-tiny.png'); }
+.commentButtonOptions .radio-button input.upvote-radio:checked + label { background-color: #43ac6a; background-image: url('../img/icons/vote-up-votes-tiny.png'); border: 1px solid #43ac6a; color: $plain-white; }
+
+.btnResetPass {display:inline; float:left; padding-left: 10px;}

@@ -1,0 +1,115 @@
+<!-- MAP CSV FILE TO DATABSE -->
+<div id="id-mapCourses" class="generic-container dataManagement" data-ng-init="initMapCourses()" block-ui="programUI">
+  <!-- page heading -->
+  <div class="pageHead help-table">
+      <div class="col">
+          <h1>Create Mapping: Courses</h1>
+      </div>
+  </div>
+  <div class="">
+    <div class="alignRight"><button class="button action" ng-click="goToMapPreview(contensiveFields)">Next</button></div>
+    <table class="mapCSVToCompanyField">
+      <thead>
+      <tr>
+        <th class="editBtnColumn">Edit</th>
+        <th class="">Company DB Field</th>
+        <th class="">CSV Header</th>
+        <th class="">Sample Data</th>
+        <th class="">Sample Data</th>
+        <th class="">Sample Data</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr data-ng-repeat="field in contensiveFields track by $index" data-ng-class="(field.emptyFields.length > 0) && field.required ? 'fieldHasError' : 'mappedFieldHasNoErrors'" ng-if="field.showField">
+
+        <td class="editModal" data-ng-click="(field.csvData.length == 0) || getFieldValues(field, field.csvField, csvFields.line_0)" data-ng-disabled="field.csvData.length == 0" data-ng-class="{'disabled': field.csvData.length == 0}">
+          <span class="button action" ng-if="field.dbMapValues.length == 0 && (field.type === 'lookup' || field.type === 'boolean')">Map</span>
+          <span  class="button action" ng-if="field.dbMapValues.length > 0 && (field.type === 'lookup' || field.type === 'boolean')">Edit</span>
+        </td>
+        <td class="fieldName">{{field.dbName}}<span ng-if="field.required">*</span></td>
+        <td>
+          <span ng-if="($index === 0) || ($index === 1) || ($index === 2) || ($index === 3)">{{field.csvField}}</span>
+          <span ng-if="($index !== 0) && ($index !== 1) && ($index !== 2) && ($index !== 3)">
+            <ui-select ng-model="field.csvField" close-on-select="true" title="Click here to select" data-ng-change="addCSVField(field.csvField, field, csvFields.line_0)" ng-init="addCSVField(field.csvField, field, csvFields.line_0)">
+              <ui-select-match placeholder="unmapped">{{$select.selected}} <a class="btn btn-xs btn-link pull-right" ng-click="clearSelected($event, $select, field)"><i class="ion-close"></i></a></ui-select-match>
+              <ui-select-choices repeat="header in csvFields.line_0 | filter: $select.search track by $index">
+                  {{header}}
+              </ui-select-choices>
+            </ui-select>
+          </span>
+        </td>
+        <td ng-if="field.csvData.length >= 1">{{field.csvData[0] | limitTo: 20}}<span ng-if="field.csvData[0].length > 20">...</span></td>
+        <td ng-if="field.csvData.length >= 2" >{{field.csvData[1] | limitTo: 20}}<span ng-if="field.csvData[1].length > 20">...</span></td>
+        <td ng-if="field.csvData.length >= 3">{{field.csvData[2] | limitTo: 20}}<span ng-if="field.csvData[2].length > 20">...</span></td>
+
+        <td ng-if="field.csvData.length == 0 && (field.emptyFields && field.emptyFields.length > 0)">--</td>
+        <td ng-if="field.csvData.length <= 1 && (field.emptyFields && field.emptyFields.length > 1)">--</td>
+        <td ng-if="field.csvData.length <= 2 && (field.emptyFields && field.emptyFields.length > 2)">--</td>
+
+      </tr>
+      </tbody>
+    </table>
+    <div class="alignRight"><button class="button action" ng-click="goToMapPreview(contensiveFields)">Next</button></div>
+  </div>
+</div>
+
+<!-- Modals -->
+<!-- MODAL: Import Users -->
+<script type="text/ng-template" id="id-mapBoolean.html">
+    <div class="modal-header">
+        <h3>Map to Company Field: </h3>
+        <button type="button" class="close-button" aria-label="Close modal" data-ng-click="cancel()">
+            <span class="ion-android-close" area-hidden="true"></span>
+        </button>
+    </div>
+    <div class="modal-body">
+      <!-- NOTE: for Testing -->
+      <table class="mapCSVToCompanyField" ng-if="!selectedField.mapped">
+        <thead>
+        <tr>
+          <th class="">CSV Field</th>
+          <th class="">Company DB Field</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr class="" ng-repeat="csvValue in uniqueFieldValues track by $index">
+            <td>{{csvValue}}</td>
+            <td>
+              <md-select  ng-model="matchedDBValue" ng-change="selectedMap(csvValue, matchedDBValue, selectedField)"
+                          data-ng-class="{'select-empty': !matchedDBValue}" placeholder="Select">
+                <md-option data-ng-repeat="map in selectedField.dbMap" data-ng-value="map" data-ng-bind="map"></md-option>
+              </md-select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="" ng-if="selectedField.mapped">
+        <thead>
+        <tr>
+          <th class="">CSV Field</th>
+          <th class="">Company DB Field</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr class="" ng-repeat="mapValue in selectedField.dbMapValues track by $index">
+            <td>{{mapValue.csvFieldValue}}</td>
+            <td>
+              <md-select  ng-model="mapValue.dbFieldValue" ng-change="selectedMap(csvValue, mapValue.dbFieldValue, selectedField)"
+                          data-ng-class="{'select-empty': !mapValue.dbFieldValue}" placeholder="Select">
+                <md-option data-ng-repeat="map in selectedField.dbMap" data-ng-value="map" data-ng-bind="map"></md-option>
+              </md-select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="modal-footer">
+      <div class="form-error" ng-show="notAllFieldsMapped" ng-class="{'showFormError' : notAllFieldsMapped}">Please match all fields before continuing</div>
+        <button type="button" class="button action" data-ng-click="matchFields(selectedField, uniqueFieldValues)">
+            Done
+        </button>
+    </div>
+</script>
+<!-- END MODAL: Confirm Report added to Saved Reports -->

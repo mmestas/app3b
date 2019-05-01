@@ -1,0 +1,139 @@
+<!doctype html>
+<html ng-app="appName">
+<head>
+    <title ng-bind="title ? title + ' &mdash; ' +  pageTitle: pageTitle"></title>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="en-us">
+    <meta name="robots" content="nofollow">
+
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:300,400,500,700|Rubik:300,400,500,700" rel="stylesheet">
+    <!-- build:css /css/stylesheet.css -->
+    <!-- CSS Libraries -->
+    <link href="/css/libraries/angular-material.1.1.10.min.css" rel="stylesheet">
+    <link href="/css/libraries/ionicons.min.css" rel="stylesheet">
+    <link href="/css/libraries/foundation.6.2.1.min.css" rel="stylesheet">
+    <link href="/css/libraries/angular-block-ui.css" type="text/css" rel="stylesheet">
+    <link href="/css/libraries/angular-tooltips.min.css" type="text/css" rel="stylesheet">
+    <link href="/css/libraries/select2.min.css" type="text/css" rel="stylesheet">
+    <link href="/css/libraries/select.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/libraries/codemirror.5.35.0.min.css" rel="stylesheet">
+    <link href="/css/appName.css" rel="stylesheet" type="text/css">
+    <!-- endbuild -->
+
+    <base href="/">
+</head>
+<body ng-controller="loginCtrl" data-ng-class="[$root.bodylayout, $root.targetRouteName]">
+
+<div ui-view="" data-ng-class="[$root.viewlayout, 'no-animate']">
+
+</div>
+
+<!-- scripts -->
+<!-- Pendo -->
+<script>
+    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+    v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+    o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+    y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/1c0d015a-c3f3-4143-6c5d-3b2b76d18c33/pendo.js';
+    z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+</script>
+
+<script src="/app/env.js"></script>
+<script src="/js/Chart.min.js"></script>
+<script src="/js/chartjs-plugin-datalabels.min.js"></script>
+
+<!-- build:js /js/script.js -->
+<script src="/js/firebase.4.11.0.min.js"></script>
+<script src="/js/codemirror.5.35.0.min.js"></script>
+<script src="/js/codemirror.autorefresh.min.js"></script>
+<script src="/js/firepad.1.5.0.1.min.js"></script>
+<script src="/js/firepad-userlist.js" type="text/javascript"></script>
+<script src="/js/angular.1.6.9.min.js"></script>
+<script src="/js/angular-animate.1.6.9.min.js"></script>
+<script src="/js/angular-touch.1.7.2.min.js"></script>
+<script src="/js/angular-ui-router.1.0.15.min.js"></script>
+<script src="/js/stateEvents.min.js"></script>
+<script src="/js/angular-cookies.1.6.9.min.js"></script>
+<script src="/js/angular-sanitize.1.6.9.min.js"></script>
+<script src="/js/angular-aria.1.6.9.min.js"></script>
+<script src="/js/angular-material.1.1.10.min.js"></script>
+<script src="/js/ng-file-upload-shim.min.js" type="text/javascript"></script>
+<script src="/js/angular-linkify.1.2.0.min.js"></script>
+<script src="/js/angular-scroll.1.0.0.min.js"></script>
+<script src="/js/angular-foundation.min.js" type="text/javascript"></script>
+<script src="/js/angular-datepicker.min.js" type="text/javascript"></script>
+<script src="/js/autofill-event.js" type="text/javascript"></script>
+<script src="/js/angular-block-ui.min.js" type="text/javascript"></script>
+<script src="/js/angular-inview.3.0.0.min.js" type="text/javascript"></script>
+<script src="/js/ng-file-upload.min.js" type="text/javascript"></script>
+<script src="/js/angular-tooltips.min.js" type="text/javascript"></script>
+<script src="/js/scrollglue.js" type="text/javascript"></script>
+<script src="/js/dirPagination.js" type="text/javascript"></script>
+<script src="/js/angular-carousel.min.js" type="text/javascript"></script>
+<script src="/js/angular-idle.min.js" type="text/javascript"></script>
+<script src="/js/ng-text-truncate.js" type="text/javascript"></script>
+<script src="/js/ng-img-crop.js" type="text/javascript"></script>
+<script src="/js/ngPrint.min.js" type="text/javascript"></script>
+<script src="/js/isteven-multi-select.js" type="text/javascript"></script>
+<script src="/js/xeditable.min.js" type="text/javascript"></script>
+<script src="/js/es6-promise.auto.min.js" type="text/javascript"></script>
+<script src="/js/typo/typo.js" type="text/javascript"></script>
+<script src="/js/typo/loadTypo.js" type="text/javascript"></script>
+<script src="/js/select.min.js"></script>
+<script src="/js/perfect-scrollbar.min.js"></script>
+<script src="/js/angular-drag-and-drop-lists.min.js" type="text/javascript"></script>
+<script src="/js/vendor/what-input.js"></script>
+<script src="/js/vendor/classie.js"></script>
+<script src="/app/app.js" type="text/javascript"></script>
+<script src="/app/ui-router.js" type="text/javascript"></script>
+<script src="/app/directives.js" type="text/javascript"></script>
+<script src="/app/session.js" type="text/javascript"></script>
+<script src="/app/config.js" type="text/javascript"></script>
+<script src="/app/credentialsView/credentialsControllers.js" type="text/javascript"></script>
+<script src="/app/masterView/index.js" type="text/javascript"></script>
+<script src="/app/schoolListView/index.js" type="text/javascript"></script>
+<script src="/app/schoolResponseView/index.js" type="text/javascript"></script>
+<script src="/app/compileReportView/index.js" type="text/javascript"></script>
+<script src="/app/savedReportsView/index.js" type="text/javascript"></script>
+<script src="/app/evidencePreview/index.js" type="text/javascript"></script>
+<script src="/app/schoolProgramView/index.js" type="text/javascript"></script>
+<script src="/app/feedbackWorkspaceView/index.js" type="text/javascript"></script>
+<script src="/app/accreditorFeedbackWorkspaceView/index.js" type="text/javascript"></script>
+<script src="/app/feedbackReportView/index.js" type="text/javascript"></script>
+<script src="/app/teamSelfRatingsView/index.js" type="text/javascript"></script>
+<script src="/app/dashboardsView/accreditorDashboardView/index.js" type="text/javascript"></script>
+<script src="/app/dashboardsView/schoolDashboardView/index.js" type="text/javascript"></script>
+<script src="/app/dashboardsView/institutionDashboardView/index.js" type="text/javascript"></script>
+<script src="/app/accreditorStandardView/index.js" type="text/javascript"></script>
+<script src="/app/accreditorStandardListView/index.js" type="text/javascript"></script>
+<script src="/app/schoolStandardListView/index.js" type="text/javascript"></script>
+<script src="/app/userManagementView/index.js" type="text/javascript"></script>
+<script src="/app/accountManagementView/index.js" type="text/javascript"></script>
+<script src="/app/institutionListView/index.js" type="text/javascript"></script>
+<script src="/app/evaluatorManagementView/index.js" type="text/javascript"></script>
+<script src="/app/nestedDragNDrop.js" type="text/javascript"></script>
+<script src="/app/dataManagement/index.js" type="text/javascript"></script>
+<script src="/app/dataManagement/importUserAccounts/index.js" type="text/javascript"></script>
+<script src="/app/dataManagement/importCourses/index.js" type="text/javascript"></script>
+<script src="/app/dataManagement/importInternalReviewProjects/index.js" type="text/javascript"></script>
+<script src="/app/dataManagement/importDegrees/index.js" type="text/javascript"></script>
+<script src="/app/dataManagement/previewMappedData/index.js" type="text/javascript"></script>
+<script src="/app/adminTasks/standardTasks/index.js" type="text/javascript"></script>
+<script src="/app/adminTasks/errorLog/index.js" type="text/javascript"></script>
+<script src="/app/404/index.js" type="text/javascript"></script>
+<script src="/app/projectsView/index.js" type="text/javascript"></script>
+<script src="/app/createProjectView/index.js" type="text/javascript"></script>
+<script src="/app/assessmentWorkspaceView/index.js" type="text/javascript"></script>
+<script src="/app/projectAttachmentsView/index.js" type="text/javascript"></script>
+<script src="/app/documentPreview/index.js" type="text/javascript"></script>
+<script src="/app/reportsView/index.js" type="text/javascript"></script>
+<script src="/app/assessmentReportsView/index.js" type="text/javascript"></script>
+<script src="/app/settingsView/index.js" type="text/javascript"></script>
+<script src="/app/credentialsWorkspace/index.js" type="text/javascript"></script>
+<script src="/app/credentialsDetails/index.js" type="text/javascript"></script>
+<script src="/app/credentialsReport/index.js" type="text/javascript"></script>
+
+
+</body>
+</html>

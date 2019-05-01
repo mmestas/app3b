@@ -1,0 +1,29 @@
+/* FLEXBOX - not supported by IE9 */
+.flexBox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+}
+.flexBox-left {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.flexBox-right {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.flex {display:flex;}
+.flexGrow {flex-grow: 1;}
+.flexGrow1 {flex-grow: 1;}
+.flexGrow2 {flex-grow: 2;}
+.flexGrow3 {flex-grow: 3;}
+.flexGrow4 {flex-grow: 4;}
+
+.flex-header-1 {display:flex; align-items:flex-start; justify-content:space-between;}

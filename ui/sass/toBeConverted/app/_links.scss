@@ -1,0 +1,7 @@
+/* links */
+a:not(.button) { color: inherit; text-decoration: underline; }
+a:not(.button):hover { text-decoration: none; }
+a:not(.button, ul.firepad-dropdown-menu a):active { opacity: 0.8; }
+// _firepad.scss
+ul.firepad-dropdown-menu a:active, a.firepad-dropdown:active {opacity : 1 !important;}
+:focus{outline: none;}

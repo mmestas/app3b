@@ -1,0 +1,28 @@
+// app.css
+/*======= TC-10 # Modals / Pop-ups =======*/
+/* modals */
+.reveal { box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.3), 0 0 24px 0 rgba(0, 0, 0, 0.22); padding: 26px; }
+.reveal-overlay { background-color: rgba(0, 0, 0, 0.45); }
+.modal-header { background-color: $light-beige; color: $dark-grey; margin: -26px -26px 0; padding: 19px 83px 19px 26px; position: relative; }
+.modal-header > h3 { margin-bottom: 0; }
+.modal-header > .close-button { font-size: 34px; line-height: 1em; top: 12px; right: 31px; }
+.modal-body { margin: 28px 0; }
+.modal-body > h4 { }
+.modal-footer { text-align: center; }
+.modal-footer > button { margin-bottom: 10px; margin-right: 23px; }
+.modal-footer > button:last-child { margin-right: 0; }
+
+/* archive file modal */
+.archiveFileName { border: 1px solid $highlight-grey; margin: 1em 0 2em; padding: 15px 21px; }
+.archiveFileName h4 { margin-bottom: 0; }
+
+
+// end app.css
+
+
+.uploadedFileName {
+    padding-top: 10px;
+    text-align: center;
+    color: $dark-gold;
+}
+.md-select-menu-container {z-index: 10000;}

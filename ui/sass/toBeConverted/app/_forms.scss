@@ -1,0 +1,212 @@
+/***************************** FORMS _forms.scss *****************************/
+/*======= TC-05 # Form Elements =======*/
+/* forms _forms.scss */
+label { color: $dark-gold; font-size: 12px; line-height: 1.5em; padding: 0 0 5px 15px; text-align: left; text-transform: uppercase; }
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea { background-color: $plain-white; border: 2px solid $light-grey; box-shadow: none; color: $dark-gold; height: auto; padding: 10px 15px; }
+[type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus, textarea:focus { background-color: $plain-white; border: 2px solid $gold; box-shadow: none; color: $dark-gold; }
+/* form buttons */
+form [type='submit'], form [type='button'] {
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 0.85em 1em;
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    background-color: $dark-grey;
+    color: $plain-white;
+}
+form [type='submit']:hover, form [type='submit']:focus,
+form [type='button']:hover, form [type='button']:focus { background-color: $dark-grey-hover; box-shadow: $button-shadow; }
+/* form alerts, form confirmations */
+.form-error { background-color: $dark-red; color: $plain-white; font-size: 13px; font-weight: $regular; padding: 9px 15px 7px; margin-top: -1rem; }
+.form-error-label { color: $dark-red; }
+.form-error-border { border-color: $dark-red; }
+.is-invalid-input:not(:focus) { background-color: $plain-white; border-color: $dark-red; }
+.is-invalid-label, .is-invalid-label > span { color: $red; }
+form.ng-invalid.ng-submitted .form-error { display: block; }
+
+/************** Inputs **************/
+/* input must go before the label, the label must contain a span */
+.input { display: inline-block; margin: 1em 0; max-width: 350px; position: relative; vertical-align: top; width: 100%; z-index: 1; }
+.textarea.input { max-width: 100%; }
+.input-field::-webkit-input-placeholder { color: $dark-grey; }
+.input-field:-moz-placeholder { color: $dark-grey; }
+.input-field::-moz-placeholder { color: $dark-grey; }
+.input-field:-ms-input-placeholder { color: $dark-grey; }
+.input-field { background-color: $light-grey; color: $dark-gold; width: 100%;
+    -webkit-transition: background-color 0.25s, border-color 0.25s;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+.input-label { font-size: $font-size; overflow: hidden; padding: 10px 16px; pointer-events: none; position: absolute; bottom: 100%; text-align: left; text-transform: none; width: 100%;
+    -webkit-transform: translate3d(0, 3em, 0);
+    transform: translate3d(0, 3em, 0);
+    /*-webkit-transition: -webkit-transform 0.25s;
+    transition: transform 0.25s;*/
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+.input-label-content { color: $dark-grey;
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: transform 0.25s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+.input-label-content::after { color: $dark-gold; content: attr(data-content); font-size: 12px; height: 100%; position: absolute; bottom: 100%; left: 0; padding: 5px 0; text-transform: uppercase; width: 100%; }
+.input-field:focus + .input-label,
+.input--filled .input-label { color: $dark-gold; font-size: 12px; padding: 5px 16px; text-transform: uppercase;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+.input-field:focus + .input-label .input-label-content,
+.input--filled .input-label-content { color: $dark-gold;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+.input-field:focus + .input-field,
+.input--filled .input-field:not(select) { background-color: $plain-white; border-color: $gold; }
+
+/************** Textareas **************/
+.textarea textarea { min-height: 160px; }
+.input--filled textarea[readonly] { border-color: $highlight-grey; }
+
+/************** Selects **************/
+/* select drop-downs */
+/* regular, no label */
+select, md-select {background-color: $light-grey; background-position: right 7px center; background-origin: inherit; border: none; color: $dark-grey; height: auto; padding: 10px 25px 10px 15px; }
+md-select {margin: 0; display: inline-block; font-size: 1rem; line-height: normal; width: 100%; margin: 0 0 1rem; border: 2px solid $gold; background-color: #fff; text-align: start;}
+md-select.select-empty,
+md-select.ng-empty {border: 2px solid $light-grey; background-color: $light-grey;}
+md-select:focus {border: 2px solid $gold; background-color: $plain-white;}
+.md-visually-hidden {width: 1px !important;}
+.md-select-value {border: none; min-height: auto; padding: 0;}
+.md-select-value .md-select-icon::after{right: -26px; right: -20px; color: #8a8a8a;} /*MM - I changed this to -20 because I didn't like it right on the edge, but if it needs to be 26 I'll comment it out*/
+md-select:not([disabled]):focus .md-select-value {border: none;}
+md-select-menu.md-default-theme md-content, md-select-menu md-content{background: #fff;}
+md-select-menu.md-default-theme md-content md-option:not([disabled]):focus,
+md-select-menu md-content md-option:not([disabled]):focus,
+md-select-menu.md-default-theme md-content md-option:not([disabled]):hover,
+md-select-menu md-content md-option:not([disabled]):hover {background: $light-beige;}
+md-select-menu:not(.md-overflow) md-content {padding-top: 0; padding-bottom: 0;}
+/* regular, with label */
+.select.input { background-color: $light-grey; }
+.select.input.manager-modal {max-width: 100%; }
+select.input-field { margin-bottom: 0; }
+
+/* Select 2 */
+.ui-select-container {width: 100%; background: $light-grey; display: inline-block; text-align: start; border: 2px solid $light-grey;}
+.ui-select-container.ui-select-not-empty{background: #fff; border: 2px solid $gold;}
+.ui-select-container.ui-select-empty{background: $light-grey; border: 2px solid $light-grey;}
+.ui-select-container.select2-dropdown-open{background: #fff; border: 2px solid $gold;}
+.ui-select-container.ui-select-multiple.ng-not-empty {background: #fff;}
+.ui-select-search-hidden{opacity:0;height:0;min-height:0;padding:0;margin:0;border:0;width:0}
+.ui-select-multiple.select2-container .select2-choice {line-height: 50px;}
+.editable-wrap.editable-ui-select {white-space: normal;}
+div[editable-ui-select]{cursor: pointer;}
+.editable-ui-select .ui-select-container {width: auto; min-width: 400px;}
+.source-of-evidence-wrapper .editable-ui-select .ui-select-container,
+.target-achievment-status .editable-ui-select .ui-select-container {min-width: 350px;}
+.editable-ui-select {font-size: 1rem;}
+
+.select2-container-multi.select2-container-active .select2-choices {border: none; box-shadow: none; width: 100%; background: #fff}
+.select2-container-multi .select2-choices {background: transparent; border: none;}
+.ui-select-container.ui-select-multiple.ng-not-empty .select2-choices {border-color: $gold;}
+.select2-container-multi .select2-choices .select2-search-field input {padding: 10px 15px; color: $dark-gold; font-size: $font-size; font-family: inherit; margin: 0;}
+.select2-drop-active {border: none;}
+ul.select2-result-single {margin-left: 0;}
+.select2-results .select2-highlighted {background: $light-beige; color: $dark-grey;}
+.select2-container-multi .select2-choices .select2-search-choice {background: $light-beige; border: none; box-shadow: none; color: $dark-grey; font-size: 12px; line-height: 17px; font-weight: $strong;}
+.select.input.no-bg {background: transparent;}
+.select.input.no-bg select {margin-bottom: 15px;}
+.select.input.no-bg select {margin-bottom: 15px;}
+.select2-container .select2-choice {background: transparent;border: none; border-radius: 0;height: auto; line-height: normal;  padding: 10px 25px 10px 15px; color: #0a0a0a;}
+.select2-dropdown-open .select2-choice{box-shadow: none;}
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.select2-default {color: #0a0a0a !important;} /**I am sorry for that but the default css overrides that with !important **/
+
+.ui-select-multiple.select2-container .select2-choice {line-height: 50px;}
+.select2-container .select2-choice .select2-arrow {border-radius: 0; border: none; background: none;}
+.select2-container .select2-choice .select2-arrow b {
+    background-color: transparent;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb%28138, 138, 138%29"></polygon></svg>');
+    background-size: 9px 6px;
+    background-position: 50%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+}
+
+/************** CHECKBOXES & RADIOS **************/
+/* these are accessible through keyboard navigation */
+// CONVERTED BELOW
+// .checkbox, .radio { margin-bottom: 0.5em; position: relative; z-index: 1; }
+// .checkbox input,
+// .radio input { left: -2px; margin: 5px; padding: 0; position: absolute; width: 12px; z-index: 1; visibility: hidden;}
+// .checkbox input + label,
+// .radio input + label { background-color: transparent; background-position: 0 0; background-repeat: no-repeat; color: $dark-grey; font-size: $font-size; line-height: 1.5em; padding: 0 0 0 31px; position: relative; text-transform: none; z-index: 2; }
+// .checkbox input + label { margin-left: 0; }
+// .radio input + label { margin-left: 0; margin-top: 1px; }
+// input[type="checkbox"] + label,
+// input[type="radio"] + label { color: $dark-grey; font-size: $font-size; line-height: 1.5em; padding: 0 0 0 31px; position: relative; text-transform: none; z-index: 2; }
+// input[type="radio"]:disabled + label{cursor: not-allowed;}
+/* checkboxes */
+// .checkbox input + label { background-image: url('../img/forms/checkbox-02.png'), url('../img/forms/checkbox-01.png'); background-position: -21px 0, 0 0; }
+// .checkbox input:checked + label { background-position: 0 0, 0 0; }
+/* radios */
+// .radio input + label { background-image: url('../img/forms/radio-02.png'), url('../img/forms/radio-01.png'); background-position: -21px 0, 0 0; }
+// .radio input:checked + label { background-position: 0 0, 0 0; }
+
+/* checkboxes */
+.checkbox {margin-bottom: 0.5em; position: relative; z-index: 1;
+  input {left: -2px; margin: 5px; padding: 0; position: absolute; width: 12px; z-index: 1; visibility: hidden;
+    + label { background-color: transparent; background-position: 0 0; background-repeat: no-repeat; color: $dark-grey; font-size: $font-size; line-height: 1.5em; padding: 0 0 0 31px; position: relative; text-transform: none; z-index: 2;  margin-left: 0; background-image: url('../img/forms/checkbox-02.png'), url('../img/forms/checkbox-01.png'); background-position: -21px 0, 0 0;
+    }
+    &:checked {
+       + label { background-position: 0 0, 0 0;
+         &.mixedSelection {background-image: url('../img/forms/checkbox-03.png')}
+       }
+    }
+  }
+  input[type="checkbox"] {
+    + label { color: $dark-grey; font-size: $font-size; line-height: 1.5em; padding: 0 0 0 31px; position: relative; text-transform: none; z-index: 2; }
+  }
+}
+
+/* radios */
+.radio {margin-bottom: 0.5em; position: relative; z-index: 1;
+  input {left: -2px; margin: 5px; padding: 0; position: absolute; width: 12px; z-index: 1; visibility: hidden;
+    + label { background-color: transparent; background-position: 0 0; background-repeat: no-repeat; color: $dark-grey; font-size: $font-size; line-height: 1.5em; padding: 0 0 0 31px; position: relative; text-transform: none; z-index: 2; margin-left: 0; margin-top: 1px; background-image: url('../img/forms/radio-02.png'), url('../img/forms/radio-01.png'); background-position: -21px 0, 0 0;}
+    &:checked {
+       + label { background-position: 0 0, 0 0; }
+    }
+  }
+  input[type="radio"] {
+    + label { color: $dark-grey; font-size: $font-size; line-height: 1.5em; padding: 0 0 0 31px; position: relative; text-transform: none; z-index: 2;
+      &:disabled {
+        + label{cursor: not-allowed;}
+      }
+    }
+  }
+}
+
+
+/* for IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .checkbox input + label,
+    .radio input + label { background-color: transparent; }
+}

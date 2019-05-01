@@ -1,0 +1,94 @@
+<!-- SCHOOLS STANDARD PAGE -->
+<div id="id-compileReportListPage-coverPage" class="compileReportListPage schoolsPage" ng-init="initCoverPage()" block-ui="programUI">
+
+    <!-- page heading -->
+    <div class="pageHead help-table">
+        <div class="col">
+            <!-- breadcrumbs -->
+            <div class="pageBreadcrumbs">
+                <nav aria-label="You are here:" role="navigation">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a data-ng-if="organizationInfoLoaded && !organizationInfo.isAccreditor"
+                               ui-sref="app.schools({scrollToPos : scrollToPos})">Schools</a>
+                            <a data-ng-if="organizationInfoLoaded && organizationInfo.isAccreditor"
+                               ui-sref="app.institutions({scrollToPos : scrollToPos})">Institutions</a>
+                        </li>
+                        <li><a ui-sref="app.school-program({programRequestKey : program.requestKey})">{{program.schoolInfo.name}}</a></li>
+                        <li><a ui-sref="app.school-program({programRequestKey : program.requestKey})">{{program.name}}</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+            <!-- end breadcrumbs -->
+        </div>
+    </div>
+    <!-- end page heading -->
+    <div><h2>Report Generator - Step 3</h2></div>
+
+    <!-- the standard -->
+    <div class="standardHeading">
+        <h3>{{program.name}}</h3>
+    </div>
+    <!-- end the standard -->
+
+    <div id="coverPageEditContainer">
+      <div class="">
+        <div class="coverPageHeader">
+          <h3>Edit Cover Page</h3>
+          <span>
+            <span class="checkbox">
+                <input type="checkbox" id="defaultCoverPage" ng-model="saveAsDefaultCoverPage">
+                <label for="defaultCoverPage">Save as New Default Cover Page </label>
+            </span>
+            <button type="button" class="button action-secondary small" data-ng-click="generateReportWithCoverPage(saveAsDefaultCoverPage)">Prepare Report</button>
+          </span>
+        </div>
+        <div class="firepad-cover-page"  ng-user-id="{{currentUser.userId}}"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOM: INSERT IMAGE DIALOG -->
+  <script type="text/ng-template" id="id-narrativeInsertImage">
+      <div class="narrativeCustomDialog firepad-dialog-div firepad-cover-page-dialog" block-ui="modalUI">
+          <form data-abide name="evidenceImageForm" novalidate data-ng-submit="evidenceImageForm.$valid && submitCoverPageImage()">
+              <div class="narrativeCustomDialog">
+                  <div class="input">
+                      <div ngf-drop="uploadImageFile($file)" ngf-drag-over-class="'dragover'" ngf-multiple="false" ngf-allow-dir="false" ngf-pattern="image/*" class="modal-upload-overlay">
+                          <div class="modal-upload-wrapper text-center">
+                              <h5 class="subheader">Drop a file to instantly upload it</h5>
+                              <div class="ion-android-upload ionicon upload-icon"></div>
+                              <h5 class="subheader choose">Or click <a accept="image/*" ngf-select="uploadImageFile($file)" ngf-multiple="false" ngf-allow-dir="false">here</a> to choose a file from your computer</h5>
+                          </div>
+                      </div>
+                      <div class="form-error" data-ng-show="evidenceImageForm.file.$error.required">Please select an evidence image.</div>
+                      <div data-ng-show="firepadImage.invalidEvidence">Please select a valid image.</div>
+                  </div>
+              </div>
+              <!-- end body -->
+              <div class="firepad-btn-group">
+                  <button type="submit" class="firepad-btn">Submit</button>
+                  <a class="firepad-btn cancelExample" ng-click="closeInsertImageModal()">Cancel</a>
+              </div>
+          </form>
+      </div>
+  </script><!-- this div is for the overlay -->
+
+
+  <script type="text/ng-template" id="id-modalReportAdded.html">
+      <div class="modal-header">
+          <h3>Report Added!</h3>
+          <button type="button" class="close-button" aria-label="Close modal" data-ng-click="closeReportAddedModal()">
+              <span class="ion-android-close" area-hidden="true"></span></button>
+      </div>
+      <div class="modal-body">
+          <h4>Your report will be added to the Saved Reports list when it is ready to download. We will send an email
+              notification to {{currentUser.userData.email}} when it is available.</h4>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="button action" data-ng-click="closeReportAddedModal()" ui-sref="app.saved-reports-list({ programRequestKey : reportObject.programRequestKey })">
+              Continue
+          </button>
+      </div>
+  </script>

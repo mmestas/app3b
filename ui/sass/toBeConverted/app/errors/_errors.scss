@@ -1,0 +1,8 @@
+/* 404 Page */
+.Message404 {width:90%; background-color: #e1d0aa; border: 3px solid $dark-grey; margin: 30px auto; padding:10px;}
+/* No Internet Connection */
+.warningNoInt {color: red;}
+.no-animate{ -webkit-transition: none !important;transition: none !important;}
+
+input:focus, textarea:focus, select:focus {outline-color: $gold;}
+input#_pendo-launcher-search-input_ {margin: 0;}

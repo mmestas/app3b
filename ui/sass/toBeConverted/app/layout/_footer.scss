@@ -1,0 +1,13 @@
+/* FOOTER */
+.layoutFooter {border-top: 1px solid $beige; margin-top: 3em;
+  .top-bar {background-color: $faint-gold; color: $dark-beige; font-size: 14px; line-height: 1.9em;
+    ul {background-color: $faint-gold; color: $dark-beige; font-size: 14px; line-height: 1.9em;
+      &.menu {
+        a {text-decoration: none}
+        .active {
+          > a {background: none; color: inherit; font-weight: $bold;}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+<!-- IMPORT USER ACCOUNT CSV FILE -->
+<div id="id-importUserAccounts" class="create-new-project-wrapper dataManagement" data-ng-init="initImportUserAccounts()" block-ui="programUI">
+  <div class="standard-width">
+    <h1>Match</h1>
+    <div class="mb15">
+      <button class="button action" data-ng-click="importCSVModal()" ng-show="csvFilename">Change File</button>
+      <button class="button action" data-ng-click="importCSVModal()" ng-show="!csvFilename">Upload CSV File</button>
+      <span class="uploadedCSVFileName">{{csvFilename}}</span>
+    </div>
+    <div ng-hide="!contensiveFields || !csvFilename">
+      <div>
+        <div class="checkbox">
+          <input type="checkbox" id="id-importNewRecords" data-ng-model="importNewRecords">
+          <label for="id-importNewRecords">Add new user accounts when fields don't match</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" id="id-updateRecords" data-ng-model="updateMatchingRecords">
+          <label for="id-updateRecords">Update existing user accounts when fields match</label>
+        </div>
+      </div>
+
+      <div class="mt20">
+        <div class="">
+          <label>Match user by: <i class="ion-help-circled" tooltip="{{matchContensiveFieldExplanation}}"></i></label>
+          <!-- <select data-ng-model="matchContensiveFieldBy" data-ng-options="field as field.dbName for field in matchByFieldSelections"><option value="">Please select one</option></select> -->
+
+          <md-input-container class="fullWidthSelect">
+            <md-select data-ng-model="matchContensiveFieldBy" placeholder="Please select one">
+              <md-option data-ng-value="field" data-ng-repeat="field in matchByFieldSelections track by $index">{{ field.dbName }}</md-option>
+            </md-select>
+          </md-input-container>
+
+        </div>
+        <div class="">
+            <label>Match above to corresponding field in your CSV file: <i class="ion-help-circled" tooltip="{{matchCVSFieldExplanation}}"></i></label>
+            <!-- <select data-ng-model="matchCSVFieldBy"  data-ng-options="header as header for header in csvFieldOptions"><option value="">Please select one</option></select> -->
+            <md-input-container class="fullWidthSelect">
+              <md-select data-ng-model="matchCSVFieldBy" placeholder="Please select one">
+                <md-option data-ng-value="header" data-ng-repeat="header in csvFieldOptions track by $index">{{ header }}</md-option>
+              </md-select>
+            </md-input-container>
+        </div>
+      </div>
+      <div class="alignRight">
+        <button class="button action" ng-click="goToMapping(importNewRecords, updateMatchingRecords, matchContensiveFieldBy, matchCSVFieldBy)" ng-disabled="((updateMatchingRecords || importNewRecords) && (!matchCSVFieldBy || !matchContensiveFieldBy)) || !csvFields">Next</button>
+      </div>
+    </div>
+  </div>
+</div>

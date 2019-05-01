@@ -1,0 +1,16 @@
+@media only screen and (max-height: 774px) {
+    .accountMenuUL .helper{
+        display: none;
+    }
+    .project-status-actions-toggle .dropdown-pane {
+        height: 300px;
+        overflow-y: scroll;
+    }
+}
+
+@media only screen and (max-height: 650px) {
+    .project-status-actions-toggle .dropdown-pane {
+        height: 300px;
+        overflow-y: scroll;
+    }
+}

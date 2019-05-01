@@ -1,0 +1,39 @@
+/********Setting Page ***********/
+.course-code-th,
+.course-no-th,
+.course-section-th,
+.course-term-th,
+.course-year-th,
+.course-cipcode-th {width: 10.0%;}
+.course-title-th,
+.course-faculty-th {width: 25.0%;}
+
+#id-settingsPage {
+  .tableLayout-left {width: 235px;background: $faint-gold;border-right: 1px solid $light-beige;}
+  .tableLayoutBox {border: 1px solid $light-beige;}
+}
+
+#settings-navigate {
+  ul {list-style: none;margin: 0;padding: 0;
+    > li {
+      > a {padding: 10px 22px;display: block;text-decoration: none;color: $dark-grey;border-bottom: 1px solid $light-beige;
+      }
+      &.settings-master-nav {
+        a {font-weight: $strong;font-size: 18px;cursor: default;padding: 15px 22px;
+        }
+      }
+      &.current {background: $beige;color: #000;}
+      &:not(.settings-master-nav) {
+        > a:hover {background: $beige;color: #000;}
+      }
+    }
+  }
+}
+
+.settings-header {background: $light-beige;padding: 17px 10px;position: relative;
+   h4{margin: 0 0 0 4px;}
+}
+
+#main-settings-view {padding: 20px;
+  table {border: none;}
+}

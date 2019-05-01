@@ -1,0 +1,24 @@
+/*======= TC-09 # Image Elements =======*/
+/* profile images */
+.profile { border-radius: 50%; display: inline-block; position: relative; vertical-align: middle; }
+.profile > img { border: 4px solid transparent; border-radius: 50%; display: block; }
+/* large profile */
+.profile-large { min-height: 168px; min-width: 168px; }
+.profile-large > img { max-height: 168px; max-width: 168px; min-height: 168px; min-width: 168px; }
+/* default profile (medium) */
+.profile-medium { min-height: 70px; min-width: 70px; }
+.profile-medium > img { max-height: 70px; max-width: 70px; min-height: 70px; min-width: 70px; }
+/* small profile */
+.profile-small { min-height: 50px; min-width: 50px; }
+.profile-small > img { max-height: 50px; max-width: 50px; min-height: 50px; min-width: 50px; }
+/* smaller profile */
+.profile-smaller { min-height: 35px; min-width: 35px; }
+.profile-smaller > img { max-height: 35px; max-width: 35px; min-height: 35px; min-width: 35px; }
+/* tiny profile (in tables only) */
+.profile-tiny { min-height: 29px; min-width: 29px; }
+.profile-tiny > img { max-height: 29px; max-width: 29px; min-height: 29px; min-width: 29px; }
+/* profile type */
+.profile-accreditor { background-color: $accreditor-light-green; background-size: cover; }
+.profile-accreditor > img { border-color: $accreditor-light-green; }
+.profile-school { background-color: $school-light-blue; background-size: cover; }
+.profile-school > img { border-color: $school-light-blue; }

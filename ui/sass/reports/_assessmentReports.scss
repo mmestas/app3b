@@ -1,0 +1,174 @@
+#assessment-report-form {
+  h2 { font-size: 24px; margin: 0;}
+  .stdSum { margin: 10px 0;}
+  .previewFoot { background: $plain-white; color: #7f7f7f; font-size: 12px; padding: 0 10px 20px; position: absolute; bottom: 0; left: 0; right: 0; margin: auto;}
+  .previewFootInner { border-top: 1px solid $highlight-grey;  display: table;  width: 100%;
+    .pCol {display: table-cell; padding-top: 10px; vertical-align: top; width: 33.33333%;
+      &.textCemter {display: none;}
+      &l:last-child {padding-left: 5px;}
+    }
+  }
+  .textRight {text-align: right; padding-right: 4px;}
+  #standardCollectionName {display: inline-block;width: 89%;}
+}
+
+#id-assessmentReportsPage {
+  .tableWrapper {
+    .filters-wrapper {width: 90%; margin: 50px auto 0;
+      .filters-table {margin-bottom: 10px;
+        > .col {width: 25%;
+          > div {margin-right: 25px;}
+        }
+        md-select, select, input {margin:0;}
+      }
+    }
+  }
+}
+
+#id-assessment-projects {
+  table.assessment-projects {
+    .checkbox {margin: 0;
+      input {
+        + label{font-size: 14px; margin:0 0 0 13px; }
+      }
+    }
+  }
+}
+
+// Assessment elements
+$tierLevel1 : 10px;
+$tierLevel2 : $tierLevel1 + 20px;
+$tierLevel3 : $tierLevel2 + 10px;
+$tierLevel4 : $tierLevel3 + 10px;
+$tierLevel5 : $tierLevel4 + 10px;
+#id-assessmentReportsElements {
+  table {
+    &.assessment-elements {
+      th {
+        &.data-select-project-th {
+          .checkbox {margin: auto; width: 21px;}
+          label {margin: 0; vertical-align: bottom;}
+        }
+      }
+      td {
+        .checkbox {margin: auto; width: 21px;}
+        label {margin: 0; vertical-align: bottom;}
+      }
+      &.tableView {
+        td {
+          &.tierLevel1 {padding-left: $tierLevel1;}
+          &.tierLevel2 {padding-left: $tierLevel2;}
+          &.tierLevel3 {padding-left: $tierLevel3;}
+          &.tierLevel4 {padding-left: $tierLevel4;}
+          &.tierLevel5 {padding-left: $tierLevel5;}
+        }
+      }
+    }
+    td {
+      &.disabled {opacity: .4; text-decoration: line-through;}
+    }
+  }
+
+}
+
+#create-assessment-report-title {
+  .assessment-report-title-wrapper {width: 600px; margin: 0 auto; padding: 150px 0 0;
+    .input {max-width: 100%;
+      input {margin: 0;}
+    }
+  }
+}
+
+#report-preview-wrapper {
+  .report-preview-wrap {margin: 140px 0 0;
+    .report-container {padding: 20px 30px 70px 30px; height: 976px; overflow: auto;}
+  }
+}
+
+// NOT SURE IF THIS IS BEING USED
+span.multiSelect.inlineBlock {position: relative;}
+.multiSelect .checkboxLayer {width: 100%; top: 38px;}
+
+
+.data-select-project-th {width: 76px;
+  .checkbox {
+    input {
+      + label{font-weight: 700;}
+    }
+  }
+}
+
+label.for-select{padding: 0; text-transform: none; color: $dark-grey; font-size: 14px; }
+form .multiSelect [type="button"] {margin: 0;}
+.projects-selected {font-size: 14px;}
+.show-all-wrapper {display: inline-block;}
+
+.reportHeader .pagePrintDownload {margin-bottom: 5px;}
+.reportHeader ul.pageOptionsUL {display: inline-block;}
+.report-description-table p{margin: 0;}
+
+ul.compile-info {margin: 0; padding: 0; list-style: none; display: inline-block; vertical-align: bottom;
+   > li {display: inline-block; font-size: 14px; color: $dark-grey; margin: 0 15px;}
+}
+
+.preview-table-of-contents {
+  > ul {
+    > li {
+      &:first-child {
+        a {padding-top: 10px;}
+      }
+      &:last-child {
+        a {padding-bottom: 10px;}
+      }
+      a {text-decoration: none; font-size: 14px; display: block; padding: 5px 10px;
+        &.selected {background: $faint-gold;}
+        &:hover {background: $faint-gold;}
+      }
+    }
+  }
+}
+
+// moved to elements.scss
+// .panelBox {
+//   &.accordion {
+//     &.preview {
+//       > ul.accordion {background: $plain-white; border: 1px solid #EDE5D6;}
+//       .accordion-content {border: none;}
+//       .accordion-title {background: #EDE5D6;}
+//     }
+//   }
+// }
+
+
+// Not sure if this can be nested under the above
+.preview {
+  table {border: none; border-spacing: 0; margin-bottom: 0;
+    td, th {border-left: 1px solid #fff; border-right: 1px solid #fff;}
+    &.attachments-table {
+      a {font-size: 18px; color: $dark-beige; margin: 0 2px;}
+      thead, th {background: $faint-gold;}
+      th {
+        &.options-th {width: 80px;}
+      }
+    }
+  }
+}
+
+.attachments-search-wrapper {
+  &.input {max-width: none; margin: 0; padding: 15px;}
+  label[for="id-filterItems"] {top: 26px; font-size: 20px;}
+}
+
+
+// Not sure if these are used elsewhere on the site or just on assessments
+// .empty {visibility: hidden; width: 100%; height: 1px;}
+.preview-project-name {margin-right: 6px;}
+.preview-reporting-period {font-style: italic; color: $grey;}
+.processing-td {padding: 10px 0;}
+.processing {margin-right: 5px; color: $dark-gold;}
+.responseHeaderBox {
+  .responseHeader {
+    &.reportHeader {box-shadow: $box-shadow;left: 0 !important;right: 0;margin: auto !important;max-width: 100% !important;padding: 0 2.75rem;position: fixed;top: 55px;}
+  }
+  .sticky.is-stuck.is-at-top {padding: 0 2.75rem;}
+}

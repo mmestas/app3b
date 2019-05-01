@@ -1,0 +1,37 @@
+/* help text */
+.help-text { font-family: 'Rubik'; font-style: normal; }
+
+.help-table, .help-table-50, .help-table-33, .help-table-25 { display: table; width: 100%; }
+.help-table > .col, .help-table-50 > .col, .help-table-33 > .col, .help-table-25 > .col { display: table-cell; vertical-align: middle; }
+.help-table-50 > .col { width: 50%; }
+.help-table-33 > .col { width: 33.333%; }
+.help-table-25 > .col { width: 25%; }
+.help-table-33 > .col66 {width: 66.666%;}
+
+/* Add animation */
+.ng-enter.ng-enter-active,
+.ng-leave {
+    opacity: 1;
+    -webkit-transition: opacity 300ms linear;
+    -moz-transition: opacity 300ms linear;
+    transition: opacity 300ms linear;
+}
+/* Remove animation */
+.ng-leave.ng-leave-active,
+.ng-enter {
+    opacity: 0;
+    -webkit-transition: opacity 300ms linear;
+    -moz-transition: opacity 300ms linear;
+    transition: opacity 300ms linear;
+}
+.panelExpandBox.accordion .maximizeButton { top: 0; }
+/* opacity */
+@-webkit-keyframes opac {
+    from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes opac {
+    from { opacity: 0; } to { opacity: 1; }
+}
+/* links */
+a.show-less { line-height: 10px; }
+a span[class^="ion"] { text-decoration: none; }

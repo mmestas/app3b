@@ -1,0 +1,23 @@
+/* tables  _tables.scss*/
+table { background-color: $plain-white; border: 1px solid$light-beige; border-collapse: separate; border-spacing: 2px; }
+th { background-color:$light-beige; color: $dark-grey; font-family: 'Catamaran', sans-serif; font-size: 14px; line-height: 1.9em; }
+td { font-size: 14px; line-height: 1.9em; }
+table tbody tr:nth-child(even) { background-color: #f6f6f6; }
+thead th > span { display: block; position: relative; }
+/* sort th arrow up */
+thead th.sort-up > span::after { border: solid 5px; border-color: transparent transparent $dark-grey transparent; border-top-style: solid; border-top-width: 0; content: ""; display: inline-block; height: 0; margin-left: 5px; position: absolute; top: 0.65em; width: 0; }
+/* sort th arrow down */
+thead th.sort-down > span::after { border: inset 5px; border-color: $dark-grey transparent transparent; border-top-style: solid; border-bottom-width: 0; content: ""; display: inline-block; height: 0; margin-left: 5px; position: absolute; top: 0.65em; width: 0; }
+
+/* TABLE LAYOUT */
+// Perhaps this should change in the future
+.tableLayoutBox {display: table; width: 100%;}
+.tableLayoutBox > .col {display: table-cell; vertical-align: top;}
+.tableLayout-left {width: 370px;}
+.tableLayout-right {}
+
+
+// New 4.2.19
+.tableWrapper {max-width: $tableWidthMax; margin:auto;
+  h1 {margin-top:50px;}
+}

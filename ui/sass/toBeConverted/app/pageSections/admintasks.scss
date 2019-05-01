@@ -1,0 +1,13 @@
+#id-schoolProgramManagementPage {
+  .standardOptionsBox button {margin: 5px 0 0;}
+  .standardOptionsBox .filterBox  {margin: 0;}
+  h1{margin: 15px 0;}
+  .max-width {max-width: none;}
+  .checkbox {margin: 0;}
+  .form-error {margin-bottom: 0;}
+  .ui-select-container + .form-error{margin-top: 0;}
+}
+
+#id-errorLog{
+  .error-stack {white-space: pre-line;}
+}

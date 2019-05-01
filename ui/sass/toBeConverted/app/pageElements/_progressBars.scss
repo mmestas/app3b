@@ -1,0 +1,16 @@
+/* progress bars */
+/* regular progress */
+.progress { background-color: #e2e2e2; border-radius: 4px; box-shadow: inset -1px 2px 3px 0 rgba(136, 136, 136, 0.5); }
+.progress-meter { background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient($school-blue, $school-blue); border-radius: 4px; box-shadow: inset 0 1px 3px 0 rgba(255, 255, 255, 0.5); }
+/* progress school */
+.progress-school .progress-meter { background-image: linear-gradient($school-blue, $school-blue); }
+/* progress accreditor */
+.progress-accreditor .progress-meter { background-image: linear-gradient($accreditor-green, $accreditor-green); }
+/* small progress */
+.progress-small { height: 8px; }
+
+tbody > tr > td .progress { display: inline-block; margin-bottom: 0; min-width: 70%; vertical-align: middle; }
+.progress .progress-meter {
+    -webkit-transition: width 1s ease-out;
+    transition: width 1s ease-out;
+}

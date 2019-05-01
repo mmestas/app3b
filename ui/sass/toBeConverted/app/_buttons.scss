@@ -1,0 +1,31 @@
+/***************************** BUTTONS *****************************/
+.button { background-color: $dark-grey; border-radius: 3px; color: $plain-white; font-size: 12px; font-weight: $strong; padding: 13px 15px;
+  &:hover {background-color: $dark-grey-hover; box-shadow: $button-shadow;}
+  &:focus {background-color: $dark-grey-hover; box-shadow: $button-shadow;}
+  &:disabled {background-color: #e0e0e0; color: #b1b1b1; opacity: 1;
+    &:hover {background-color: #e0e0e0; color: #b1b1b1; box-shadow: none;}
+  }
+  &.large {font-size: $font-size;}
+  &.small {font-size: 12px; line-height: 1em;}
+  &.tiny {font-size: 12px; line-height: 1em; padding: 5px 15px;}
+  &.secondary {background-color: $plain-white; border: solid 1px $light-grey; color: $dark-grey;
+    &:hover {background-color: #fafafa; border: solid 1px $light-grey; color: $dark-grey;}
+    &:focus {background-color: #fafafa; border: solid 1px $light-grey; color: $dark-grey;}
+  }
+  &.action {background-color: $beige; color: #372a04;
+    &:hover {background-color: #e1d0aa; color: #372a04;}
+    &:focus {background-color: #e1d0aa; color: #372a04;}
+  }
+  &.action-secondary {background-color: $light-beige; color: #372a04;
+    &:hover {background-color: #f5f2eb; color: #372a04;}
+    &:focus {background-color: #f5f2eb; color: #372a04;}
+  }
+  &.action-alert {background-color: $dark-red;}
+}
+/* modal close button X */
+button {
+  &.close-button {background-color: transparent; border: 0; color: $dark-grey;  box-shadow: none
+    // &:hover {}
+    // &:focus {}
+  }
+}

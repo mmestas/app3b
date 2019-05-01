@@ -1,0 +1,129 @@
+/******Assessment PDF Report*****/
+.assessment-report-container {padding: 20px 0 0; max-width: 1240px; margin: auto;}
+.assessment-pdf-report .panelBox .is-active > .accordion-title::before {content: ""}
+.assessment-pdf-report .accordion-content {display: block;}
+.assessment-pdf-report .pre-line {white-space: pre-line;}
+.assessment-pdf-report div.target-description {font-size: 12px; font-weight: 700;}
+.assessment-pdf-report .objective-body, .measure-body {margin-bottom: 0;}
+.assessment-pdf-report .target-list-wrapper {margin-top: 15px;}
+.assessment-pdf-report .help-table > .project-status-col {vertical-align: top; white-space: normal; width: 80%;}
+.assessment-pdf-report .help-table > .projectName-col {width: 20%;}
+.assessment-pdf-report .projectName-col > h3 {margin: 0;}
+.assessment-pdf-report .projectHeaderBox {margin: 10px 0;}
+.assessment-pdf-report .responseHeader-table {margin-bottom: 10px;}
+.assessment-pdf-report .action-plan-body > .row {padding: 5px 0;}
+.assessment-pdf-report .panelBox.accordion.project-attachments {background-color: transparent;}
+.assessment-pdf-report .panelBox.accordion.project-attachments .accordion-title {font-size: 32px; color: $dark-grey; background-color: #fff; padding: 0 0 10px; border-bottom: none; font-weight: $regular;}
+.assessment-pdf-report .panelBox.accordion.project-attachments > ul.accordion {margin-right: 0;}
+.assessment-pdf-report .row {max-width: 100%;}
+
+:not(.includeMission) > .assessment-pdf-report > .missionBox:nth-child(2),
+:not(.includeVision) > .assessment-pdf-report > .missionBox:nth-child(3),
+:not(.includeGoals) > .assessment-pdf-report li.goal-label,
+:not(.includeGoals) > .assessment-pdf-report li.goal-list-item > .assessment-header,
+:not(.includeGoals) > .assessment-pdf-report li.goal-list-item > .assessment-body > p.assessment-desc,
+:not(.includeObjectives) > .assessment-pdf-report div.objective-list-wrapper >.help-table,
+:not(.includeObjectives) > .assessment-pdf-report div.objective-list-wrapper > ul.objective-list > li.objective-list-item > .assessment-header,
+:not(.includeObjectives) > .assessment-pdf-report div.objective-list-wrapper > ul.objective-list > li.objective-list-item > .assessment-body > .objective-body > .assessment-label,
+:not(.includeObjectives) > .assessment-pdf-report div.objective-list-wrapper > ul.objective-list > li.objective-list-item > .assessment-body > .objective-body > p.assessment-desc,
+:not(.includeObjectiveInitiatives):not(.includeObjectives) > .assessment-pdf-report div.objective-body,
+:not(.includeObjectiveInitiatives) > .assessment-pdf-report div.supported-initiatives,
+:not(.includeActionPlans):not(.includeActionItems) > .assessment-pdf-report div.action-plan-wrapper,
+:not(.includeActionPlans) > .assessment-pdf-report div.action-plan > .assessment-header,
+:not(.includeActionPlans) > .assessment-pdf-report div.action-plan > .action-plan-body > .action-plan-row,
+:not(.includeActionPlans) > .assessment-pdf-report div.action-plan > .action-plan-body > .row,
+:not(.includeActionPlans) > .assessment-pdf-report div.action-plan > .action-plan-body > div > .action-plan-name,
+:not(.includeActionItems) > .assessment-pdf-report div.action-plan > .action-plan-body > .action-items-table,
+:not(.includeObjectiveMeasures) > .assessment-pdf-report div.measure-list-wrapper > .help-table,
+:not(.includeObjectiveMeasures) > .assessment-pdf-report div.measure-list-wrapper > ul.measure-list > li.measure-list-item > .assessment-header,
+:not(.includeObjectiveMeasures) > .assessment-pdf-report div.measure-list-wrapper > ul.measure-list > li.measure-list-item > .measure-body-wrapper > .measure-body > .assessment-label,
+:not(.includeObjectiveMeasures) > .assessment-pdf-report div.measure-list-wrapper > ul.measure-list > li.measure-list-item > .measure-body-wrapper > .measure-body > .assessment-desc,
+:not(.includeMethodology) > .assessment-pdf-report div.measure-list-wrapper > ul.measure-list > li.measure-list-item > .measure-body-wrapper > .measure-body > .measure-list-item-methodology-wrapper,
+:not(.includeSourceOfEvidence) > .assessment-pdf-report div.measure-list-wrapper > ul.measure-list > li.measure-list-item > .measure-body-wrapper > .measure-body > .row,
+:not(.includeObjectiveMeasures):not(.includeMethodology):not(.includeSourceOfEvidence) > .assessment-pdf-report div.measure-list-wrapper > ul.measure-list > li.measure-list-item > .measure-body-wrapper > .measure-body,
+:not(.includeQual) > .assessment-pdf-report .target-list-wrapper > .help-table,
+:not(.includeQual) > .assessment-pdf-report.table-view .target-list-wrapper,
+:not(.includeQual) > .assessment-pdf-report .target-list-wrapper > ul.target-list li.target-list-item > .assessment-header,
+:not(.includeQual) > .assessment-pdf-report .target-list-wrapper > ul.target-list li.target-list-item > .target-body > .row:first-child,
+:not(.includeQualFindings) > .assessment-pdf-report .target-list-wrapper > ul.target-list li.target-list-item > .target-body > .row:nth-child(2),
+:not(.includeQualAnalysisOfFindings) > .assessment-pdf-report .target-list-wrapper > ul.target-list li.target-list-item > .target-body > .row:nth-child(3),
+:not(.includeImprovementsAchieved) > .assessment-pdf-report .target-list-wrapper > ul.target-list li.target-list-item > .target-body > .row.target-body-improvement-type,
+:not(.includeImprovementsAchieved) > .assessment-pdf-report .target-list-wrapper > ul.target-list li.target-list-item > .target-body > .row.target-body-improvement,
+:not(.includeQual):not(.includeQualFindings):not(.includeQualAnalysisOfFindings):not(.includeImprovementsAchieved) > .assessment-pdf-report .target-list-wrapper,
+:not(.includeObjectiveMeasures):not(.includeMethodology):not(.includeSourceOfEvidence):not(.includeQual):not(.includeQualFindings):not(.includeQualAnalysisOfFindings):not(.includeImprovementsAchieved) > .assessment-pdf-report .measure-list-wrapper,
+:not(.includeObjectives):not(.includeObjectiveInitiatives):not(.includeActionItems):not(.includeActionPlans):not(.includeObjectiveMeasures):not(.includeMethodology):not(.includeSourceOfEvidence):not(.includeQual):not(.includeQualFindings):not(.includeQualAnalysisOfFindings):not(.includeImprovementsAchieved) > .assessment-pdf-report .objective-list-wrapper,
+:not(.includeAttachments) > .assessment-pdf-report .project-attachments
+{display:none; display:block; } //return to display:none;
+
+:not(.includeGoals) > .assessment-pdf-report ul.goal-list > li {margin: 0;}
+:not(.includeObjectives) > .assessment-pdf-report div.objective-list-wrapper > ul.objective-list > li.objective-list-item {margin: 0;}
+:not(.includeGoals) > .assessment-pdf-report ul.goal-list > li {border: none;}
+:not(.includeGoals) > .assessment-pdf-report .objective-list-wrapper {padding: 0;}
+:not(.includeQual) > .assessment-pdf-report .target-list-wrapper > ul.target-list li.target-list-item > .target-body {padding: 0;}
+:not(.includeObjectives) > .assessment-pdf-report .action-plan-wrapper {padding-top: 0;}
+:not(.includeObjectives) > .assessment-pdf-report .action-plan-wrapper,
+:not(.includeObjectives) > .assessment-pdf-report .measure-list-wrapper {padding-left: 0; padding-right: 0;}
+
+
+/***Table View ***/
+.assessment-pdf-report.table-view ul.goal-list > li, ul.objective-list > li {border: none;}
+.assessment-pdf-report.table-view .objective-body {padding: 0;}
+.assessment-pdf-report.table-view .objective-body p.assessment-desc {padding: 15px;}
+.assessment-pdf-report.table-view .supported-initiatives {padding: 15px 0 0;}
+.assessment-pdf-report.table-view .supported-initiatives table {border-spacing: 0;border-color: $faint-gold; margin: 0;}
+.assessment-pdf-report.table-view .supported-initiatives table th{background: $light-beige;}
+.assessment-pdf-report.table-view .supported-initiatives table.supported-initiatives-header th{background: $beige; font-size: $font-size; font-weight: $regular;}
+.assessment-pdf-report.table-view .index-col.action-plan-col{background: transparent;}
+.assessment-pdf-report.table-view .action-items-table,
+.assessment-pdf-report.table-view .project-attachments table{border: none;}
+.assessment-pdf-report.table-view .action-items-table th,
+.assessment-pdf-report.table-view .project-attachments table th{background-color: $light-beige;}
+.assessment-pdf-report.table-view .action-plan-body .columns{padding: 0;}
+.assessment-pdf-report.table-view .action-plan-body {padding: 0 15px; background-color: $faint-gold;}
+.assessment-pdf-report.table-view div.target-desc {padding: 10px 14px; font-weight: $semiBold; background-color: $light-beige;}
+.target-desc-wrap {padding: 0 2px;}
+th.table-view-target-status-th {width: 15%;}
+.assessment-pdf-report.table-view .target-list-wrapper table {border: none;}
+.assessment-pdf-report.table-view .target-list-wrapper table th {background: $faint-gold;}
+.assessment-pdf-report.table-view .assessment-header {background: transparent;}
+.assessment-pdf-report.table-view .target-list-wrapper table th {width:20%;}
+.assessment-pdf-report.table-view .target-list-wrapper table th:first-child {width:60%;}
+.assessment-pdf-report .target-achievment-status > .status {font-size: 14px;}
+.assessment-pdf-report ul.goal-list > li {margin-bottom: 15px;}
+.assessment-pdf-report ul.goal-list > li.goal-label {border: none; margin: 0;}
+.assessment-pdf-report .page-break {page-break-after: always;}
+
+/**Font size for pdf **/
+
+.assessment-pdf-wrapper .assessment-pdf-report{font-size: 30px;}
+.assessment-pdf-wrapper .assessment-pdf-report .missionBox.panelBox .accordion-title,
+.assessment-pdf-wrapper .assessment-pdf-report .panelBox.preview .missionBox.panelBox .accordion-title{
+    font-size: 1.5em;
+}
+.assessment-pdf-wrapper .assessment-pdf-report h2,
+.assessment-pdf-wrapper .assessment-pdf-report h3{
+    font-size: 1.25em;
+}
+
+.assessment-pdf-wrapper .assessment-pdf-report h4{
+    font-size: 1.0625em;
+}
+
+.assessment-pdf-wrapper .assessment-pdf-report label,
+.assessment-pdf-wrapper h6,
+.assessment-pdf-wrapper .assessment-pdf-report .action-plan-label,
+.assessment-pdf-wrapper .assessment-pdf-report div.target-description,
+.assessment-pdf-wrapper .assessment-pdf-report .target-body .target-label{
+    font-size: 0.875em;
+}
+
+.assessment-pdf-wrapper .assessment-pdf-report .target-title-row{
+    line-height: 24px;
+}
+
+.assessment-pdf-wrapper .assessment-pdf-report td,
+.assessment-pdf-wrapper .assessment-pdf-report .assessment-header,
+.assessment-pdf-wrapper .assessment-pdf-report h5,
+.assessment-pdf-wrapper .assessment-pdf-report th{
+    font-size: 0.925em;
+}

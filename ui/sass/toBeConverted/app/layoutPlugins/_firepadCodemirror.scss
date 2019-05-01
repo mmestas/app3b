@@ -1,0 +1,40 @@
+/* firepad / codemirror */
+.firepad { height: 450px; background-color: $plain-white; }
+a.powered-by-firepad { display: none; opacity: 0; z-index: -1; }
+.narrativeEditorPanel .narrativeFunctionBox { clear: both; padding: 0; position: relative; }
+.CodeMirror { background: $faint-gold; }
+.firepad-dialog-div .firepad-btn-group { display: block; margin: auto; width: 150px; }
+.firepad-dialog-div .firepad-btn-group.edit-on{width: 275px;}
+.firepad-dialog-div .firepad-btn-group .firepad-btn {
+    background-color: $light-beige;
+    border-radius: 3px;
+    color: #372a04;
+    font-size: 13px !important;
+    font-weight: $strong;
+    padding: 9px 15px;
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 0.85em 1em;
+    margin: 1rem 5px 0.5rem 0;
+    font-size: 0.9rem;
+}
+.firepad-dialog-div .firepad-btn-group .firepad-btn:hover,
+.firepad-dialog-div .firepad-btn-group .firepad-btn:focus {
+    background-color: #f5f2eb;
+    color: #372a04;
+    box-shadow: $button-shadow;
+}
+.firepad-dialog-div .firepad-btn-group #submitbtn {
+    background-color: $beige;
+    float: right;
+}
+.firepad-dialog-div .firepad-btn-group #submitbtn:hover,
+.firepad-dialog-div .firepad-btn-group #submitbtn:focus {
+    background-color: #e1d0aa;
+}

@@ -1,0 +1,22 @@
+.responsibilities{
+    padding: 0 15px;
+}
+.roles {padding-right:15px;}
+.removeRoles {float:right;}
+td.rolesTable {width:100%;}
+.noBulletList {list-style-type: none;}
+.progManagerCheckbox {padding-top:15px; padding-bottom:25px; overflow: hidden;}
+
+.subHeadLeft {float:left;}
+.buttonPlace {
+    font-size:12px;
+    line-height:1em;
+    border-radius: 3px;
+    background-color: $light-beige;
+    background-color: var(--light-beige);
+    font-weight: $strong;
+    padding: 9px 15px;
+  /*  margin: 0 0 1rem;*/
+  }
+
+.reveal.addUserModal {width: 680px;}

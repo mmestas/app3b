@@ -1,0 +1,7 @@
+/* filter buttons */
+ul.filterUL { list-style: none; margin: 0; padding: 0; }
+#id-schoolsStandardPage ul.filterUL {text-align: center;}
+ul.filterUL > li { display: inline-block; margin-right: 17px; vertical-align: middle; }
+ul.filterUL > li > a { background-color: rgba(237, 230, 214, 0.3); color: $dark-beige; border-radius: 3px; display: block; padding: 4px 15px; text-decoration: none; }
+ul.filterUL > li.active > a,
+ul.filterUL > li:hover > a { background-color: $light-beige; color: $dark-gold; }

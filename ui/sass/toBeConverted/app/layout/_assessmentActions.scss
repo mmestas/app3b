@@ -1,0 +1,31 @@
+/*Assesment Dropdowns */
+.assessment-actions-toggle {
+  .dropdown-pane {border: 0; box-shadow: $button-shadow; color: $dark-beige; padding: 0; width: 180px; text-align: left;
+    ul {margin: 0; padding: 15px; list-style: none;
+      li {
+        &.projects-options-headline {padding: 0 0 5px; font-size: 14px; color: $dark-grey;}
+      }
+    }
+    > pane {font-family: 'Catamaran', sans-serif;
+      ul {position: relative; background: $plain-white;
+        &:after {bottom: 100%; right: 13px; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(255, 255, 255, 0); border-bottom-color: $plain-white; border-width: 5px; margin-left: -5px;}
+        > li {
+          > a {text-decoration: none; font-size: 14px; color: $dark-beige; font-weight: normal;
+            &:before {color:$dark-gold;}
+            &.ion-trash-a:before {color:$dark-red;}
+            &.ion-eye:before {font-size: $font-size;}
+            &.ion-forward:before {font-size: 18px;}
+          }
+          > a[class^="ion-"]:before {width: 20px;}
+        }
+      }
+    }
+    &.dropdown-pane.dropdown-pane-left {
+      > pane {
+        > ul {
+          &:after {right: auto; left: 13px;}
+        }
+      }
+    }
+  }
+}

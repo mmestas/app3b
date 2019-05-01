@@ -1,0 +1,58 @@
+/* badges */
+.badge {background-color: $grey; border-radius: 0; color: $plain-white; font-size: 12px; line-height: 1.6em; padding: 0 10px; text-align: center;display: inline-block;
+  &.default {background-color: $grey;}
+  &.secondary {background-color: $light-beige; color: $dark-grey;} //Not being used
+  &.alert {background-color: $red;}
+  &.success {background-color: #43ac6a;}
+  &.warning {background-color: $gold; color: $dark-gold;}
+  &.info {background-color: $dark-gold; color: $light-beige;}
+  &.school {background-color: $school-dark-blue;}
+  &.accreditor, &.complete {background-color: $accreditor-dark-green;}
+
+  &.exceeded, &.met, &.complete {background-color: $accreditor-green;}
+  &.met, &.partiallyComplete, &.internalReview {background-color: $accreditor-light-green;}
+  &.partiallyMet, &.planned {background-color: $school-light-blue;}
+  &.notMet {background-color: $school-blue;}
+  &.notMet {background-color: $red;}
+  &.notReported, &.notStarted {background-color: $light-grey;}
+  &.inProgress {background-color: $periwinkle-blue;}
+  &.nothingEntered {background-color: $dark-grey;}
+
+  &.round {border-radius: 40px;}
+  &.rounded {border-radius: 3px;}
+  // There are duplicates in defining the classes because the UI Kit, wireframe, and Weave site were inconsistent on these colors
+}
+
+.status-badge {background-color: $grey; color: $plain-white; display: inline-block; font-size: 14px; line-height: 1em; padding: 7px 10px;
+  &.nothing-entered {background-color: $dark-grey; color: #fff;}
+  &.not-reported-this-cycle {background-color: #e0e0e0; color: $dark-grey;}
+  &.not-met {background-color: $school-blue; color: #fff;}
+  &.partially-met {background-color: $school-light-blue; color: #1d1e1c;}
+  &.met {background-color: #e3ebab; color: $dark-grey;}
+  &.exceeded {background-color: $accreditor-green; color: $dark-grey;}
+  &.assigned-to-you { background-color: #fed766; color: $dark-grey;}
+  &.assigned-to-others {background-color: $light-beige; color: $dark-grey;
+    > button {color: $dark-grey;}
+  }
+  &.date {background-color: #e0e0e0; color: $dark-grey;}
+    > button {color: $dark-beige; position: relative; top: -1px; right: -5px;}
+}
+
+.status-notstarted {background-color: #e0e0e0; color: #000000;}
+.status-inprogress {background-color: $periwinkle-blue; color: $plain-white;}
+.status-internalreview {background-color: $accreditor-light-green; color: #000000; min-width: 110px;}
+.status-externalreview {background-color: #fed766; color: #000000; min-width: 115px;}
+.status-complete {background-color: #43ac6a; color: $plain-white;}
+.status-desc {font-size: 12px; color: $dark-grey; padding-left: 30px; white-space: normal;}
+.not-set {background-color: #e0e0e0; color:$dark-grey;}
+
+.project {
+  &.status-badge {
+    &.not-started {background-color: $light-grey; color: $dark-grey;}
+    &.draft {background-color: $grey;}
+    &.in-review {background-color: $school-light-blue; color: $dark-grey;}
+    &.planned {background-color: $school-light-blue; color: $dark-grey;}
+    &.final {background-color: $accreditor-green;}
+    &.completed {background-color: $accreditor-green;}
+  }
+}

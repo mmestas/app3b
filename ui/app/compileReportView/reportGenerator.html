@@ -1,0 +1,239 @@
+<!-- SCHOOLS STANDARD PAGE -->
+<div id="id-compileReportListPage-step2" class="compileReportListPage schoolsPage" block-ui="programUI">
+    <!-- page heading -->
+    <div class="pageHead help-table">
+        <div class="col">
+            <!-- breadcrumbs -->
+            <div class="pageBreadcrumbs">
+                <nav aria-label="You are here:" role="navigation">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a data-ng-if="organizationInfoLoaded && !organizationInfo.isAccreditor"
+                               ui-sref="app.schools({scrollToPos : scrollToPos})">Schools</a>
+                            <a data-ng-if="organizationInfoLoaded && organizationInfo.isAccreditor"
+                               ui-sref="app.institutions({scrollToPos : scrollToPos})">Institutions</a>
+                        </li>
+                        <li><a ui-sref="app.school-program({programRequestKey : program.requestKey})">{{program.schoolInfo.name}}</a></li>
+                        <li><a ui-sref="app.school-program({programRequestKey : program.requestKey})">{{program.name}}</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+            <!-- end breadcrumbs -->
+        </div>
+        <div class="text-right col"><!-- SCHOOLS STANDARD PAGE -->
+        
+
+            <div class="pagePrintDownload">
+                <ul class="pageOptionsUL">
+                    <li>
+                        <button ng-click="goBack()" type="button" class="closePageButton pageButton">
+                            <span class="ion-arrow-left-c"></span>
+                            <span>Back</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end page heading -->
+    <div><h2>Report Generator - Step 2</h2></div>
+
+    <!-- the standard -->
+    <div class="standardHeading">
+        <h3>{{program.name}}</h3>
+    </div>
+    <!-- end the standard -->
+
+    <!-- standard page header sticky -->
+    <div class="standardsHeaderBox">
+        <div class="standardsHeader setClassWhenAtTop" set-class-when-at-top="sticky is-at-top is-stuck">
+            <div class="standardsPageHead pageHead help-table">
+                <div class="adding-standard-col text-right col">
+                    <span class="checkbox" ng-show="jsonModel.included.coverPage" class="no-animate">
+                        <input type="checkbox" id="defaultCoverPage" ng-model="defaultCoverPage">
+                        <label for="defaultCoverPage">Include Default Cover Page</label>
+                    </span>
+                    <button type="button" class="button action-secondary small no-animate" data-ng-click="generateReport(jsonModel.included.coverPage, defaultCoverPage)" ng-disabled="!report.name" ng-if="jsonModel.included.coverPage">Next</button>
+                    <button type="button" class="button action-secondary small no-animate" data-ng-click="generateReport(jsonModel.included.coverPage, defaultCoverPage)" ng-disabled="!report.name" ng-if="!jsonModel.included.coverPage">Prepare Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Select Standards table -->
+
+    <!-- end one standard -->
+    <!-- BEGIN DRAG AND DROP -->
+    <div ng-controller="NestedListsDragDropCtrl" class="dragNdrop nestedDemo" style="">
+        <script type="text/ng-template" id="list.html">
+            <ul dnd-list="list">
+                <li ng-repeat="item in list"
+                    dnd-draggable="item"
+                    dnd-effect-allowed="move"
+                    dnd-moved="list.splice($index, 1); removeListItem(item)"
+                    dnd-selected="models.selected = item"
+                    ng-class="{selected: models.selected === item}"
+                    dnd-type="'{{item.type}}'"
+                    ng-include="item.type + '.html'">
+                </li>
+            </ul>
+        </script>
+        <script type="text/ng-template" id="container.html">
+            <div class="container-element box">
+                <div class="column" ng-repeat="list in item.columns">
+                    <ul dnd-list="list" dnd-allowed-types="['item']">
+                        <li ng-repeat="item in list"
+                            dnd-draggable="item"
+                            dnd-type="'{{item.type}}'"
+                            dnd-effect-allowed="move"
+                            dnd-moved="list.splice($index, 1); removeListItem(item)"
+                            dnd-selected="models.selected = item"
+                            ng-class="{selected: models.selected === item}"
+                            ng-include="item.type + '.html'">
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="clearfix"></div> -->
+            </div>
+        </script>
+        <script type="text/ng-template" id="item.html">
+          <div id="id-main-{{item.identifier}}">
+            <div class="item">
+              <h3 id="id-header-{{item.identifier}}">{{item.title}}</h3>
+              <!-- <div class=""><h3 id="id-header-{{item.identifier}}">{{item.title}}</h3></div> -->
+              <div id="id-item-{{item.identifier}}" class="item" ng-class="{'addLinks': addLinksIsTrue, 'deactivateLinks': !addLinksIsTrue}" ng-if="item.id != 2" ng-bind-html="item.data"></div>
+            </div>
+          </div>
+        </script>
+        <!-- Sidebar -->
+        <div class="row">
+          <div class="medium-12 columns">
+            <div class="box box-yellow box-padding">
+              <h3 class="instructions">Instructions</h3>
+                <div style="text-indent: 10px;">1. Select the settings you want to include in the report and drag the elements you want onto the report area (drag to rearrange).</div>
+                <div style="text-indent: 10px;">2. To create side by side elements, drag the container over to the report and then drag elements inside the container.</div>
+                <div style="text-indent: 10px;">3. To remove element from report, drag it back to the Report Settings column.</div>
+            </div>
+          </div>
+        </div>
+        <div class="dragNDropSidebar columns">
+            <div class="toolbox box box-grey box-padding">
+              <h3>Report Name*</h3>
+              <input class="filterInput input-field" type="text" ng-model="report.name" placeholder="Enter Report Name">
+            </div>
+            <div class="toolbox box box-grey box-padding">
+                <h3>Report Settings</h3>
+                <ul >
+                  <span dnd-list="[]">
+                  <li>
+                    <input type="checkbox" id="coverpage-id" name="coverPage" data-ng-model="coverPage" data-ng-change="addcoverPage(coverPage)">
+                    <label for="coverpage-id">Cover Page</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="tableOfContents-id" data-ng-model="tableOfContents" data-ng-change="addTableOfContents(tableOfContents)">
+                    <label for="tableOfContents-id">Table of Contents</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="linksInText-id" data-ng-model="links" data-ng-change="addLinksToText(links)">
+                    <label for="linksInText-id">Links in Text</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="evidenceFiles-id" data-ng-model="evidenceFiles" data-ng-change="addEvidenceFiles(evidenceFiles)">
+                    <label for="evidenceFiles-id">Evidence Files</label>
+                  </li>
+                  <li ng-repeat="item in models.templates"
+                      data-ng-if="item.isAccreditorOnline === '' || item.isAccreditorOnline === accreditorInfo.isAccreditorOnline"
+                      dnd-dragstart="dragStartFunction(item)"
+                      dnd-draggable="item"
+                      dnd-type="'{{item.type}}'"
+                      dnd-effect-allowed="copy"
+                      dnd-copied="item.id = item.id"
+                      draggable="true"
+                      >
+                      <div type="button" class="button draggableBtn" ng-hide="item.include" ng-class="{'action reportContainerBtn' : item.type == 'container'}" data-ng-bind-html="item.title"></div>
+                  </li>
+                </span>
+              </ul>
+          </div>
+        </div>
+            <!-- Main area with dropzones and source code -->
+        <div class="dragNDropMain columns">
+            <div class="toolbox box box-grey box-padding">
+              <h3>Report Description</h3>
+              <textarea id="reportDescriptionTextarea" ng-model="report.description" style="" placeholder="This is my report description"></textarea>
+            </div>
+            <h3 id="reportTitle" style="position:relative;">
+              <span ng-hide="report.name" id="hideReportPlaceholder">Report</span>
+              <span ng-if="report.name">{{report.name}}</span>
+            </h3>
+            <h3 ng-if="coverPage" style="font-size: 16px;padding: 10px 15px;background: #dac38b;margin: 0;">Cover Page</h3>
+            <h3 ng-if="tableOfContents" style="font-size: 16px;padding: 10px 15px;background: #dac38b;margin: 0;">Table of Contents</h3>
+            <div class="row" id="listReport">
+              <div ng-repeat="(zone, list) in models.dropzones" id="generatedReportHTML" class="medium-12 columns generatedReportHTML customizedFont" ng-class="{'addLinks': addLinksIsTrue, 'deactivateLinks': !addLinksIsTrue }" >
+                  <div class="dropzone box box-yellow" style="border-top: 0;">
+                      <div id="printPage" ng-if="coverPage" style="page-break-after: always"> <!--page-break-after: always NOTE: This is new added 8/10/18-->
+                        <div id="coverPageContents"></div>
+                      </div>
+                      <div class="medium-12 columns" id="generatedTOC" ng-if="tableOfContents" style="{{tocPageBreak}}">
+                      		<h3 class="reportSections">Table of Contents</h3>
+                      		<div class="TOC-contents">
+                      			<ul id="tocUL">
+                              <li class="TOC-li" id="tocLI">
+                                <div class="tocTitle" id="tocTitle">Simple and powerful</div>
+                                <div class="tocPage" id="tocPage">Page 3</div>
+                              </li>
+                      			</ul>
+                      		</div>
+                      </div>
+                      <!-- </div> -->
+                      <div id="id-repeated-standards">
+                        <div style="page-break-before: always">
+                          <div id="standardHeader">
+                            <h2 id="id-standardName">Standard Name</h2>
+                            <div id="id-standardDescription">Standard Description</div>
+                          </div>
+                          <div id="individualStandard"  ng-include="'list.html'"></div>
+                          <div id="id-main-evidenceList" ng-if="evidenceFiles">
+                            <h3 id="id-header-evidenceList">Evidence Attachments</h3>
+                            <div id="id-item-evidenceList">
+                              <div id="evidenceFilesList" ng-class="{'addLinks': addLinksIsTrue, 'deactivateLinks': !addLinksIsTrue}">
+                                <div id="id-file-0"><a href="insertFileHere" class="inactiveLink">FileName1.docx</a></div>
+                                <div id="id-file-1"><a href="insertFileHere" class="inactiveLink">FileName2.docx</a></div>
+                                <div id="id-file-2"><a href="insertFileHere" class="inactiveLink">FileName3.docx</a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div view-source="nested"></div>
+        </div>
+    </div>
+      <!-- END DRAG AND DROP -->
+
+</div>
+
+
+
+
+<script type="text/ng-template" id="id-modalReportAdded.html">
+    <div class="modal-header">
+        <h3>Report Added!</h3>
+        <button type="button" class="close-button" aria-label="Close modal" data-ng-click="closeReportAddedModal()">
+            <span class="ion-android-close" area-hidden="true"></span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <h4>Your report will be added to the Saved Reports list when it is ready to download. We will send an email
+            notification to {{currentUser.userData.email}} when it is available.
+        </h4>
+    </div>
+    <div class="modal-footer">
+        <!--  <button type="button" class="button action-secondary" data-ng-click="closeReportAddedModal()">Cancel</button>-->
+        <button type="button" class="button action" data-ng-click="closeReportAddedModal()" ui-sref="app.saved-reports-list({ programRequestKey : programRequestKey })">
+            Continue
+        </button>
+    </div>
+</script>

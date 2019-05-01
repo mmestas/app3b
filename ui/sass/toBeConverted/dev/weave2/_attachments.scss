@@ -1,0 +1,42 @@
+/***Attachments *****/
+.attachments-header {background: $light-beige; padding: 7px 10px; position: relative;}
+span.project-root {color: $beige; font-size: 26px; margin-right: 10px; vertical-align: middle; line-height: 26px;}
+span.project-root.has-breadcrumb {color: $dark-gold;}
+span.projects-header {font-size: 18px;}
+.change-view button {color: $dark-gold; font-size: 20px;  padding: 5px 10px;}
+.change-view button:hover, .change-view button.active {background-color: $beige;}
+.grid-view table.projectsTable thead, .grid-view table.projectsTable tbody td {display: none;}
+.grid-view table.projectsTable tbody td.project-attachments-options-td {display: block; position: absolute; top: 20px; right: -5px; height: 170px; width: 175px; text-align: right; padding-right: 10px;}
+.grid-view table.projectsTable tbody td.project-attachments-options-td a.project-attachments-options { padding: 6px 0 3px; margin: 0; width: 30px; text-align: center; display: none;}
+.grid-view table.projectsTable tbody tr:hover td.project-attachments-options-td a.project-attachments-options,
+.grid-view table.projectsTable tbody td.project-attachments-options-td .is-open a.project-attachments-options {display: inline-block;}
+.grid-view table.projectsTable tbody td.project-attachments-options-td .assessment-actions-toggle .dropdown-pane {width: 150px;}
+.grid-view table.projectsTable tbody td:first-child {display: inline-block; padding-top: 15px;}
+.grid-view table.projectsTable tbody tr {background: none; display: inline-block; width: 120px; text-align: center; vertical-align: top; margin: 0 30px; position: relative;}
+table.projectsTable a.project-attachment-entry {text-decoration: none;}
+.table-view table.projectsTable a.project-attachment-entry .ion-folder {color: $light-grey; font-size: 21px; margin-right: 10px; vertical-align: text-top;}
+// .table-view th {background-color: #f6f6f6;} //Commented MM 4.9.19
+.grid-view table.projectsTable a.project-attachment-entry .ion-folder {color: #9CC0CF; font-size: 108px; display: block; height: 96px;}
+.grid-view table.projectsTable .project-attachment-entry .folder-name {display: block; line-height: 15px; overflow-wrap: break-word;}
+.table-view table.projectsTable .project-attachment-entry .folder-name {display: inline-block;}
+table.projectsTable .project-attachment-entry div.folder-name {cursor: default;}
+.grid-view table.projectsTable {padding-bottom: 60px; display: inline;}
+.grid-view table.projectsTable tbody {display: inline; border: none;}
+.breadcrumb-arrow {margin-right: 5px;}
+.project-attachments-breadcrumb {position: absolute; font-size: 18px; color: #fff; left: 10px; top: 10px;}
+.project-attachments-breadcrumb toggle a {padding: 0 5px;}
+.grid-view .project-attachment-entry .oneFile-info {background-repeat: no-repeat; height: 80px; background-position: bottom center; display: block; margin-bottom: 5px;}
+.table-view .project-attachment-entry .oneFile-info {background-repeat: no-repeat; height: 20px; background-position: top center; display: inline-block; width: 30px; vertical-align: bottom;}
+.change-view > a.view-all-project-attachments {margin-right: 15px; color: $dark-beige;}
+#id-projectAttachmentsPage .tableLayout-left {width: 200px; background: $faint-gold; border-right: 1px solid $light-beige;}
+#collections-navigate ul {list-style: none;margin: 0; padding: 0;}
+#collections-navigate ul > li > a{padding: 10px 22px; display: block;  text-decoration: none; color: $dark-grey;}
+#collections-navigate ul > li.current > a,
+#collections-navigate ul > li > a:hover{background: $beige; color: #000;}
+.attachments-wrapper table {border: none; margin: 0;}
+.attachments-wrapper .grid-view {padding: 0 0 70px 0;}
+#id-projectAttachmentsPage .tableLayoutBox {border: 1px solid $light-beige;}
+.no-files {text-align: center; padding-top: 70px;}
+.table-view .no-files {padding: 70px 0;}
+.file-enumeration {padding: 15px 10px;}
+.grid-view .file-enumeration {display: none;}

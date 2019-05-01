@@ -1,0 +1,19 @@
+/* typeahead */
+.typeaheadBox { background-color: $plain-white; box-shadow: $button-shadow; position: absolute; top: 80%; width: 475px; z-index: 5; }
+ul.typeaheadUL { list-style: none; max-height: 400px; margin: 0; overflow-y: auto; padding: 0; }
+ul.typeaheadUL > li { border-bottom: 1px solid #979797; display: inline-block; width: 100%; }
+ul.typeaheadUL > li:last-child { border-bottom: 0; }
+ul.typeaheadUL > li:hover,
+ul.typeaheadUL > li.active { background-color: $light-gold; cursor: pointer; }
+ul.typeaheadUL > li .oneResult { display: inline-block; padding: 20px; width: 100%; }
+ul.typeaheadUL > li .oneResult strong { font-weight: $bold; }
+/* typeahead add team members */
+.addInputBox.input { margin-bottom: 0; max-width: 100%; }
+.addOneMemberResult > .col { vertical-align: middle; }
+.member-info { max-width: 330px; overflow: hidden; }
+.member-info-col h5, .member-info-col p { margin-bottom: 0; }
+ul.typeaheadUL > li:hover .addOneMemberResult { color: $dark-gold; }
+ul.typeaheadUL > li:hover .addOneMemberResult .member-add-col { visibility: visible; }
+.member-img-col { width: 64px; }
+.member-add-col { text-align: right; visibility: hidden; width: 40px; }
+.plusAddButton { font-size: 32px; }

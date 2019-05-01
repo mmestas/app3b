@@ -1,0 +1,530 @@
+// For the Assessment Report PDF
+
+#assessmentReportCoverPage {height:100%;
+  .reportPage {height:100%;
+    section {
+      &.rpHeader {
+        .headerLogo {max-width: 95pt;max-height: 85pt;}
+        .headerSchool {font-size:18pt}
+        .headerDivision {font-size:11pt}
+      }
+      &.rpBody {position: relative; top: calc(50% - 165pt); transform: translateY(-50%);
+        .reportTitle {font-size: 28pt; line-height: 32pt;font-weight:100;margin-bottom: 10pt;}
+        .reportSummary {font-size:11pt;margin-bottom:15pt;}
+      }
+    }
+  }
+}
+
+#assessmentReportCoverPageTableView {height:100%;
+  .reportPage {height:100%;
+    .centerContent {position: absolute;top: 50%;transform: translate(0%, -50%);}
+    section {
+      &.rpHeader {
+        .headerLogo {max-width: 95pt;max-height: 85pt;}
+        .headerSchool {font-size:18pt}
+        .headerDivision {font-size:11pt}
+      }
+      &.rpBody {position: relative;
+        .reportTitle {font-size: 28pt; line-height: 32pt;font-weight:100;margin-bottom: 10pt;}
+        .reportSummary {font-size:11pt;margin-bottom:15pt;}
+      }
+    }
+  }
+}
+
+#assessmentReportTableOfContents {
+  body, div {font-family: "Catamaran", sans-serif; box-sizing: border-box; color: #777;}
+  h1, h2, h3, h4, h5, h6 {font-family: "Rubik", sans-serif; color: #777;}
+  h3 {font-size: 24px;font-weight: 500;line-height: 1.1em;}
+  h4 {font-size: 18px;font-weight: 400;line-height: 1.4em; }
+  h5, h6 {font-weight: 700; }
+  h5 {font-size: 16px;line-height: 1.6em;}
+  *, *:after, *:before {box-sizing: border-box;-moz-box-sizing: border-box;
+  }
+  * {margin:0;padding:0;border: 0 none;position: relative;}
+  .tocHeader {border-bottom: 1px solid #ddded6; padding-bottom: .5rem;}
+  .tocContents {padding-top:1rem;
+    section {margin-bottom: 2rem;
+      h5 {
+        .projectYear {font-weight:100;margin-left: 5pt;}
+      }
+      ul.tocPageList {list-style-type: none;margin:0;
+        li {
+          background: inherit;
+          width: 100%;
+          max-width:100%;
+          margin: 0 auto;
+          font-size: 1.2rem;
+          line-height: 1.6rem;
+          // color: #fff;
+          padding-right: 4rem;
+          margin-bottom: .5rem;
+
+          &:before {
+              content: '';
+              position: absolute;
+              bottom: .4rem;
+              width: 100%;
+              height: 0;
+              line-height: 0;
+              border-bottom: 2px dotted #ddded6;
+          }
+          .pageName {
+            background: white;
+            display: inline;
+            z-index: 1;
+            padding-right: .2rem;
+          }
+          .pageNumber {
+            background: white;
+            position: absolute;
+            // min-width: 4rem;
+            bottom: 0;
+            right: 0;
+            padding-left: .2rem;
+            text-align: right;
+            z-index: 2;
+            &:after {
+
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+body, div {font-family: "Catamaran", sans-serif; box-sizing: border-box;line-height: 1.5;}
+body {color: #4b4c47;}
+
+.assessmentReport {
+
+  *, *:after, *:before {box-sizing: border-box;-moz-box-sizing: border-box;
+  }
+  /* headers */
+  h1, h2, h3, h4, h5, h6 {font-family: "Rubik", sans-serif; margin:0;}
+  // h1, h2, h3, h4, h5, h6 {margin:0;}
+  // h6 {line-height: 1.5em;font-weight: 500;}
+  h3 {font-size: 24px;font-weight: 500;line-height: 1.1em; }
+  h4 {font-size: 18px;font-weight: 400;line-height: 1.4em; }
+  h6 {font-size:11pt;font-size:9pt;font-weight: 400;text-transform: uppercase;font-family: "Catamaran", sans-serif;}
+  ul {list-style-type: none; margin:0; padding: 0;
+    li {
+
+    }
+  }
+  .badge {font-size: 11pt;line-height: 15pt;}
+  .statementCaption {font-weight:500;}
+  .elementTitle {font-size: 16pt; line-height: 16pt;font-weight: 500;}
+  .elementCaption {font-size: 8pt;line-height: 9pt;}
+  .asReportHeader {background-color: lighten(#dac38b, 25%);padding: 10pt;
+    .reportHeaderRow {position: relative;
+      .headerLeft {position: absolute; left: 0;}
+      .headerRight {position: absolute; right: 0;}
+      &.titleRow {height:22pt; margin-bottom:10pt;}
+      &.infoRow {height:18pt;}
+    }
+    ul.reportElementList {
+      li.reportElement {text-transform: uppercase; display: inline-block;font-size: 8.5pt; margin-left: 3pt;
+        .reportElementQuantity {font-weight: bold;}
+        .reportElementName {}
+      }
+    }
+  }
+
+  section {padding: 10pt 0; font-size: 12pt;
+      &.statementSection {
+        ul {
+          li {
+            .caption {font-weight: 500;}
+            .description {}
+          }
+        }
+      }
+      &.reportSection {
+        border-top: 1px solid lighten(#dac38b, 25%);
+        ul {
+          li {
+            .elementHeader {
+              .elementNumber {display: inline-block;background: #dac38b;min-width: 40px;vertical-align: top;text-align: center; padding: 10px 5px;margin-right: 5pt; border-radius: 4px;
+                &.goalNumber {max-width: 40px;}
+                div {
+                  line-height: 13pt; font-size: 15pt;
+                }
+              }
+              .elementName {display: inline-block;vertical-align: top;width: calc(100% - 38pt);
+                .elementCaption {margin-bottom: 4pt;text-transform: uppercase;}
+                .elementTitle {}
+              }
+            }
+            .elementDescription {margin-top:6pt;
+              .elementDescriptionLeft {display: inline-block; min-width: 40px;vertical-align: top;margin-right: 5pt;}
+              .elementDescriptionRight {display: inline-block; vertical-align: top; width: calc(100% - 38pt);}
+            }
+            &.goal-list-item {margin-top:20pt;}
+          }
+        }
+
+        .reportChildSection {margin-left: 50px;margin-top: 15pt;
+          ul {
+            // margin-left: 50px;margin-top: 15pt;
+            > li {
+              .elementHeader {
+                .elementNumber {}
+                .elementName {width: calc(100% - 78pt);
+                  .elementCaption {text-transform: uppercase;}
+                  .elementTitle {
+                    span {vertical-align: middle;
+                      // &.badge {font-size: 11pt;line-height: 15pt;padding: 0 2pt;}
+                    }
+                  }
+                }
+              }
+              .elementDescription {
+                .elementDescriptionLeft {}
+                .elementDescriptionRight {width: calc(100% - 78pt);
+                  label {
+                    padding: 0;
+                    color: #4b4c47;
+                    margin-top: 5pt;
+                    font-weight: 500;
+                    font-size: 11pt;
+                  }
+                }
+                &.supportedInitiatives {margin-top:10pt;
+                  .supportedInitiativesLists {margin-top:6pt;
+                    .supportedInitiativeList { //class name getting deleted by the SS???
+                      ul {margin-left:30px;
+                        li {list-style-type: disc; margin-top:0;
+                          &:not(:first-child) {margin-top:0;}
+                        }
+                      }
+                    }
+                    // Adding this here because the above class is getting deleted from the HTML by the SS code
+                    ul {margin-left:30px;
+                      li {list-style-type: disc; margin-top:0;
+                        &:not(:first-child) {margin-top:0;}
+                      }
+                    }
+                  }
+                }
+                &.actionPlan {border: 1px solid #dac38b; border-radius: 2pt; margin-top:10pt; padding: 1px 1px; //padding should not be necessary but hack
+                  .actionPlanHeader {background-color: lighten(#dac38b, 25%);padding:5pt;
+                    .actionPlanName {font-size: 17pt; line-height: 18pt;font-weight: 500;}
+                    .actionPlanDescription {margin-bottom:8pt;}
+                  }
+                  .actionPlanItems {margin-top:0;
+                    .actionPlanItem {display:inline-block; font-size: 11pt;vertical-align: top;overflow-wrap: break-word;
+                      .elementCaption {font-weight: 500;}
+                      &:first-child {width:54%; background-color: transparent;}
+                      &:nth-child(2) {width:15%; background-color: transparent;}
+                      &:nth-child(3) {width:11%; background-color: transparent;}
+                      &:nth-child(4) {margin-right:0;width:17%; background-color: transparent;}
+                    }
+                  }
+                  ul.actionPlanList {padding:5pt;
+                    li.actionPlanItems { border-bottom: 1px solid #dac38b;padding: 5pt 0;
+                      &:not(first-child) {margin-top:0;}
+                      &:last-child {border-bottom: 0;}
+                    }
+                  }
+                }
+              }
+
+              &:not(:first-child) {margin-top:15pt;} //background-color: #cddc3961;
+              &:first-child {} //background-color: #03a9f41a;
+              ul {margin-top:0;
+                li {
+                    &:not(:first-child) {}
+                }
+              }
+
+            }
+
+            &.target-list {
+              > li {
+                .elementDescription {
+                  .elementDescriptionLeft {width: 70pt;}
+                }
+              }
+            }
+
+          }
+        }
+
+
+      }
+      &.attachmentsSection {
+        table {background-color: transparent; border: 1px transparent; margin-top: 10pt;width:100%;
+          thead {background-color: transparent;
+            tr {
+              th {background-color: transparent;font-weight: 500;font-family: 'Catamaran', sans-serif; text-align: left;}
+            }
+          }
+          tbody {
+            tr {
+              td {
+                a {text-decoration: none; color:inherit;}
+              }
+              &:nth-child(odd) {background-color: lighten(#dac38b, 25%);}
+              &:nth-child(even) {background-color: lighten(#ffffff, 25%);}
+            }
+          }
+        }
+
+      }
+    }
+
+  &.table-view {background-color: transparent;
+    // h1, h2, h3, h4, h5, h6 {margin:0;}
+    h6 {line-height: 1.5em;font-weight: 500;}
+    ul {line-height: 1.3em;
+      li {}
+    }
+    #missionVisionSection {display:table;
+      > .statementSection {
+        display:none;
+        // display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        &:first-child {padding-right: 15pt;}
+        &:last-child {padding-left: 15pt;}
+      }
+    }
+
+    .assessmentReportTable {width:100%; border-spacing: 0; border: 0;margin-top: 8pt;border-right: 1px solid #ede6d6;
+      thead {
+        th {padding: .25rem .25rem .25rem; border:1px solid #ede6d6; background-color: lighten(#dac38b, 25%);border-bottom: 0;border-right-width:0px;font-size: 11pt;font-family: 'Catamaran', sans-serif;
+          // &:last-child {border-right-width: 1px;}
+        }
+        tr:last-child {
+          th {background:#ffffff;}
+        }
+      }
+      tbody {
+        tr:nth-child(even) {background-color: #ffffff;}
+        td {padding: .25rem .25rem .25rem; border:1px solid #ede6d6;border-top: 0;border-right-width:0px;font-size: 11pt;
+            vertical-align: top;
+            width:100%;
+            p {line-height: 1.3em;}
+          // &:last-child {border-right-width: 1px;}
+          > div {
+            // border-bottom: 1px solid #ede6d6; //used in first table design
+            // margin-left: -3pt; //used in first table design
+            // margin-right: -3pt; //used in first table design
+            // padding-right: 3pt;
+            // padding-left: 3pt;
+            // padding:5pt; //used in first table design
+            &:last-child {border-bottom:0;}
+          }
+        }
+      }
+      .elementNumber {display: inline-block;
+        background: #dac38b;
+        min-width: 0px;
+        height: 18px;
+        text-align: center;
+        padding: 2px 3px;
+        margin-right: 5pt;
+        border-radius: 3px;
+        vertical-align: top;
+        margin-bottom:5pt;
+        div {line-height: 11pt;}
+      }
+      .elementTitle {font-size: 14pt;line-height: 15pt;margin-bottom: 5pt;}
+      .elementWarning {display: inline-block;}
+      .statusBadge {display: inline-block;vertical-align: top;height:18px;padding: 2pt 5px;
+        &.badge {font-size: 11pt;line-height: 11pt;vertical-align: top;min-width: 70pt;
+        }
+      }
+
+      .hasActionPlanWrapper {
+        th {background-color: #ffffff;}
+        .hasActionPlan {background-color: #ede6d6;line-height: 1em;margin-bottom: 5pt;padding: 3pt;border-radius: 3px;}
+      }
+      .supportedInitiativeList {
+        ul {
+          list-style-type: disc;margin-left: 15pt;
+        }
+      }
+      .actionPlan {margin-top:10pt;
+        .actionPlanName {display: inline-block; margin-right: 5pt;}
+      }
+
+    }
+
+  }
+
+  // Make visible invisible sections if included
+  // Hide if not included
+  #mission-section {display:none;}
+  #vision-section {display:none;}
+  #goals-section {display: none;}
+  .objective-list-wrapper {display: none;}
+  .supported-initiatives {display: none;}
+  .action-plan-wrapper {display: none;}
+  .measure-list-wrapper {display: none;}
+  .target-list-wrapper {display: none;}
+  .target-target-wrapper {display: none;}
+  .target-finding-wrapper {display: none;}
+  .target-analysis-wrapper {display: none;}
+
+} //End assessmentReport
+
+//Show if included
+.includeMission #mission-section {display:block;}
+.includeMission .table-view #missionVisionSection #mission-section {display:table-cell;}
+.includeVision #vision-section {display:block;}
+.includeVision .table-view #missionVisionSection #vision-section {display:table-cell;}
+.includeMission.includeVision #missionVisionSection .statementSection {width:50%;}
+
+.includeGoals #goals-section {display: block;}
+.includeObjectives .objective-list-wrapper {display: block;}
+.includeObjectiveInitiatives .supported-initiatives {display: block;}
+.includeActionPlans .action-plan-wrapper {display: block;}
+.includeActionItems .action-plan-wrapper {display: block;}
+.includeObjectiveMeasures .measure-list-wrapper {display: block;}
+.includeMethodology {}
+.includeSourceOfEvidence {}
+.includeQual .target-list-wrapper {display: block;}
+.includeQualFindings .target-finding-wrapper {display: block;}
+.includeQualAnalysisOfFindings .target-analysis-wrapper {display: block;}
+.includeImprovementsAchieved {}
+.includeAttachments {}
+
+
+
+
+//Table View
+.tableOutcome {
+  display:none;
+}.tableMeasure {
+  display:none;
+}.tableTarget {
+  display:none;
+}.tableFindings {
+  display:none;
+}
+
+
+//Resize the table size depending on what is included.
+//Note: order is important here.  You cannot have Targets without measures, etc.
+.includeObjectives {
+  .assessmentReport.table-view {
+    .assessmentReportTable {
+      .tableOutcome {
+        display:table-cell;
+      }
+      td, th {width: 100%;}
+    }
+  }
+}
+.includeObjectiveMeasures {
+  .assessmentReport.table-view {
+    .assessmentReportTable {
+      .tableMeasure {
+        display:table-cell;
+      }
+      td, th {width: 50%;}
+    }
+  }
+}
+.includeQual {
+  .assessmentReport.table-view {
+    .assessmentReportTable {
+      .tableTarget {
+        display:table-cell;
+      }
+      td, th {width: 33.33%;}
+    }
+  }
+}
+.includeQualFindings {
+  .assessmentReport.table-view {
+    .assessmentReportTable {
+      .tableFindings {
+        display:table-cell;
+      }
+      td, th {width: 25%;}
+    }
+  }
+}
+
+
+// Badges
+  //Project Statuses
+    // Not Started  .badge.notStarted
+    // In Progress .badge.inProgress
+    // Internal Review .badge.internalReview
+    // Complete .badge.complete
+
+  // Action Plan Statuses
+    // Planned, .badge.planned
+    // Complete, .badge.complete
+    // In Progress .badge.notStarted
+  //Target Statuses
+    // Not Set, .badge.nothingEntered
+    // Nothing Entered, .badge.nothingEntered
+    // Not Reported this Cycle, .badge.nothingEntered
+    // Not Reported This Period, .badge.nothingEntered
+    // Not Met, .badge.notMet
+    // Partially Met, .badge.partiallyMet
+    // Met Exceeded .badge.met
+
+/* badges Taken from appName.css*/
+.badge {
+  background-color: #707265;
+  border-radius: 0;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.6em;
+  padding: 0 10px;
+  text-align: center;
+  display: inline-block;
+}
+  .badge.default {
+    background-color: #707265; }
+  .badge.secondary {
+    background-color: #ede6d6;
+    color: #4b4c47; }
+  .badge.alert {
+    background-color: #ff4a49; }
+  .badge.success {
+    background-color: #43ac6a; }
+  .badge.warning {
+    background-color: #fed766;
+    color: #764c03; }
+  .badge.info {
+    background-color: #764c03;
+    color: #ede6d6; }
+  .badge.school {
+    background-color: #004a67; }
+  .badge.accreditor, .badge.complete {
+    background-color: #679436; }
+  .badge.exceeded, .badge.met, .badge.complete {
+    background-color: #a5be00; }
+  .badge.met, .badge.partiallyComplete, .badge.internalReview {
+    background-color: #e3ebab; }
+  .badge.partiallyMet, .badge.planned {
+    background-color: #9fc1cf; }
+  .badge.notMet {
+    background-color: #05668d; }
+  .badge.notMet {
+    background-color: #ff4a49; }
+  .badge.notReported, .badge.notStarted {
+    background-color: #ddded6; }
+  .badge.inProgress {
+    background-color: #717fc9; }
+  .badge.nothingEntered {
+    background-color: #4b4c47; }
+  .badge.round {
+    border-radius: 40px; }
+  .badge.rounded {
+    border-radius: 3px; }
+
+
+  .alert-text {
+  color: #ff4a49; }

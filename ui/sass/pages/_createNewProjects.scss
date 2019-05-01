@@ -1,0 +1,26 @@
+/***Create new project page ***/
+.create-new-project-wrapper {text-align: center; padding-top: 150px;
+   h1 {text-align: center;}
+   > div {text-align: left; display: inline-block;}
+   .help-table {margin: 1rem 0; position: relative;
+     > .col {vertical-align: top;}
+   }
+  .confirm-new-project-header {margin-bottom: 60px;}
+   .create-project-radio-wrapper {margin: 0 0 0 90px;}
+   .project-format {margin: 3rem 0;
+     table.projectsTable {
+        th.dash-project-name-th{width: 65%;}
+     }
+     .radio {margin: 0;}
+   }
+   .project-select {width: 860px;
+     .project-filters {
+        .input {margin: 0;}
+        select {margin: 0; width: auto;}
+        > .col {padding: 0 10px; width: 50%;}
+     }
+   }
+}
+#project-title {width: 500px; margin-right: 20px;}
+#reporting-period-select {min-width: 250px;}
+li.delete-project-option {margin: 3px 0 0; padding: 3px 0 0; border-top: 1px solid $light-beige; }

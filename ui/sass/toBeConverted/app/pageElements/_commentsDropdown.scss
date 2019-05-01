@@ -1,0 +1,24 @@
+/* comments dropdown */
+.commentsPanel { border: 0; box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.3), 0 0 24px 0 rgba(0, 0, 0, 0.22); padding: 0; text-align: left; width: 380px; z-index: 10; }
+.commentsPanel-inner { max-height: 360px; overflow-y: auto; }
+ul.commentsUL { font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.commentsUL > li { background-color: #fafafa; border-bottom: 1px solid $light-grey; font-size: $font-size; }
+ul.commentsUL > li:nth-child(even) { background-color: $plain-white; }
+ul.commentsUL > li.noComment { text-align: center; }
+/* school comments */
+.commentsPanel-school ul.commentsUL > li .comment-text h5,
+.commentsPanel-school ul.commentsUL > li .comment-text h6 { color: $school-blue; }
+/* accreditor comments */
+.commentsPanel-accreditor ul.commentsUL > li .comment-text h5,
+.commentsPanel-accreditor ul.commentsUL > li .comment-text h6 { color: $accreditor-dark-green; }
+.oneComment { padding: 10px; }
+.oneComment .help-table > .col { vertical-align: top; }
+.oneComment .comment-img { text-align: left; width: 64px; }
+.oneComment .comment-text h5, .oneComment .comment-text h6 { margin-bottom: 0; }
+.oneComment .comment-body { font-size: 14px; }
+.commentsPanel-newReply { padding: 10px; text-align: right; }
+.newReplyBox textarea { max-width: 295px; max-height: 100px; min-height: 100px; resize: none; }
+ul.commentsOptionsUL { background-color: $beige; font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.commentsOptionsUL > li { display: inline-block; font-size: 14px; text-align: center; width: 50%; }
+ul.commentsOptionsUL > li:last-child { background-color: $light-beige; }
+ul.commentsOptionsUL > li > a { display: block; font-weight: $strong; padding: 10px; text-decoration: none; }

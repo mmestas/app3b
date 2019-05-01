@@ -1,0 +1,50 @@
+/* sprint 07 - accreditor standards view */
+.accredStandardsPage .standardsHeaderBox .input,
+#id-schoolsPage .standardsHeaderBox .input { margin: 23px 10px 0px 0; }
+.accredStandardsPage { padding-bottom: 7em; }
+.accredStandardsPage .standardActionPane { z-index: 9; }
+.accredStandaredsPage .oneStandardUnit { margin-bottom: 2em; }
+.accredStandardsPage .standardHeaderTable { background: $light-beige; padding: 12px 0.9375rem 0; }
+.standardOptionsBox { position: relative; }
+/* single */
+.singleAction button { padding: 5px 10px; }
+.singleAction .ionicon { font-size: 22px; }
+.standardOptionsBox .singleAction .standardActionPane { width: 200px; }
+/* multiple */
+.multipleActions .status { color: $dark-red; font-family: 'Rubik'; font-size: 13px; font-weight: $strong; }
+ul.multiActionUL { display: inline-block; font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.multiActionUL > li { display: inline-block; font-size: $font-size; margin-left: 3px; position: relative; vertical-align: middle; }
+th.std-checkbox-th { width: 70px; }
+th.std-stage-th { width: 15%; }
+th.std-action-th { text-align: center; width: 90px; }
+.oneStandard td { vertical-align: top; }
+.oneStandard td:last-child { position: relative; text-align: center; }
+.oneStandard .checkbox { margin: auto; width: 21px; }
+.oneStandard td:first-child .checkbox input + label { display: inline-block; margin-right: 0;  padding: 0 0 0 21px; width: 21px; }
+td.actions-td .button { margin-bottom: 0; }
+td.actions-td .standardActionPane { right: 25px !important; width: 320px; }
+ul.viewLinksUL { list-style: none; margin: 0; padding: 0; }
+li.selectMenuLI { background-color: #fafafa; }
+.addToSet { padding: 10px 10px 0; }
+.addToSet select { font-size: 14px; padding: 5px 15px; }
+.addToSet-confirm { padding: 0 10px 10px; text-align: center; }
+/* all standards */
+.allStandardsBox .standardHeaderTable { background-color: $dark-beige; }
+.allStandardsBox .standardNameBox .subheader { color: $plain-white; }
+.allStandardsBox .multipleActions .status { color: $plain-white; }
+/* add new standard set */
+.newStandardNameInput { display: block; margin: 2em 0 3em; }
+/* add instructions */
+.accredInstructionsRubricPage textarea { resize: vertical; }
+.accredInstructionsRubricPage .accreditorFeedbackHeader-inner > .standard-col { padding-right: 0; }
+.accreditorStandardInstructions { margin-bottom: 2em; }
+.accreditorStandardInstructions .help-table > .col,
+.accreditorRubricInstructions .help-table > .col { position: relative; vertical-align: top; }
+.accreditorStandardInstructions .instructions-col,
+.accreditorRubricInstructions .instructions-col { background-color: $faint-gold; padding: 10px; width: 40%; }
+.accreditorStandardInstructions .editor-col,
+.accreditorRubricInstructions .editor-col { padding-left: 26px; }
+.instructions .sticky.is-at-top.is-stuck { margin-top: 50px !important; }
+.accredInstructionsRubricPage { padding-bottom: 2em; }
+.accredStandardsPage ul.standardActionUL > li.selectMenuLI:hover,
+.userManagementPage ul.standardActionUL > li.selectMenuLI:hover { background: #fafafa; }

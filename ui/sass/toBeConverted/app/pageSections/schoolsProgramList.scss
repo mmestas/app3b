@@ -1,0 +1,55 @@
+/* sprint 01 - schools/programs list page */
+.schoolsPage th.prog-name-th { width: 15%; }
+.schoolsPage th.prog-bar-th { width: 20%; }
+.schoolsPage th.prog-team-th { width: 15%; }
+.schoolsPage th.prog-standards-th,
+.schoolsPage th.prog-completed-th,
+.schoolsPage th.prog-inprogress-th,
+.schoolsPage th.prog-responses-th { width: 10%; }
+.schoolsPage th.prog-issues-th { width: 10%; }
+/* header */
+.schoolsPage-header { /*margin-top: 1em;*/ }
+.schoolsFilterBox .filterBox { position: relative; }
+.schoolsFilterBox input.filterInput { max-width: 300px; }
+input.filterInput::-webkit-input-placeholder { color: $dark-grey; }
+input.filterInput:-moz-placeholder { color: $dark-grey; }
+input.filterInput::-moz-placeholder { color: $dark-grey; }
+input.filterInput:-ms-input-placeholder { color: $dark-grey; }
+.schoolsAddBox { text-align: right; }
+.schoolsAddBox > .button { margin-bottom: 0; }
+/* school list */
+.oneSchoolUnit { margin-bottom: 2em; }
+.schoolHeaderTable { background: $light-beige; padding: 12px 0.9375rem; }
+.schoolNameBox > .schoolNameHeader { display: block; font-family: 'Rubik'; font-size: 24px; font-weight: $light; height: 1.2em; line-height: 1.1em; overflow: hidden; position: relative; text-overflow: ellipsis; width: 90%; }
+/* school meta */
+.schoolMetaBox { border: 0; border-radius: 3px; box-shadow: $button-shadow; font-size: 14px; max-height: 300px; max-width: 500px; overflow-y: auto; width: 100%; }
+.schoolMetaBox > h5 { background: $school-blue; color: $plain-white; font-weight: $strong; line-height: 2em; margin: -20px -20px 0; padding: 12px 20px; text-align: center; }
+.schoolMetaBox .tabs { background: none; border: 0; text-align: center; }
+.schoolMetaBox .tabs-title > a { padding: 10px 12px; color: $school-blue; font-size: 2em; line-height: 1em; text-align: center; text-decoration: none; width: 2em; }
+.schoolMetaBox .tabs-title > a:focus, .schoolMetaBox .tabs-title > a[aria-selected='true'] { background: $school-light-blue; }
+.schoolMetaBox .tabs-title { display: inline-block; float: none; vertical-align: middle; }
+.schoolMetaBox .tabs-content { background: $plain-white; border: 0; display: none; margin-bottom: 1em; text-align: center; }
+.schoolMetaBox .tabs-panel.is-active { display: none; }
+.metaBox.is-open .tabs-panel.is-active { border: 1px solid $school-light-blue; display: block; }
+.metaBox.is-open .tabs-content { display: block; }
+/* school accreditation progress */
+.progressAlertsTable { padding: 0; }
+.progressAlertsTable .progressBarCol { width: 80%; }
+.progressAlertsTable .issues-alert { background: $red; border-radius: 3px; color: $plain-white; display: inline-block; font-size: 12px; line-height: 1em; padding: 5px 10px; }
+.schoolTotalProgressBox { text-align: center; }
+.schoolTotalProgressBox .progress { margin-bottom: 0; }
+.schoolTotalProgressBox .progressIssuesCol { vertical-align: bottom; }
+.schoolTotalProgressBox .help-table-50 { padding: 0 0; }
+.accred-completion { font-family: 'Rubik'; font-size: 12px; text-align: left; }
+/* school issues */
+td.prog-issues > a { color: $red; font-weight: $bold; }
+.issuesMetaBox h5 { background-color: $red; border-radius: 3px 3px 0 0; color: $plain-white; font-weight: $strong; margin: -20px -20px 1em; padding: 12px 20px; text-align: center; }
+ul.issuesUL { list-style: none; margin: 0; padding: 0; }
+ul.issuesUL > li { border-bottom: 1px solid #979797; display: inline-block; padding: 12px 0; width: 100%; }
+ul.issuesUL > li:last-child { border-bottom: 0; }
+.schoolOptionsBox, .standardOptionsBox { text-align: right; }
+.schoolOptionsBox .button { margin-bottom: 0; }
+table.oneSchoolTable > thead span,
+table.oneStandardTable > thead th.sort-down span,
+table.oneStandardTable > thead th.sort-up span{ cursor: pointer; display: block; position: relative; }
+table.oneSchoolTable .progress-pct { display: inline-block; margin-right: 0.5em; vertical-align: middle; width: 35px; }

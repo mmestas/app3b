@@ -1,0 +1,52 @@
+    <div class="modal-header">
+        <h3>File Upload</h3>
+        <button type="button" class="close-button" aria-label="Close modal" data-ng-click="cancel()">
+            <span class="ion-android-close" area-hidden="true"></span>
+        </button>
+    </div>
+    <div class="modal-body">
+
+      <div class="text-center" ng-if="showTemplateSelect">
+        <h4 class="pb10">Select the project Template you wish to use for this data</h4>
+        <!-- {{selected.template.id}}{{selected.template.requestKey}}{{selected.template.id}}{{selected.template.name}} -->
+        <div class="select input template-select input--filled">
+          <ui-select ng-model="selected.template" close-on-select="true" title="Select Project Template" id="template-select">
+            <ui-select-match placeholder="Select Template">{{$select.selected.name}}</ui-select-match>
+            <ui-select-choices repeat="template as template in templateList | filter: {name: $select.search}">
+              {{template.name}}
+            </ui-select-choices>
+          </ui-select>
+          <label class="input-label" for="template-select">
+              <span class="input-label-content" data-content="Selector label">Template</span>
+          </label>
+        </div>
+
+        <!-- <md-input-container class="fullWidthSelect">
+          <md-select data-ng-model="list" placeholder="Please select one">
+            <md-option data-ng-value="template.name" data-ng-repeat="template in templateList">{{template.name}}</md-option>
+          </md-select>
+        </md-input-container> -->
+
+      </div>
+
+      <h4 class="text-center">Import your CSV file:</h4>
+      <div class="profilePicUploadOverlay" ng-model="uploadUserAccounts.csvFile" ngf-drop ngf-drag-over-class="'dragover'"  accept=".csv">
+        <div class="profilePicUploadOverlay-inner">
+          <p>Drop your CSV file to instantly upload it</p>
+          <div class="ion-plus-circled ionicon"></div>
+          <p class="choose">Or click <a ngf-select ng-model="uploadUserAccounts.csvFile" accept=".csv">here</a> to choose file from your computer</h5>
+          <progressbar ng-show="uploadUserAccounts.isGettingUploaded" class="progress-upload progress-small" value="uploadUserAccounts.progress"></progressbar>
+          <span class="float:left;" ng-show="uploadUserAccounts.isGettingUploaded">{{uploadUserAccounts.progress}} %</span>
+          <alert type="error" ng-show="uploadUserAccounts.errorMsg" close="uploadUserAccounts.errorMsg=String()">{{uploadUserAccounts.errorMsg}}</alert>
+        </div>
+      </div>
+      <div class="text-center" ng-show="uploadUserAccounts.csvFile">
+        {{uploadUserAccounts.csvFile.name}}
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="form-error" ng-show="showErrorMessage" ng-class="{'showFormError' : showErrorMessage}">{{errorMessage}}</div>
+        <button type="button" class="button action" data-ng-click="uploadCSV(uploadUserAccounts.csvFile, importPath, selected.template)">
+            Next
+        </button>
+    </div>

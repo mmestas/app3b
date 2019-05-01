@@ -1,0 +1,11 @@
+ul.teamMembers {
+  margin: 0;
+  list-style: none;
+
+  p.none{margin: -8px 0 0; font-weight: bold;}
+  > li{margin: 0 0 15px;}
+}
+
+.user-info-summary {
+  h6{line-height: normal; margin: 15px 0 0;}
+}

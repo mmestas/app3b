@@ -1,0 +1,25 @@
+/* sprint 01 - login page */
+.loginBody { background-color: $light-beige; display: table; width: 100%; }
+.loginBody-inner { display: table-cell; vertical-align: middle;-webkit-transition: none !important;transition: none !important; }
+.loginPage { background-color: $plain-white; border-radius: 3px; box-shadow: $button-shadow; margin: auto; padding: 2em; text-align: center; max-width: 420px; min-width: 310px; }
+.loginLogo { margin-bottom: 2rem; }
+.loginLogo > img { max-height: 32px; max-width: 350px; }
+.loginForm .showHidePwdBox {  top: 2.25em; }
+.showHidePwdBox { position: absolute; right: -5px; top: 0.75em; }
+.showHidePwdBox * { -webkit-transition: none; transition: none; }
+.showHidePwdBox input { padding: 0; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; z-index: -1; }
+.showHidePwdBox input + label { background-color: $dark-grey; border-radius: 3px; color: $plain-white; margin-bottom: 0; padding: 3px 7px; z-index: 1; }
+.showHidePwdBox label { display: block; }
+input.show-pwd { padding-right: 5em; }
+.loginPage .form-error { text-align: left; }
+.loginPage .forgot { margin: auto; }
+.buttonBox { margin-top: 1rem; }
+.continueButtonBox{ margin-bottom: 1rem; }
+.loginFooter { margin-top: 2rem; margin-bottom:-1.5em;}
+.loginFooter > h6 { color: $grey; font-weight: $regular; }
+.loginPage .ldap-link-wrap {margin-top: 40px;}
+.loginPage .ldap-continue {margin: 0 5px;}
+/* sprint 01 continued in sprint 11 - login and subsequent pages */
+.resetPass {background-color: $plain-white; border-radius: 3px; box-shadow: $button-shadow; margin: auto; padding: 2em; text-align: center; max-width: 420px; min-width: 310px;}
+.newPass {background-color: $plain-white; border-radius: 3px; box-shadow: $button-shadow; margin: auto; padding: 2em; text-align: center; max-width: 420px; min-width: 310px;}
+.forgotUN {background-color: $plain-white; border-radius: 3px; box-shadow: $button-shadow; margin: auto; padding: 2em; text-align: center; max-width: 420px; min-width: 310px;}

@@ -1,0 +1,26 @@
+/* sprint 10 - dashboards */
+.dashboardPage .dashboardPage-header { background-color: $plain-white; padding: 1em 0; }
+.dashboardPage .standardHeaderTable { padding: 12px 0.9375rem; }
+.dashboardPage .standardNameBox .subheader { margin-bottom: 0; }
+.dashboardPage .standardOptionsBox md-select,
+.dashboardPage .standardOptionsBox .select2,
+.dashboardPage .standardOptionsBox select { font-size: 14px;margin-bottom: 0; width: auto; }
+.dashboardPage .dropdown-pane { position: absolute; z-index: 2; width: 325px; top: 0; right: 0; left: inherit; }
+th.dash-num-th { text-align: center; width: 7%; }
+th.dash-institution-th { width: 15%; }
+th.dash-schoolprog-th { width: 20%; }
+th.dash-std-th { width: 20%; }
+.dashSection-issueSchool th.dash-std-th,
+.dashSection-issueSchool th.dash-schoolprog-th,
+.dashSection-standardsSchool th.dash-std-th,
+.dashSection-standardsSchool th.dash-schoolprog-th { width: 25%; }
+th.dash-year-th { width: 7%; }
+th.dash-stage-th { width: 13%; }
+th.dash-award-th { }
+th.dash-rec-th { }
+th.dash-upd-th { }
+th.dash-team-th { width: 10%; }
+th.dash-action-th { width: 15%; }
+.dashSection-fastAccred table.oneStandardTable td:first-child { text-align: center; }
+.dashboardPage .oneStandard td:last-child { text-align: left; }
+.dashSection-feedbackSchool table.oneStandardTable td:last-child button { margin-bottom: 0; }

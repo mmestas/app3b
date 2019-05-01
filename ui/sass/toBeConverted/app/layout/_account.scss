@@ -1,0 +1,18 @@
+li.systemUserLI {padding-right: 1rem; position: relative;
+  > a.user-menu {padding: 0.75rem 1.5rem 0.75rem 1rem; position: relative;
+    &::after { content: ''; display: block; width: 0; height: 0; border: inset 5px; border-color: $plain-white transparent transparent; border-top-style: solid; border-bottom-width: 0; right: 5px; margin-top: -2px; position: absolute; top: 50%;
+    }
+  }
+}
+.userMenuPane, .systemUserLI .dropdown-pane, .systemImpersonateLI .dropdown-pane, .systemSettingsLI .dropdown-pane  { background-color: $dark-grey; border: 0; box-shadow: $button-shadow; padding: 0; width: 220px; }
+ul.accountMenuUL {list-style: none; margin: 0; padding: 0;
+ > li {
+   > a {display: block; padding: 0.7rem 1rem; text-decoration: none;}
+   > span {display: block; padding: 0.7rem 1rem; text-decoration: none; cursor: default; font-size: 14px; color: $grey;}
+   span {display: inline-block; margin-right: 0.5em;}
+   &.helper.secondary {
+     > span {padding-top: 1.5rem;}
+   }
+   &:not(.helper):hover {background-color: $light-beige; color: $dark-grey;}
+ }
+}

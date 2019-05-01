@@ -1,0 +1,18 @@
+/*****Projects Page *****/
+.standardsHeader.sticky input{margin: 0;}
+label[for="id-filterProjects"],
+label[for="id-filterItems"] {position: absolute; top: 12px; color: #75776A; font-size: $font-size; font-weight: $light;}
+#id-projectAttachmentsPage label[for="id-filterProjects"] {top: 8px; font-size: 26px; font-weight: $light;}
+.is-stuck label[for="id-filterProjects"] {top: 9px;}
+input#id-filterProjects,
+input#id-filterItems {padding-left: 35px; margin: 0;}
+#id-projectAttachmentsPage input#id-filterProjects {padding-left: 40px;}
+ul.table-actions {list-style: none; margin: 0; padding: 0; font-size: 0;}
+ul.table-actions li { display: inline-block; font-size: 20px; margin-right: 1em; }
+ul.table-actions li button{ color: $dark-gold; }
+table.projectsTable th.dash-year-th {width: auto;}
+ul.filterUL.projectsFilters {margin-left: 15px;}
+table.projectsTable th {width:15%;}
+table.projectsTable th.dash-project-name-th {width:55%;}
+#id-my-projects li.show-all,
+#id-projectAttachmentsPage li.show-all {display: none;}

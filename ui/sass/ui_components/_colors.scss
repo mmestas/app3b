@@ -1,0 +1,71 @@
+/***************************** COLORS *****************************/
+$school-blue: #05668d !default;
+$school-light-blue: #9fc1cf !default;
+$school-dark-blue: #004a67 !default;
+
+$periwinkle-blue: #717fc9 !default;
+
+$accreditor-green: #a5be00 !default;
+$accreditor-light-green: #e3ebab !default;
+$accreditor-dark-green: #679436 !default;
+
+$grey: #707265 !default;
+$light-grey: #ddded6 !default;
+$dark-grey: #4b4c47 !default;
+$dark-grey-hover: lighten(desaturate(adjust-hue($dark-grey, 3), 1.40), 10.39); //#656662
+
+$gold: #fed766 !default;
+$light-gold: #fff4d6 !default;
+$dark-gold: #764c03 !default;
+$darkest-gold: darken(desaturate($gold, 12.26), 58.24); //#372a04
+$faint-gold: lighten(desaturate($gold, 54.26), 26.67); //$faint-gold
+
+$beige: #dac38b !default;
+$light-beige: #ede6d6 !default;
+$dark-beige: #a39061 !default;
+$faint-beige: lighten($beige, 35%);
+
+$red: #ff4a49 !default;
+$light-red: #f7c5c5 !default;
+$dark-red: #b21716 !default;
+
+$highlight-blue: #d6e5eb !default;
+$highlight-grey: #e7e7e7 !default;
+
+$plain-white: #ffffff !default;
+
+//colors I found in the site that don't have "official colors"
+$alertLt : lighten(desaturate($red, 13.48), 18.24) !default; //#f9acac
+$successLt : lighten(desaturate($accreditor-green, 39.46), 33.92) !default; //#d6e289
+$warningLt : lighten(desaturate(adjust-hue($gold, 1), 1.83), 17.65) !default; //#feefc0
+$primaryLt : lighten(desaturate($school-blue, 58.39), 34.71) !default; //#81afc2
+
+// $success : #43ac6a
+
+$box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1), 0 0 3px 0 rgba(0, 0, 0, 0.12);
+$button-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 0 8px 0 rgba(0, 0, 0, 0.12);
+
+//since many were hovers or focuses - perhaps they are a darken/lighten/etc
+// #372a04
+// #656662
+// #e0e0e0
+// #b1b1b1
+// #ffffff
+// #fafafa
+// #f6f6f6
+// #f5f2eb
+// #ddded6
+// #e1d0aa
+// $faint-gold
+// #faebcc
+// $faint-gold
+// #d9edf7
+// #bce8f1
+// #8a6d3b
+// #fcf8e3
+// #707070
+// #75776A
+
+//
+// rgba(0, 0, 0, 0.24)
+// rgba(0, 0, 0, 0.12)

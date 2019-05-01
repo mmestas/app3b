@@ -1,0 +1,8 @@
+/* system help */
+li.systemHelpLI { position: relative; }
+li.systemHelpLI .dropdown-pane{ border: 0; box-shadow: $button-shadow; color: $grey; padding: 0; width: 360px; }
+.systemHelpPane-inner { padding: 1em; }
+.systemHelpPane-inner > h4 { background-color: $light-gold; border-bottom: 1px solid $dark-beige; padding: 1em; margin: -1rem -1rem 1rem; }
+.systemHelpPane a { color: $dark-beige; }
+.systemHelpPane ul.helpTopicsUL { background: none !important; border-bottom: 1px solid #979797; color: inherit; list-style: none; margin: 1em 0; padding: 0 0 2em; }
+.systemHelpPane .searchHelpBox input { max-width: 100%; }

@@ -1,0 +1,56 @@
+/* sprint 08 - narrative editor */
+.narrative-table .narrative-editor-col { vertical-align: top; }
+.narrative-table .narrative-comments-col { border-left: 1px solid $highlight-grey; vertical-align: top; width: 280px; }
+.schoolOptionsBox.accreditor button { padding: 7px 10px; }
+.schoolOptionsBox .ionicon { font-size: 18px; }
+/* narrative comment selection */
+.editor-comment { border-bottom: 1px dashed $dark-gold; }
+.editor-comment-new { border-bottom: 1px dashed; color: $red; font-weight: $bold; }
+.editor-comment-view { border-bottom: 1px dashed; background-color: $light-gold; }
+.commentTools { border-bottom: 1px solid $highlight-grey; padding: 20px 10px; text-align: center; }
+ul.commentToolsUL { font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.commentToolsUL > li { display: inline-block; font-size: $font-size; margin-left: 10px; vertical-align: middle; }
+ul.commentToolsUL > li:first-child { margin-left: 0; }
+ul.commentToolsUL > li:last-child { width: 120px; }
+ul.commentToolsUL button { margin-bottom: 0; padding: 5px 15px; }
+ul.commentToolsUL button .ionicon { font-size: 22px; }
+span.comment-indicator { display: inline-block; font-family: 'Rubik'; font-size: 12px; font-weight: $bold; }
+.narrativeCommentsBox { height: 425px; overflow-y: auto; }
+ul.narrativeCommentsUL { font-size: 0; list-style: none; margin: 0; padding: 0; }
+ul.narrativeCommentsUL > li { border-bottom: 1px solid $light-grey; font-size: 14px; padding: 10px 0; }
+ul.narrativeCommentsUL > li:first-child { border-top: 0; }
+ul.narrativeCommentsUL > li:last-child { border-bottom: 0; }
+ul.narrativeCommentsUL .school h6 { color: $school-blue; }
+ul.narrativeCommentsUL .accreditor h6 { color: $accreditor-dark-green; }
+ul.narrativeCommentsUL > li.viewing { background-color: $light-gold; }
+.addNarrativeCommentBox { background-color: #fafafa; border-top: 1px solid $highlight-grey; padding: 10px 0 15px; }
+.addNarrativeCommentBox .input { margin: 0; padding: 10px; }
+.addNarrativeCommentBox textarea { margin-bottom: 0; min-height: 90px; resize: none; }
+.addNarrativeCommentBox .buttonHolder { padding: 0 10px 0; text-align: right; }
+.addNarrativeCommentBox .buttonHolder button { margin-bottom: 0; }
+.narrativeCommentsInstructions { font-size: 14px; padding: 20px 10px; }
+.editorUsersBox { }
+.editorUsersBox h6 { display: inline-block; vertical-align: middle; margin: 0 7px 0 0; }
+ul.currentUsersUL { display: inline-block; font-size: 0; list-style: none; margin: 0; padding: 0; vertical-align: middle; }
+ul.currentUsersUL > li { display: inline-block; font-size: $font-size; margin-right: 3px; }
+.narrativeEditorOptions { border-top: 1px solid $light-grey; }
+.narrativeEditorOptions button { margin-bottom: 0; }
+.narrativeEditorOptions > .col { padding: 10px 0.625rem; }
+.narrativeEditorOptions .toggle-button-col { text-align: right; width: 180px; }
+.narrativeCustomTools { display: inline-block; /*margin-top: 8px;*/ position: absolute; right: 10px; z-index: 1; }
+.narrativeCustomTools .firepad-btn-group { }
+
+.narrativeCustomTools .firepad-btn { display: inline-block; padding: 2px 5px 1px; }
+.narrativeCustomTools .firepad-btn:active { padding: 2px 5px 1px; }
+.narrativeCustomTools .ionicon { display: block; font-size: 22px; line-height: 1.05em; }
+.narrativeCustomDialog .tabs { font-size: 0; text-align: center; }
+.narrativeCustomDialog .tabs li { display: inline-block; float: none; font-size: $font-size; vertical-align: middle; }
+.narrativeCustomDialog .tabs-title > a { font-size: 1em; font-weight: $strong; padding: 10px 20px; text-decoration: none; }
+.narrativeCustomDialog .tabs-title > a:focus,
+.narrativeCustomDialog .tabs-title > a[aria-selected='true'] { background: #dac386; color: #372a04; }
+.narrativeCustomDialog .input { margin-top: 2em; max-width: 100%; }
+.narrativeCustomDialog.firepad-cover-page-dialog .input { margin-top: 1em; max-width: 100%; }
+.narrativeCustomDialog .input ~ .input { margin-top: 1em; }
+.firepad-dialog-div .tabs { background: none; border: 0;  }
+.firepad-dialog-div .tabs-content { background: none; border: 0; }
+.firepad-narrative .firepad-dropdown-menu {z-index: 12;}

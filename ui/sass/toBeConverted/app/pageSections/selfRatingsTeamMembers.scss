@@ -1,0 +1,47 @@
+/* sprint 06 - self-ratings team members */
+.selfRatingsHeader { margin-top: 1.5em; }
+.selfRatingsHeader .standard-col { padding-right: 26px; }
+.selfRatingsHeader .standard-col h4, .selfRatingsHeader .standard-col h5 { background-color: $dark-beige; color: $plain-white; margin-bottom: 0; }
+.selfRatingsHeader .currentDescription { background-color: $light-beige; font-size: 14px; padding: 20px 15px; }
+.selfRatingsHeader .ratings-col { background-color: $faint-gold; padding-left: 26px; padding-top: 10px; vertical-align: top; }
+.selfRatingsHeader .ratings-col ul.ratingTrendUL { font-size: 0; }
+.selfRatingsHeader .ratings-col ul.ratingTrendUL > li { font-size: 14px; padding: 0 26px 0 0; width: 50%; }
+.selfRatingsPagination { margin-top: 1.5em; }
+.selfRatingsPagination .header-col h3 { margin-bottom: 0; }
+.selfRatingsPagination .pages-col { text-align: right; }
+.teamMemberRatings { margin: 0 0 1.5em; }
+.teamMemberRatings .members-col { width: 330px; }
+.teamMemberRatings .tabs { border: 0; background: $plain-white; }
+.teamMemberRatings .tabs-content.vertical, .teamMemberRatings .tabs-content { background: transparent; border: 0; padding: 0 0 10px 10px; }
+.teamMemberRatings .tabs.vertical > li { opacity: 0.8; }
+.teamMemberRatings li.tabs-title.is-active { opacity: 1; }
+.teamMemberRatings .tabs-title > a:focus, .teamMemberRatings .tabs-title > a[aria-selected='true'] { background: $light-beige; position: relative; }
+.teamMemberRatings .tabs-title > a:focus::after, .teamMemberRatings .tabs-title > a[aria-selected='true']::after {
+    border-style: solid;
+    border-color: transparent transparent transparent $light-beige;
+    border-width: 25px 0 25px 43.3px;
+    content: "";
+    height: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    right: -30px;
+    z-index: 1;
+}
+.teamMemberRatings .tabs-panel { padding: 10px 0 0 20px;
+    -webkit-animation: opac 0.75s;
+    animation: opac 0.75s;
+}
+.teamMemberRatings .tabs-panel.is-active { background-color: $faint-gold; }
+/*.teamMemberRatings .tabs-title > a.userClickable { display: table; padding: 15px; position: relative; text-decoration: none; width: 100%; }*/ /*this has the a.*/
+.teamMemberRatings .tabs-title > .userClickable { display: table; padding: 15px; position: relative; text-decoration: none; width: 100%; }
+.teamMemberRatings .userClickable > .col { display: table-cell; vertical-align: middle; }
+.teamMemberRatings .userClickable .user-info-name { font-family: 'Rubik'; font-size: $font-size; font-weight: $bold; line-height: 1.6em; }
+.teamMemberRatings .userClickable .user-info-timestamp { font-family: 'Rubik'; font-size: 12px; line-height: 1.6em; }
+.teamMemberRatings .userClickable .user-info-img { width: 80px; }
+.teamMemberRatings .accreditorFeedbackRubricBox ul.rubricsUL > li.rating-done { background-color: transparent; }
+.teamMemberRatings .accreditorFeedbackRubricBox,
+.teamMemberRatings .accreditorFeedbackRubricBox ul.rubricsUL { margin-top: 0; }
+.teamMemberRatings .accreditorFeedbackRubricBox ul.rubricsUL > li { display: inline-block; width: 49%; }
